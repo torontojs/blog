@@ -2,6 +2,9 @@
   "name": "torontojs-blog",
   "type": "module",
   "version": "0.0.1",
+  "browserList": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,8 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.4.0",
     "@astrojs/check": "^0.5.4",
+    "astro": "^4.4.0",
+    "postcss": "^8.4.35",
+    "postcss-preset-env": "^9.4.0",
     "typescript": "^5.3.3"
   }
 }

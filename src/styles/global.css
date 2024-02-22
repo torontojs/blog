@@ -127,7 +127,7 @@ h6 {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --bkg: var(--bkg--dark);
     --txt: var(--txt--dark);

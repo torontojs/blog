@@ -1,16 +1,19 @@
 ---
 // component import
 import MainHead from "./MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
 
 // style import
 import "../styles/global.css";
-const { title = "Default title", description = "Default Description" } =
-  Astro.props;
+const { title = "TorontoJS Blog", description = "Blog" } = Astro.props;
 ---
 
 <html lang="en">
   <MainHead {title} {description} />
   <body>
+    <Nav />
     <slot>Default Text</slot>
+    <Footer />
   </body>
 </html>

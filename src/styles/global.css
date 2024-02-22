@@ -127,7 +127,7 @@ h6 {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --bkg: var(--bkg--dark);
     --txt: var(--txt--dark);
@@ -333,22 +333,22 @@ button:focus-visible {
   -moz-user-select: none;
   user-select: none;
 }
-
+/* 
 .link (svg) {
   height: max(1.13rem, min(calc(1.04rem + 0.43vw), 1.38rem));
   height: var(--fs-md);
   width: max(1.13rem, min(calc(1.04rem + 0.43vw), 1.38rem));
   width: var(--fs-md);
-}
+} */
 
 .link.primary {
-  --type: hsl(var(--txt));
+  --type: #eb2c24;
+  background-color: #eb2c24;
+
 }
 
 .link.secondary {
-  --type: hsl(var(--accent));
-  color: #080912;
-  color: hsl(var(--txt));
+  --type: hsl(var(--txt))
 }
 
 .link.filled {

@@ -1,8 +1,27 @@
 ---
 //component import
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="about" description="my about page">
-  <p>hello</p>
+  <section class="container about" aria-label="About TorontoJS">
+    <img
+      src="/images/torontojs-logo.png"
+      alt="TorontoJS Logo"
+      width={200}
+      height={330}
+    />
+    <div class="content">
+      <h1 class="h1">Our Blog</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
+        mollitia, architecto beatae hic repellat quidem vero labore numquam
+        veniam tempore deserunt modi earum sunt assumenda, id voluptates
+        molestias. Itaque harum doloremque atque voluptas nobis ex esse natus
+        eos consequatur dolores?
+      </p>
+      <Link href="mailto:" style="primary" text="Contact Us!" />
+    </div>
+  </section>
 </MainLayout>

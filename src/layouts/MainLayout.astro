@@ -13,7 +13,9 @@ const { title = "TorontoJS Blog", description = "Blog" } = Astro.props;
   <MainHead {title} {description} />
   <body>
     <Nav />
-    <slot>Default Text</slot>
+    <main>
+      <slot> Default Text</slot>
+    </main>
     <Footer />
   </body>
 </html>

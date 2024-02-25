@@ -1,0 +1,40 @@
+---
+// component import
+import MainLayout from "./MainLayout.astro";
+
+// utils import
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter } = Astro.props;
+// when console log'd it shows all the props coming from post1, it will use the template format when the layout prop is declared in the markdown file
+// console.log(frontmatter);
+
+// destructuring it this way helps reduce repetitive typing of doing frontmatter . over and over again
+const { title, description, date, category, author, image } = frontmatter;
+---
+
+<MainLayout {title} {description}>
+  <header>
+    <div class="container">
+      <small>
+        <a href={`/category/${slugify(category)}/`} class="badge">
+          {category}</a
+        >
+      </small>
+      <h1 class="h2">{title}</h1>
+      <p>
+        <a href={`/author/${slugify(author)}/`}>{author}</a> - {
+          formatDate(date)
+        }
+      </p>
+    </div>
+    <img src="" alt="" />
+  </header>
+  <div class="post-content">
+    <div class="content">
+      <!-- blog content gets rendered through the slot element -->
+      <slot />
+    </div>
+    <div class="sidebar"></div>
+  </div>
+</MainLayout>

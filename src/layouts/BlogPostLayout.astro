@@ -1,11 +1,7 @@
 ---
 // component import
 import MainLayout from "./MainLayout.astro";
-
-// utils import
-import { slugify, formatDate } from "../js/utils";
-
-import { Image } from "astro:assets";
+import PostHeader from "../components/PostHeader.astro";
 
 const { frontmatter } = Astro.props;
 // when console log'd it shows all the props coming from post1, it will use the template format when the layout prop is declared in the markdown file
@@ -16,31 +12,7 @@ const { title, description, date, category, author, image } = frontmatter;
 ---
 
 <MainLayout {title} {description}>
-  <header>
-    <div class="container">
-      <small>
-        <a href={`/category/${slugify(category)}/`} class="badge">
-          {category}</a
-        >
-      </small>
-      <h1 class="h2">{title}</h1>
-      <p>
-        <a href={`/author/${slugify(author)}/`}>{author}</a> - {
-          formatDate(date)
-        }
-      </p>
-    </div>
-    <!-- had to update the Image component importing using the built in assets rather than from image/components -->
-    <Image
-      src={image.src}
-      alt={image.alt}
-      width="1200"
-      height="600"
-      format="avif"
-      quality={80}
-      class="hero-image"
-    />
-  </header>
+  <PostHeader {title} {description} {date} {category} {author} {image} />
   <div class="post-content">
     <div class="content">
       <!-- blog content gets rendered through the slot element -->

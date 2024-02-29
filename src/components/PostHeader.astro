@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+
+// utils import
+import { slugify, formatDate } from "../js/utils";
+
+const { category, title, author, date, image } = Astro.props;
+---
+
+<header>
+  <div class="container">
+    <small>
+      <a href={`/category/${slugify(category)}/`} class="badge"> {category}</a>
+    </small>
+    <h1 class="h2">{title}</h1>
+    <p>
+      <a href={`/author/${slugify(author)}/`}>{author}</a> - {formatDate(date)}
+    </p>
+  </div>
+  <!-- had to update the Image component importing using the built in assets rather than from image/components -->
+  <!-- details about Image component, selecting the format is for reducing the memory usage -->
+  <Image
+    src={image.src}
+    alt={image.alt}
+    width="1200"
+    height="600"
+    format="avif"
+    quality={100}
+    class="hero-image"
+  />
+</header>

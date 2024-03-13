@@ -1,23 +1,30 @@
 ---
-// component import
-import MainLayout from "./MainLayout.astro";
-import PostHeader from "../components/PostHeader.astro";
+// Component import
+import PostHeader from '../components/PostHeader.astro';
+import MainLayout from './MainLayout.astro';
 
 const { frontmatter } = Astro.props;
-// when console log'd it shows all the props coming from post1, it will use the template format when the layout prop is declared in the markdown file
-// console.log(frontmatter);
+// When console log'd it shows all the props coming from post1, it will use the template format when the layout prop is declared in the markdown file
+// Console.log(frontmatter);
 
-// destructuring it this way helps reduce repetitive typing of doing frontmatter . over and over again
+// Destructuring it this way helps reduce repetitive typing of doing frontmatter . over and over again
 const { title, description, date, category, author, image } = frontmatter;
 ---
 
-<MainLayout {title} {description}>
-  <PostHeader {title} {description} {date} {category} {author} {image} />
-  <div class="post-content">
-    <div class="content">
-      <!-- blog content gets rendered through the slot element -->
-      <slot />
-    </div>
-    <div class="sidebar"></div>
-  </div>
+<MainLayout title={title} description={description}>
+	<PostHeader
+		title={title}
+		description={description}
+		date={date}
+		category={category}
+		author={author}
+		image={image}
+	/>
+	<div class="post-content">
+		<div class="content">
+			<!-- blog content gets rendered through the slot element -->
+			<slot />
+		</div>
+		<div class="sidebar"></div>
+	</div>
 </MainLayout>

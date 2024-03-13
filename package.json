@@ -35,7 +35,6 @@
 		"@astrojs/sitemap": "^3.1.1",
 		"@commitlint/cli": "^19.1.0",
 		"@commitlint/config-conventional": "^19.1.0",
-		"@iconify-json/brandico": "^1.1.8",
 		"@markuplint/astro-parser": "^4.2.0",
 		"@stylistic/eslint-plugin": "^1.6.3",
 		"@typescript-eslint/eslint-plugin": "^7.2.0",

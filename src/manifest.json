@@ -1,0 +1,127 @@
+{
+	"id": "/?id=a51d10e1-ffc3-4214-b4bd-b33691d1cdb1",
+	"scope": "/?utm_source=pwa&utm_medium=install&utm_campaign=web_app_manifest",
+	"start_url": "/?utm_source=pwa&utm_medium=start_url&utm_campaign=web_app_manifest",
+	"scope_extensions": [ { "origin": "https://blog.torontojs.com/" } ],
+	"name": "TorontoJS Blog",
+	"short_name": "TJS Blog",
+	"lang": "en-US",
+	"dir": "ltr",
+	"description": "TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in the GTA area.",
+	"categories": [ "development", "tools", "utilities" ],
+	"display": "minimal-ui",
+	"orientation": "any",
+	"background_color": "#120606",
+	"theme_color": "#ee2e24",
+	"prefer_related_applications": false,
+	"icons": [
+		{
+			"src": "/icons/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-1024x1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-64x64.png",
+			"sizes": "64x64",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/maskable-icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icons/maskable-icon-1024x1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icons/maskable-icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icons/maskable-icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icons/maskable-icon-64x64.png",
+			"sizes": "64x64",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "TorontoJS Blog",
+			"short_name": "Blog",
+			"description": "Visit TorontoJS Blog",
+			"url": "/?utm_source=pwa&utm_medium=shortcut&utm_campaign=blog",
+			"icons": [
+				{
+					"src": "/icons/shortcuts/blog.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "any"
+				},
+				{
+					"src": "/icons/shortcuts/blog-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/icons/shortcuts/blog-96x96.png",
+					"sizes": "96x96",
+					"type": "image/png",
+					"purpose": "any"
+				}
+			]
+		}
+	],
+	"handle_links": "preffered",
+	"launch_handler": { "client_mode": "auto" },
+	"protocol_handlers": [
+		{
+			"protocol": "web+tjs",
+			"url": "/?utm_source=pwa&utm_medium=protocol_handler&utm_campaign=web+tjs&url=%s"
+		}
+	],
+	"edge_side_panel": {
+		"preffer_width": 460
+	},
+	"changelog": {
+		"version": "3.4.0",
+		"history": [
+			{
+				"url": "/changelog.xml?utm_source=pwa&utm_medium=changelog&utm_campaign=changelog",
+				"type": "application/rss+xml"
+			}
+		]
+	}
+}

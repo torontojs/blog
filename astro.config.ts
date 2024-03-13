@@ -14,7 +14,7 @@ const mode = process.env['NODE_ENV'] === 'production' ? 'production' : 'developm
 export default defineConfig({
 	site: 'https://blog.torontojs.com/',
 	base: '/',
-	trailingSlash: 'never',
+	trailingSlash: 'always',
 	compressHTML: true,
 	build: {
 		format: 'directory'

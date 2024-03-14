@@ -1,40 +1,38 @@
 ---
-// library imports
-import { Icon } from "astro-icon/components";
+// Library imports
+import { Icon } from 'astro-icon/components';
 
-// component imports
-import Link from "./Link.astro";
+// Component imports
+import Link from './Link.astro';
 
-// data imports
-import navData from "../data/navData";
+// Data imports
+import navData from '../data/navData';
 
-// stylesheet import
-import "../styles/global.css";
+// Stylesheet import
+import '../styles/global.css';
 ---
 
 <nav aria-label="Primary">
-  <div class="navbar">
-    <a href="/" class="logomark" aria-label="Go home">
-      <!-- tjs icon being rendered into the navbar -->
-      <Icon name="tjs" width={80} height={80} class="rounded" />
-    </a>
-    <ul>
-      {
-        navData.map((item) => (
-          <Link
-            text={item.name}
-            href={item.path}
-            style="primary"
-            isFilled={true}
-            data-navLink
-          />
-        ))
-      }
-    </ul>
-  </div>
+	<div class="navbar">
+		<a href="/" class="logomark" aria-label="Go home">
+			<!-- TJS icon being rendered into the navbar -->
+			<Icon name="tjs" width={80} height={80} class="rounded" />
+		</a>
+		<ul>
+			{navData.map((item) => (
+				<Link
+					text={item.name}
+					href={item.path}
+					actionType="primary"
+					isFilled={true}
+					data-navLink
+				/>
+			))}
+		</ul>
+	</div>
 </nav>
 
-<!-- js files can still be imported separately from the js import part at the top! they can also be imported using the script tag like in regular html :) -->
+<!-- Js files can still be imported separately from the js import part at the top! they can also be imported using the script tag like in regular html :) -->
 <script>
-  import "../js/nav.js";
+	import "../js/nav.js";
 </script>

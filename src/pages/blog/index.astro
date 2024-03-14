@@ -1,12 +1,14 @@
 ---
-// component imports
-import MainLayout from "../../layouts/MainLayout.astro";
-import PostCard from "../../components/PostCard.astro";
+// Component imports
+import PostCard from '../../components/PostCard.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
-// top level await because the top part is wrapped in an async function
-const allPosts = await Astro.glob("./*.md");
+// Top level await because the top part is wrapped in an async function
+const allPosts = await Astro.glob('./*.md');
 ---
 
 <MainLayout title="My Blog">
-  {allPosts.map((post) => <PostCard {post} />)}
+	{allPosts.map((post) => (
+		<PostCard post={post} />
+	))}
 </MainLayout>

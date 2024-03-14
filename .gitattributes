@@ -1,0 +1,132 @@
+## GITATTRIBUTES FOR WEB PROJECTS
+#
+# These settings are for any web project.
+#
+# Details per file setting:
+#   text    These files should be normalized (i.e. convert CRLF to LF).
+#   binary  These files are binary and should be left untouched.
+#
+# Note that binary is a macro for -text -diff.
+######################################################################
+
+# Auto detect
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*                 text=auto
+
+# Text files where line endings should be preserved
+*.patch    -text
+
+#
+# Exclude files from exporting
+#
+
+.gitattributes export-ignore
+.gitignore     export-ignore
+.gitkeep       export-ignore
+
+# Source code
+*.bash            text eol=lf
+*.css             text diff=css
+*.htm             text diff=html
+*.html            text diff=html
+*.js              text
+*.mjs             text
+*.cjs             text
+*.json            text
+*.jsx             text
+*.ps1             text eol=crlf
+*.sh              text eol=lf
+.husky/*          text eol=lf
+*.ts              text
+*.tsx             text
+*.xml             text
+*.xhtml           text diff=html
+
+# Docker
+Dockerfile        text
+
+# Documentation
+*.markdown        text diff=markdown
+*.md              text diff=markdown
+*.mdwn            text diff=markdown
+*.mdown           text diff=markdown
+*.mkd             text diff=markdown
+*.mkdn            text diff=markdown
+*.mdtxt           text
+*.mdtext          text
+*.mdx      text diff=markdown
+*.txt             text
+AUTHORS           text
+CHANGELOG         text
+CHANGES           text
+CONTRIBUTING      text
+COPYING           text
+copyright         text
+*COPYRIGHT*       text
+INSTALL           text
+license           text
+LICENSE           text
+NEWS              text
+readme            text
+*README*          text
+TODO              text
+
+
+# Configs
+*.astro           text
+*.cnf             text
+*.conf            text
+*.config          text
+.env              text
+.gitattributes    text
+.gitconfig        text
+*.lock            text -diff
+package.json      text eol=lf
+package-lock.json text eol=lf -diff
+*.yaml            text
+*.yml             text
+# Fixes syntax highlighting on GitHub to allow comments
+tsconfig.json     linguist-language=JSON-with-Comments
+
+# Graphics
+*.gif             binary
+*.ico             binary
+*.jng             binary
+*.jp2             binary
+*.jpg             binary
+*.jpeg            binary
+*.jpx             binary
+*.jxr             binary
+*.png             binary
+# SVG treated as an asset (binary) by default.
+*.svg             text
+*.webp            binary
+
+# Audio
+*.m4a             binary
+*.mp3             binary
+*.ogg             binary
+
+# Video
+*.m4v             binary
+*.mov             binary
+*.mp4             binary
+*.mpeg            binary
+*.mpg             binary
+*.ogv             binary
+*.webm            binary
+
+# Fonts
+*.woff            binary
+*.woff2           binary
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc             text
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore         text
+
+# Prevents massive diffs from built files
+dist/*            binary

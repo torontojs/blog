@@ -1,0 +1,7 @@
+[core]
+	autocrlf = false
+	safecrlf = false
+	eol = lf
+	protectNTFS = true
+	protectHFS = true
+	ignoreCase = false

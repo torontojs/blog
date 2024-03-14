@@ -2,20 +2,44 @@
 
 ## Pre-requisites
 
-- [Node.js](https://nodejs.org/en/download/)
-- [npm](https://www.npmjs.com/get-npm)
+- [Node.js](https://nodejs.org/en/download/) - The JavaScript runtime that runs the project
+- [npm](https://www.npmjs.com/get-npm) - To run the commands and install the dependencies
+- [`volta`](https://volta.sh/) - (**OPTIONAL**) to manage Node.js versions
+- [mkcert](https://github.com/FiloSottile/mkcert) - To generate SSL certificates for local development
 
 ## Getting Started
 
-You will need to generate a certificate to run the local server. To do so, you can use [mkcert](https://github.com/FiloSottile/mkcert) and follow the steps below:
+### (**OPTIONAL**) Install `volta`
+
+`volta` is a tool to manage Node.js versions. It's optional, but it's a good tool to have if you work with multiple Node.js projects. You can skip this step if you want to use your system's Node.js version and don't mind about node versions. With `volta`, you don't need to install node.js separately as it will keep track of the versions for you.
+
+To install `volta` on Linux or Mac, run the following command:
+
+```shell
+curl https://get.volta.sh | bash
+```
+
+On Windows, you can run the following command:
+
+```shell
+winget install --id Volta.Volta
+```
+
+After installing, you will need to restart your terminal or open a new terminal window to use `volta`.
+
+Now, when you run the project, `volta` will automatically install the correct version of Node.js for the project.
 
 ### Install mkcert
 
-Install `mkcert` for your operating system, following the instructions on the [mkcert GitHub page](https://github.com/FiloSottile/mkcert?tab=readme-ov-file#installation). On Windows 10+ you can use [`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget/) instead with the command below:
+You will need to generate a certificate to run the local server. To do so, you can use [mkcert](https://github.com/FiloSottile/mkcert).
+
+First, install `mkcert` for your operating system, following the instructions on the [mkcert GitHub page](https://github.com/FiloSottile/mkcert?tab=readme-ov-file#installation). On Windows 10+ you can use [`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget/) instead with the command below:
 
 ```shell
 winget install --id FiloSottile.mkcert
 ```
+
+After installing `mkcert`, you will need to restart your terminal or open a new terminal window to use `mkcert`.
 
 ### Install root certificate
 

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+
+import AuthorCard from '../../components/AuthorCard/index.astro';
+import PageHeader from '../../components/PageHeader/index.astro';
+import BaseLayout from '../../layouts/Base.astro';
+
+const authors = await getCollection('authors');
+
+const BLOG_URL = Astro.site?.href;
+
+---
+<BaseLayout
+	htmlTitle={['Authors', 'Toronto JS Blog']}
+	title="Toronto JS Blog Authors"
+	description="Toronto JS Blog Authors"
+	url={`${BLOG_URL}authors`}
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+	hasFeed={true}
+	pageSchema="ItemList"
+>
+	<meta itemprop="name" content="Toronto JS Blog Authors" />
+	<link itemprop="itemListOrder" href="https://schema.org/ItemListUnordered" />
+	<meta itemprop="numberOfItems" content={authors.length.toString()} />
+
+	<PageHeader slot="header">
+		Toronto JS Blog Authors
+	</PageHeader>
+
+
+	<div id="contents">
+		<ul id="author-list">
+			{authors.map(({ slug }) => (
+				<li itemprop="itemListElement">
+					<AuthorCard
+						author={slug}
+						url={`${BLOG_URL}authors/${slug}`}
+					/>
+				</li>
+			))}
+		</ul>
+	</div>
+</BaseLayout>

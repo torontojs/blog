@@ -1,0 +1,40 @@
+---
+import PageHeader from '../../components/PageHeader/index.astro';
+import BaseLayout from '../../layouts/Base.astro';
+
+import { listTags } from '../../utils/post';
+
+const BLOG_URL = Astro.site?.href;
+
+const tags = await listTags();
+---
+<BaseLayout
+	htmlTitle={['Tags', 'Toronto JS Blog']}
+	title="Toronto JS Blog Tags"
+	description="Toronto JS Blog Tags"
+	url={`${BLOG_URL}tags`}
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+	hasFeed={true}
+	pageSchema="ItemList"
+>
+	<meta itemprop="name" content="Toronto JS Blog Tags" />
+	<link itemprop="itemListOrder" href="https://schema.org/ItemListUnordered" />
+	<meta itemprop="numberOfItems" content={tags.length.toString()} />
+
+	<PageHeader slot="header">
+		Toronto JS Blog Tags
+	</PageHeader>
+
+
+	<div id="contents">
+		<ul id="tag-list">
+			{tags.map((tag) => (
+				<li class="tag">
+					<a href={`${BLOG_URL}tags/${tag}`} itemprop="url">
+						<span itemprop="itemListElement">{tag}</span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</BaseLayout>

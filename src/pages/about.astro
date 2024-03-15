@@ -1,21 +1,35 @@
 ---
-// Component import
-import Link from '../components/Link.astro';
-import MainLayout from '../layouts/MainLayout.astro';
----
+import SiteNav from '../components/SiteNav/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from '../layouts/Base.astro';
 
-<!-- TODO: restructure image import to be its own component like how its happening in the PostHeader component for each blog post, rather than using the img html tag -->
-<MainLayout title="about" description="my about page">
-	<section class="container about" aria-label="About TorontoJS">
-		<img src="/images/torontojs-logo.png" alt="TorontoJS Logo" width={200} height={330} />
-		<div class="content">
-			<h1 class="h1">Our Blog</h1>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-				Dignissimos mollitia, architecto beatae hic repellat quidem vero labore numquam veniam tempore deserunt modi earum sunt assumenda, id voluptates molestias.
-				Itaque harum doloremque atque voluptas nobis ex esse natus eos consequatur dolores?
-			</p>
-			<Link href="mailto:" actionType="primary" text="Contact Us!" />
-		</div>
-	</section>
-</MainLayout>
+const BLOG_URL = Astro.site?.href;
+
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.png';
+
+---
+<BaseLayout
+	htmlTitle={['Offline', 'Toronto JS Blog']}
+	title="Offline Page"
+	url={`${BLOG_URL}404`}
+	description="Offline page for the Toronto JS blog. If you are offline, you can still navigate the site, but some content might not be available."
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+>
+	<SkipToContent slot="header" />
+	<header slot="header">
+		<SiteNav />
+		<h1>Our Blog</h1>
+	</header>
+
+	<Image src={logo} alt="Toronto JS Logo" />
+
+	<div id="contents">
+		<p>Welpm this is awkward!</p>
+		<p>We seem to have misplaced something</p>
+
+		<p>
+			<a href={BLOG_URL}>Go back to the blog home</a>
+		</p>
+	</div>
+</BaseLayout>

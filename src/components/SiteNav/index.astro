@@ -1,0 +1,35 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import './styles.css';
+
+const BLOG_URL = Astro.site?.href;
+---
+<nav id="site-nav" aria-label="Primary navigation">
+	<ul>
+		<li>
+			<a href={BLOG_URL}>
+				<Icon name="uil:home-alt" title="An icon of a house." />
+				Blog Home
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}about`}>
+				<Icon name="uil:info-circle" title="An icon of a person." />
+				About
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}accessibility`}>
+				<Icon name="uil:accessible-icon-alt" title="An icon of a person on a wheelchair." />
+				Accessibility
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}license`}>
+				<Icon name="uil:award-alt" title="An icon of a ribbon." />
+				License
+			</a>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType, PaginateFunction } from 'astro';
+
+import BlogPostsLayout from '../../layouts/BlogPosts.astro';
+
+
+import { listPostPagesByYear, MAX_POSTS_PER_PAGE } from '../../utils/post.ts';
+
+// eslint-disable-next-line @typescript-eslint/no-use-before-define
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+export const getStaticPaths = (async ({ paginate }: { paginate: PaginateFunction }) => {
+	const postsList = await listPostPagesByYear();
+
+	return Object.entries(postsList).flatMap(([yearKey, yearPosts]) => paginate(yearPosts, {
+		params: {
+			year: yearKey
+		},
+		pageSize: MAX_POSTS_PER_PAGE
+	}));
+}) satisfies GetStaticPaths;
+
+const {
+	data: posts,
+	url,
+	currentPage, lastPage,
+	start, end, total, size
+} = Astro.props.page;
+const { year } = Astro.params;
+
+const BLOG_URL = Astro.site?.href ?? '';
+---
+<BlogPostsLayout
+	posts={posts}
+	title={`Posts from ${year}`}
+	currentUrl={url.current}
+	currentPage={currentPage}
+	lastPage={lastPage}
+	prevUrl={url.prev}
+	nextUrl={url.next}
+	baseUrl={`${BLOG_URL}${year}`}
+	start={start}
+	end={end}
+	total={total}
+	size={size}
+>
+	<Fragment slot="header">
+		{`Posts from ${year}`}
+	</Fragment>
+</BlogPostsLayout>

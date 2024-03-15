@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torontojs.github.io/blog/sitemap-index.xml

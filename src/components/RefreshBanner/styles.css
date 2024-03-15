@@ -1,0 +1,48 @@
+#pwa-toast {
+	visibility: hidden;
+	position: fixed;
+	display: flex;
+	gap: var(--spacing-medium);
+	align-items: center;
+	justify-content: space-between;
+
+	width: clamp(var(--min-width), 100%, var(--medium-width));
+	inset-inline: 0;
+	inset-block-end: var(--spacing-small);
+	margin-inline: auto;
+	padding: var(--spacing-medium) var(--spacing-large);
+
+	z-index: 1;
+}
+
+#pwa-toast:is([data-offline], [data-refresh]) {
+	visibility: visible;
+}
+
+#pwa-toast div {
+	flex-basis: min-content;
+	flex-grow: 1;
+}
+
+#pwa-toast button {
+	display: none;
+	place-items: center;
+	padding: var(--spacing-small);
+	width: var(--button-size);
+	height: var(--button-size);
+	cursor: pointer;
+}
+
+#pwa-toast button svg {
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+#pwa-toast[data-offline] #pwa-close {
+	display: grid;
+}
+
+#pwa-toast[data-refresh] #pwa-refresh {
+	display: grid;
+}

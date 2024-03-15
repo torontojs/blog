@@ -1,0 +1,33 @@
+:root {
+	/* Sizes */
+	--body-text: 20px;
+	--small-text: 0.75rem;
+
+	--min-width: 5rem;
+	--medium-width: 30rem;
+	--max-width: 76rem;
+
+	--iframe-size: var(--min-width);
+	--button-size: 2.5rem;
+
+	--avatar-size: calc(var(--medium-width) * 0.45);
+	--avatar-small-size: var(--min-width);
+	--avatar-size-mini: calc(var(--avatar-size) * 0.6);
+
+	/* Spacing */
+	--spacing-large: 1rem;
+	--spacing-medium: 0.5rem;
+	--spacing-small: 0.2rem;
+
+	/* Theme colors */
+	--theme-color: #ee2e24;
+
+	color-scheme: dark light;
+	accent-color: var(--theme-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+	}
+}

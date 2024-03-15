@@ -1,0 +1,42 @@
+.author-card {
+	display: grid;
+	padding-inline: var(--spacing-large);
+	grid-template-columns: 1fr auto;
+	grid-template-rows: 1fr auto;
+	gap: var(--spacing-large);
+	place-items: center;
+	grid-template-areas:
+		"avatar name"
+		"avatar bio";
+	margin: var(--spacing-large) 0;
+}
+
+.author-card .author-name * { margin: 0; }
+
+.author-card .author-picture {
+	grid-area: avatar;
+	align-self: start;
+}
+
+.author-card .author-name {
+	grid-area: name;
+	justify-self: start;
+}
+.author-card .author-bio { grid-area: bio; }
+
+@media (max-width: 768px) {
+	.author-card {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto auto;
+		grid-template-areas:
+			"avatar"
+			"name"
+			"bio";
+	}
+
+	.author-card .author-picture {
+		place-self: center center;
+	}
+
+	.author-card .author-name { justify-self: center; }
+}

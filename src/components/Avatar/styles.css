@@ -1,0 +1,21 @@
+.user-avatar {
+	--image-size: var(--avatar-size);
+
+	display: block;
+
+	width: var(--image-size);
+	height: var(--image-size);
+	border-radius: 100vmax;
+	overflow: hidden;
+}
+
+.user-avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+@media (max-width: 768px) {
+	.user-avatar { --image-size: var(--avatar-small-size); }
+}

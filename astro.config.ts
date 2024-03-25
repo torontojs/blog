@@ -12,9 +12,10 @@ const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest
 const mode = process.env['NODE_ENV'] === 'production' ? 'production' : 'development';
 
 export default defineConfig({
-	site: 'https://blog.torontojs.com/',
+	// TODO: update to final URL
+	site: 'https://torontojs.github.io/blog/',
 	base: '/',
-	trailingSlash: 'always',
+	trailingSlash: 'ignore',
 	compressHTML: true,
 	build: {
 		format: 'directory'
@@ -48,7 +49,7 @@ export default defineConfig({
 		astroPWA({
 			registerType: 'prompt',
 			minify: true,
-			includeAssets: ['/icons/favicon.svg'],
+			includeAssets: ['/icons/icon.svg'],
 			manifest,
 			workbox: {
 				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
@@ -71,7 +72,7 @@ export default defineConfig({
 			lastmod: new Date()
 		}),
 		astroIcon({
-			iconDir: 'src/icons'
+			iconDir: 'src/assets/icons'
 		})
 	]
 });

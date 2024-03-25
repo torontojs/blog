@@ -1,0 +1,18 @@
+#skip-to-main {
+	position: absolute;
+	inset-inline: var(--spacing-medium);
+	inset-block-start: -100%;
+	text-align: center;
+	padding: var(--spacing-medium);
+	z-index: calc(infinity * 1);
+	display: block;
+}
+
+#skip-to-main:focus {
+	inset-block-start: var(--spacing-medium);
+}
+
+:target {
+	scroll-snap-align: start;
+	scroll-margin: var(--spacing-large);
+}

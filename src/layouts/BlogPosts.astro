@@ -1,0 +1,83 @@
+---
+import type { Post } from '../utils/post';
+
+import PageHeader from '../components/PageHeader/index.astro';
+import Pagination from '../components/Pagination/index.astro';
+import PostCard from '../components/PostCard/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from '../layouts/Base.astro';
+
+
+interface Props {
+	posts: Post[],
+	title?: string,
+	baseUrl: string,
+	currentUrl: string,
+	currentPage: number,
+	lastPage: number,
+	prevUrl?: string,
+	nextUrl?: string,
+	start: number,
+	end: number,
+	total: number,
+	size: number
+}
+
+const BLOG_URL = Astro.site?.href;
+
+const {
+	title = '',
+	posts,
+	baseUrl, currentUrl,
+	currentPage, lastPage,
+	prevUrl, nextUrl,
+	start, end, total, size
+} = Astro.props;
+---
+<BaseLayout
+	htmlTitle={[title, 'Toronto JS Blog'].filter(Boolean)}
+	title={title ?? 'Toronto JS Blog'}
+	description="TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in the GTA area."
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+	url={currentUrl}
+	hasFeed={true}
+	pageSchema="Blog"
+>
+	<SkipToContent
+		slot="header"
+		target="posts-list"
+	/>
+	<PageHeader slot="header">
+		<slot name="header"></slot>
+	</PageHeader>
+
+	<div id="posts-list">
+		{posts.map((post) => (
+			<PostCard
+				url={`${BLOG_URL}${post.url}`}
+				title={post.data.title}
+				createdAt={post.data.createdAt.toISOString()}
+				image={post.data.image}
+				imageAlt={post.data.imageAlt}
+				tags={post.data.tags}
+			>
+				<span slot="title">{post.data.title}</span>
+				{post.data.summary}
+			</PostCard>
+		))}
+	</div>
+
+	<footer slot="footer">
+		<Pagination
+			baseUrl={baseUrl}
+			currentPage={currentPage}
+			lastPage={lastPage}
+			prevUrl={prevUrl}
+			nextUrl={nextUrl}
+			start={start}
+			end={end}
+			total={total}
+			size={size}
+		/>
+	</footer>
+</BaseLayout>

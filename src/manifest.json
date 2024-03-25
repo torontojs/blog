@@ -84,19 +84,19 @@
 			"url": "/?utm_source=pwa&utm_medium=shortcut&utm_campaign=blog",
 			"icons": [
 				{
-					"src": "/icons/shortcuts/blog.svg",
+					"src": "/icons/icon.svg",
 					"sizes": "any",
 					"type": "image/svg+xml",
 					"purpose": "any"
 				},
 				{
-					"src": "/icons/shortcuts/blog-512x512.png",
+					"src": "/icons/icon-512x512.png",
 					"sizes": "512x512",
 					"type": "image/png",
 					"purpose": "any"
 				},
 				{
-					"src": "/icons/shortcuts/blog-96x96.png",
+					"src": "/icons/icons/icon-96x96.png",
 					"sizes": "96x96",
 					"type": "image/png",
 					"purpose": "any"

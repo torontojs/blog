@@ -1,0 +1,63 @@
+---
+import '../assets/css/base.css';
+
+import HtmlHead from '../components/HtmlHead.astro';
+import RefreshBanner from '../components/RefreshBanner/index.astro';
+
+interface Props {
+	title: string,
+	htmlTitle?: string[],
+	url: string,
+	description: string,
+	author?: string,
+	tags?: string[],
+	image?: string,
+	imageAlt?: string,
+	createdAt?: Date,
+	updatedAt?: Date,
+	hasFeed?: boolean,
+	pageSchema?: string
+}
+
+const {
+	title,
+	htmlTitle,
+	description,
+	author,
+	url,
+	tags,
+	image,
+	imageAlt,
+	createdAt,
+	updatedAt,
+	hasFeed = false,
+	pageSchema = 'WebPage'
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype={`https://schema.org/${pageSchema}`}>
+	<HtmlHead
+		htmlTitle={htmlTitle}
+		title={title}
+		url={url}
+		description={description}
+		author={author}
+		tags={tags}
+		image={image}
+		imageAlt={imageAlt}
+		createdAt={createdAt}
+		updatedAt={updatedAt}
+		hasFeed={hasFeed}
+	/>
+	<body class:list={[{ 'h-entry': hasFeed }]}>
+		<slot name="header"></slot>
+		<main>
+			<slot></slot>
+		</main>
+
+		<footer slot="footer">
+			<slot name="footer"></slot>
+			<RefreshBanner />
+		</footer>
+	</body>
+</html>

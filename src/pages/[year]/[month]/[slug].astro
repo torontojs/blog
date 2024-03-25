@@ -1,0 +1,52 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+
+import BlogPostLayout from '../../../layouts/BlogPost.astro';
+import { listAllPosts } from '../../../utils/post.ts';
+
+// eslint-disable-next-line @typescript-eslint/no-use-before-define
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+export const getStaticPaths = (async () => (await listAllPosts()).map((post) => ({
+		params: {
+			year: post.year,
+			month: post.month,
+			day: post.day,
+			slug: post.slug
+		},
+		props: post
+	}))) satisfies GetStaticPaths;
+
+const {
+	render,
+	url, data: {
+		title, summary,
+		image, imageAlt,
+		createdAt, updatedAt,
+		updates,
+		tags,
+		author
+	},
+	readingTime, letterCount, wordCount,
+	relatedPosts
+} = Astro.props;
+const { Content } = await render();
+---
+<BlogPostLayout
+	url={url}
+	title={title}
+	summary={summary}
+	author={author}
+	image={image}
+	imageAlt={imageAlt}
+	createdAt={createdAt}
+	updatedAt={updatedAt}
+	updates={updates}
+	tags={tags}
+	readingTime={readingTime}
+	wordCount={wordCount}
+	letterCount={letterCount}
+	relatedPosts={relatedPosts}
+>
+	<Content />
+</BlogPostLayout>

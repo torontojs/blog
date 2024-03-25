@@ -1,0 +1,55 @@
+---
+import PageHeader from '../components/PageHeader/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from './Base.astro';
+
+interface Props {
+	htmlTitle?: string[],
+	title: string,
+	url: string,
+	description: string,
+	tags?: string[],
+	image?: string,
+	imageAlt?: string,
+	createdAt?: Date,
+	updatedAt?: Date,
+	hasFeed?: boolean,
+	pageSchema?: string
+}
+
+const {
+	htmlTitle, title,
+	description,
+	url,
+	tags,
+	image, imageAlt,
+	createdAt, updatedAt,
+	hasFeed,
+	pageSchema
+} = Astro.props;
+---
+<BaseLayout
+	htmlTitle={htmlTitle}
+	title={title}
+	description={description}
+	url={url}
+	tags={tags}
+	image={image}
+	imageAlt={imageAlt}
+	createdAt={createdAt}
+	updatedAt={updatedAt}
+	hasFeed={hasFeed}
+	pageSchema={pageSchema}
+>
+
+	<SkipToContent slot="header" />
+	<PageHeader slot="header">
+		<slot name="header"></slot>
+	</PageHeader>
+
+	<div id="contents">
+		<slot></slot>
+	</div>
+
+	<slot name="footer" slot="footer"></slot>
+</BaseLayout>

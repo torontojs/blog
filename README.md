@@ -6,7 +6,7 @@
 - [npm](https://www.npmjs.com/get-npm)
 - [mkcert](https://github.com/FiloSottile/mkcert)
 
-## Running the project
+## Project setup
 
 Check detailed documentation on the project setup and how to get it running in [`src/content/docs/setup.md`](./src/content/docs/setup.md).
 
@@ -19,9 +19,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm install` | Installs all dependencies |
 | `npm start` | Starts local dev server at [`https://localhost:3000/`](https://localhost:3000/) |
 | `npm run build` | Build your production site to `./dist/` |
-| `npm run preview` | Preview your build locally, before deploying |
-| `npm run astro ...` | Run CLI commands like `astro add`, `astro check` |
 | `npm run lint` | Checks the project for errors and fix most of them |
+
+Check detailed documentation on the commands available in [`src/content/docs/commands.md`](./src/content/docs/commands.md).
 
 
 ## Project Structure

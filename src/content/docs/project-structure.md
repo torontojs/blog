@@ -169,7 +169,9 @@ Basically, everything in the square brackets will be replaced and have an html f
 
 ## Content and Schemas
 
-Contents are the dynamic part that feeds and build all the blog. It is based on Astro's [Content Collections](https://docs.astro.build/en/guides/content-collections/) and contain all the source markdown files for blog posts and authors. Those markdown files will be listed and each one of those will be used as the content to be inserted into the dynamic pages.
+Contents are the dynamic part that feeds and build all the blog and schemas are the validation for metadata for those collections.
+
+It is based on Astro's [Content Collections](https://docs.astro.build/en/guides/content-collections/) and contain all the source markdown files for blog posts and authors. Those markdown files will be listed and each one of those will be used as the content to be inserted into the dynamic pages.
 
 For example, if we have the following list of markdown files, each representing a blog post:
 

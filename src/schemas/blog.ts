@@ -4,8 +4,8 @@ export const blogSchema = ({ image }: SchemaContext) => zod.object({
 	title: zod.string().describe('The post title that will be displayed as the top of the post page or as the heading on lists.'),
 	summary: zod.string().describe('A summary for the post that will show in list pages. Should be a short paragraph on what the post is about. Accepts markdown.'),
 
-	createdAt: zod.date().describe('The post\'s creation date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
-	updatedAt: zod.date().optional().describe('The post\'s last update date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
+	createdAt: zod.coerce.date().describe('The post\'s creation date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
+	updatedAt: zod.coerce.date().optional().describe('The post\'s last update date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
 
 	author: zod.string().describe('The slug for the author of this post from the "authors" collection.'),
 
@@ -18,7 +18,7 @@ export const blogSchema = ({ image }: SchemaContext) => zod.object({
 	relatedPosts: zod.array(zod.string()).optional().describe('Slugs for other posts related to this one.'),
 
 	updates: zod.array(zod.object({
-		date: zod.date().describe('The date of the update. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
+		date: zod.coerce.date().describe('The date of the update. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
 		changes: zod.string().describe('A summary of the changes in this update.')
 	})).optional().describe('The list of updates this post had. It is a list of objects with the keys "date" and "changes".')
 });

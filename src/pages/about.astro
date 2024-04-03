@@ -2,6 +2,8 @@
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
+import '../styles/about.css';
+import '../styles/global.css';
 
 const BLOG_URL = Astro.site?.href;
 
@@ -19,17 +21,22 @@ import logo from '../assets/images/logo.png';
 	<SkipToContent slot="header" />
 	<header slot="header">
 		<SiteNav />
-		<h1>Our Blog</h1>
+		<h1 class="centerElements">TorontoJS Blog</h1>
 	</header>
 
-	<Image src={logo} alt="Toronto JS Logo" />
-
+	<main>
+		<div class="centerElements">
+	<Image src={logo} alt="Toronto JS Logo" class="resizeImage" />
+		</div>
 	<div id="contents">
-		<p>Welpm this is awkward!</p>
-		<p>We seem to have misplaced something</p>
+		<p class="font-bold text-mainRed">
+			You may be asking.....what is all of this? We aren't really sure frankly, if we are being honest with you...
 
-		<p>
-			<a href={BLOG_URL}>Go back to the blog home</a>
-		</p>
+			What we do know though, is that this is a place for ideas, words, creations, community and hopefully......expansion, building, friendship, structure!
+  </p>
+		<footer class="flex place-content-center p-5">
+			<a href={BLOG_URL} class="buttonStyle text-xs content-center text-black font-bold p-2.5">Home</a>
+		</footer>
 	</div>
+	</main>
 </BaseLayout>

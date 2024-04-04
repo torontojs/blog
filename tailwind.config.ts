@@ -12,7 +12,7 @@ const config: Config = {
 			mediumGrey: '#B9B4AD',
 			lightGrey: '#D3D3E3',
 			black: '#120606',
-			white: '#fffff'
+			white: '#ffffff'
 		},
 		fontFamily: {
 			sans: ['Roboto', 'sans-serif'],

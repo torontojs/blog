@@ -3,28 +3,28 @@ import { Icon } from 'astro-icon/components';
 
 const BLOG_URL = Astro.site?.href;
 ---
-<nav id="site-nav" class="w-full p-2 bg-mainRed font-bold" aria-label="Primary navigation">
-	<ul class="flex gap-2">
+<nav id="site-nav" class="w-full p-2 bg-mainRed font-bold text-white" aria-label="Primary navigation">
+	<ul class="flex gap-2 justify-center">
 		<li>
-			<a href={BLOG_URL}>
+			<a href={BLOG_URL} class="inline-flex items-center gap-2 break-words">
 				<Icon name="uil:home-alt" title="An icon of a house." />
 				Blog Home
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}about`}>
+			<a href={`${BLOG_URL}about`} class="inline-flex items-center gap-2 break-words">
 				<Icon name="uil:info-circle" title="An icon of a person." />
 				About
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}accessibility`}>
+			<a href={`${BLOG_URL}accessibility`} class="inline-flex items-center gap-2 break-words">
 				<Icon name="uil:accessible-icon-alt" title="An icon of a person on a wheelchair." />
 				Accessibility
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}license`}>
+			<a href={`${BLOG_URL}license`} class="inline-flex items-center gap-2 break-words">
 				<Icon name="uil:award-alt" title="An icon of a ribbon." />
 				License
 			</a>

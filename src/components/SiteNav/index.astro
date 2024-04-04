@@ -1,12 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import './styles.css';
-
 const BLOG_URL = Astro.site?.href;
 ---
-<nav id="site-nav" aria-label="Primary navigation">
-	<ul>
+<nav id="site-nav" class="w-full p-2 bg-mainRed font-bold" aria-label="Primary navigation">
+	<ul class="flex gap-2">
 		<li>
 			<a href={BLOG_URL}>
 				<Icon name="uil:home-alt" title="An icon of a house." />

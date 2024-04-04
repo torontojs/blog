@@ -1,6 +1,4 @@
 ---
-import '../assets/css/base.css';
-
 import HtmlHead from '../components/HtmlHead.astro';
 import RefreshBanner from '../components/RefreshBanner/index.astro';
 
@@ -49,9 +47,9 @@ const {
 		updatedAt={updatedAt}
 		hasFeed={hasFeed}
 	/>
-	<body class:list={[{ 'h-entry': hasFeed }]}>
+	<body class:list={[{ 'h-entry': hasFeed, 'font-sans': true }]}>
 		<slot name="header"></slot>
-		<main>
+		<main class="w-auto mx-auto px-4 desktop:px-9">
 			<slot></slot>
 		</main>
 

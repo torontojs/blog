@@ -25,6 +25,13 @@ export default {
       '3xl': '1.953rem',
       '4xl': '2.441rem',
       '5xl': '3.052rem'
+    },
+    screens: {
+      mobile: '640px',
+      tablet: '768px',
+      desktop: '1024px',
+      'desktop-xl': '1280px',
+      'desktop-2xl': '1536px'
     }
   },
   plugins: []

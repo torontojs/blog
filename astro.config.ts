@@ -10,8 +10,11 @@ const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest
 }));
 const mode = process.env['NODE_ENV'] === 'production' ? 'production' : 'development';
 
+// https://astro.build/config
 export default defineConfig({
-  devToolbar: { enabled: false },
+  devToolbar: {
+    enabled: false
+  },
   site: 'https://torontojs.github.io/blog/',
   base: '/',
   trailingSlash: 'ignore',

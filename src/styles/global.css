@@ -127,8 +127,8 @@ h6 {
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		/* --bkg: var(--bkg--dark);
-		--txt: var(--txt--dark); */
+		--bkg: var(--bkg--dark);
+		--txt: var(--txt--dark);
 		--accent: var(--accent--dark);
 		--muted: var(--muted--dark);
 		--_shadow-strength: 0.75;

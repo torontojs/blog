@@ -1,16 +1,16 @@
 ---
+import PageFooter from '../components/PageFooter/index.astro';
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
 import '../styles/about.css';
 import '../styles/global.css';
-
 const BLOG_URL = Astro.site?.href;
 
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.png';
-
 ---
+
 <BaseLayout
 	htmlTitle={['About', 'Toronto JS Blog']}
 	title="About Toronto JS Blog"
@@ -26,17 +26,17 @@ import logo from '../assets/images/logo.png';
 
 	<main>
 		<div class="centerElements">
-	<Image src={logo} alt="Toronto JS Logo" class="resizeImage" />
+			<Image src={logo} alt="Toronto JS Logo" class="resizeImage" />
 		</div>
-	<div id="contents">
-		<p class="font-bold text-mainRed">
-			You may be asking.....what is all of this? We aren't really sure frankly, if we are being honest with you...
-
-			What we do know though, is that this is a place for ideas, words, creations, community and hopefully......expansion, building, friendship, structure!
-  </p>
-		<footer class="flex place-content-center p-5">
-			<a href={BLOG_URL} class="buttonStyle text-xs content-center text-black font-bold p-2.5">Home</a>
-		</footer>
-	</div>
+		<div id="contents">
+			<p class="font-bold text-mainRed">
+				You may be asking.....what is all of this? We aren't really sure
+				frankly, if we are being honest with you... What we do know
+				though, is that this is a place for ideas, words, creations,
+				community and hopefully......expansion, building, friendship,
+				structure!
+			</p>
+		</div>
 	</main>
+	<PageFooter />
 </BaseLayout>

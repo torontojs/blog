@@ -75,6 +75,7 @@
 		"@commitlint/config-conventional": "^19.1.0",
 		"@iconify-json/brandico": "^1.1.8",
 		"@iconify-json/fa6-brands": "^1.1.18",
+		"@iconify-json/mdi": "^1.1.65",
 		"@iconify-json/uil": "^1.1.8",
 		"@markuplint/astro-parser": "^4.2.0",
 		"@stylistic/eslint-plugin": "^1.7.0",

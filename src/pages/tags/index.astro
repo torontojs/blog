@@ -1,4 +1,5 @@
 ---
+import PageFooter from '../../components/PageFooter/index.astro';
 import PageHeader from '../../components/PageHeader/index.astro';
 import BaseLayout from '../../layouts/Base.astro';
 
@@ -37,4 +38,7 @@ const tags = await listTags();
 			))}
 		</ul>
 	</div>
+	<PageFooter slot="footer">
+		Page Footer
+	</PageFooter>
 </BaseLayout>

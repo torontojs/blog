@@ -3,8 +3,6 @@ import { Picture } from 'astro:assets';
 
 import TagList from '../TagList/index.astro';
 
-import './styles.css';
-
 interface Props {
 	url: string,
 	title: string,
@@ -21,7 +19,26 @@ const BLOG_URL = Astro.site?.href;
 const IMAGE_WIDTHS = [256, 512, 768, image?.width ?? 1024];
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 ---
-<article class="post-card">
+<article
+	class:list={[
+		'post-card bg-gradient-to-t rounded-3xl p-4 hover:from-yellow to-transparent grid gap-2 shadow-md',
+		{
+			'grid-cols-[auto] desktop:grid-cols-[min-content_auto] grid-rows-[auto_auto_auto_auto_auto] desktop:grid-rows-[auto_1fr_auto_auto]': image,
+			'grid-cols-[auto] grid-rows-[auto_auto_auto]': !image
+		}
+	]}
+>
+
+	<header class:list={['col-start-1', { 'desktop:col-span-2': image }]}>
+		<h2 class="text-2xl font-light">
+			<a href={url}>
+				<slot name="title"></slot>
+			</a>
+		</h2>
+
+		<span class="text-sm"><time datetime={new Date(createdAt).toISOString()}>{formatter.format(new Date(createdAt))}</time></span>
+	</header>
+
 	{image && (
 		<Picture
 			src={image}
@@ -29,26 +46,17 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 			widths={IMAGE_WIDTHS}
 			sizes={`(max-width: 360px) 256px, (max-width: 720px) 512px, (max-width: 1280px) 768px, ${image.width}px`}
 			quality="high"
+			pictureAttributes={{ 'class': 'col-start-1 row-start-2 desktop:row-span-2 w-64 flex items-start justify-center' }}
 		/>
 	)}
 
-	<header>
-		<h2>
-			<a href={url}>
-				<slot name="title"></slot>
-			</a>
-		</h2>
-
-		<span><time datetime={new Date(createdAt).toISOString()}>{formatter.format(new Date(createdAt))}</time></span>
-	</header>
-
-	<div class="post-card-content">
+	<div class:list={['post-card-content row-start-3 desktop:row-start-2', { 'col-start-1 desktop:col-start-2': image }]}>
 		<slot></slot>
 	</div>
 
-	<a class="read-more-link" href={url}><span class="visually-hidden">({title}) </span>Read more...</a>
+	<a class:list={['read-more-link row-start-4 desktop:row-start-3', { 'col-start-1 desktop:col-start-2': image }]} href={url}><span class="sr-only">({title}) </span>Read more...</a>
 
-	<footer>
+	<footer class:list={['col-start-1 row-start-5 desktop:row-start-4', { 'desktop:col-span-2': image }]}>
 		{tags && tags.length > 0 && (
 			<TagList
 				tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}

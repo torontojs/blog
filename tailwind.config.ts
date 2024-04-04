@@ -12,7 +12,8 @@ const config: Config = {
 			mediumGrey: '#B9B4AD',
 			lightGrey: '#D3D3E3',
 			black: '#120606',
-			white: '#ffffff'
+			white: '#ffffff',
+			yellow: '#fff854'
 		},
 		fontFamily: {
 			sans: ['Roboto', 'sans-serif'],

@@ -51,7 +51,7 @@ const {
 		<slot name="header"></slot>
 	</PageHeader>
 
-	<div id="posts-list">
+	<div id="posts-list" class="space-y-8">
 		{posts.map((post) => (
 			<PostCard
 				url={`${BLOG_URL}${post.url}`}

@@ -1,0 +1,26 @@
+---
+import SiteNav from '../components/SiteNav/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from '../layouts/Base.astro';
+
+const BLOG_URL = Astro.site?.href;
+---
+
+
+<!-- i think eventually this will be the home page for the blog but right now it will be under /home, have a conversation with marco
+about this!  -->
+<BaseLayout
+	htmlTitle={['Home Page', 'Toronto JS Blog']}
+	title="Home Page"
+	url={`${BLOG_URL}404`}
+	description="Offline page for the Toronto JS blog. If you are offline, you can still navigate the site, but some content might not be available."
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+>
+	<SkipToContent slot="header" />
+	<header slot="header">
+		<SiteNav />
+	</header>
+
+	<div id="contents">
+	</div>
+</BaseLayout>

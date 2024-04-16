@@ -514,7 +514,7 @@ button:focus-visible {
 	gap: var(--space-xs);
 }
 
-header {
+/* header {
 	display: grid;
 	place-items: center;
 	grid-gap: var(--space-sm);
@@ -530,7 +530,7 @@ header .container {
 	text-align: center;
 	margin-top: var(--space-lg);
 	margin-bottom: var(--space-sm);
-}
+} */
 
 .post-content {
 	display: grid;

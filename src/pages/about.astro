@@ -1,10 +1,8 @@
 ---
-import PageFooter from '../components/PageFooter/index.astro';
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
 import '../styles/about.css';
-import '../styles/global.css';
 const BLOG_URL = Astro.site?.href;
 
 import { Image } from 'astro:assets';
@@ -23,8 +21,6 @@ import logo from '../assets/images/logo.png';
 		<SiteNav />
 		<h1 class="centerElements">TorontoJS Blog</h1>
 	</header>
-
-	<main>
 		<div class="centerElements">
 			<Image src={logo} alt="Toronto JS Logo" class="resizeImage" />
 		</div>
@@ -37,6 +33,4 @@ import logo from '../assets/images/logo.png';
 				structure!
 			</p>
 		</div>
-	</main>
-	<PageFooter />
 </BaseLayout>

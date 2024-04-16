@@ -1,6 +1,7 @@
 ---
 import HtmlHead from '../components/HtmlHead.astro';
 import RefreshBanner from '../components/RefreshBanner/index.astro';
+import SiteFooter from '../components/SiteFooter/index.astro';
 
 interface Props {
 	title: string,
@@ -53,9 +54,11 @@ const {
 			<slot></slot>
 		</main>
 
-		<footer slot="footer">
+		<SiteFooter />
+		<RefreshBanner />
+		<!-- <footer slot="footer">
 			<slot name="footer"></slot>
 			<RefreshBanner />
-		</footer>
+		</footer> -->
 	</body>
 </html>

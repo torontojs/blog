@@ -1,31 +1,30 @@
 ---
-import { Icon } from 'astro-icon/components';
-
+import { Image } from 'astro:assets';
+import logo from '../../assets/images/logo.png';
 const BLOG_URL = Astro.site?.href;
 ---
-<nav id="site-nav" class="w-full p-2 bg-mainRed font-bold text-white" aria-label="Primary navigation">
-	<ul class="flex gap-2 justify-center">
+<nav id="site-nav" class="p-2 bg-[#130E02] font-bold text-white w-[100%]" aria-label="Primary navigation">
+	<ul class="flex gap-2 justify-center items-center p-3">
 		<li>
-			<a href={BLOG_URL} class="inline-flex items-center gap-2 break-words">
-				<Icon name="uil:home-alt" title="An icon of a house." />
-				Blog Home
-			</a>
+			<Image src={logo} alt="Toronto Js Logo!" height={90} width={70} class="flex items-start" />
 		</li>
 		<li>
-			<a href={`${BLOG_URL}about`} class="inline-flex items-center gap-2 break-words">
-				<Icon name="uil:info-circle" title="An icon of a person." />
+			<a href={BLOG_URL} class="inline-flex items-center gap-4 break-words ml-3">
 				About
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}accessibility`} class="inline-flex items-center gap-2 break-words">
-				<Icon name="uil:accessible-icon-alt" title="An icon of a person on a wheelchair." />
+			<a href={`${BLOG_URL}about`} class="inline-flex items-center gap-4 break-words ml-3">
+				Blog
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}accessibility`} class="inline-flex items-center gap-4 break-words ml-3">
 				Accessibility
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}license`} class="inline-flex items-center gap-2 break-words">
-				<Icon name="uil:award-alt" title="An icon of a ribbon." />
+			<a href={`${BLOG_URL}license`} class="inline-flex items-center gap-4 break-words ml-3">
 				License
 			</a>
 		</li>

@@ -2,7 +2,6 @@
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
-
 const BLOG_URL = Astro.site?.href;
 ---
 
@@ -12,7 +11,7 @@ about this!  -->
 <BaseLayout
 	htmlTitle={['Home Page', 'Toronto JS Blog']}
 	title="Home Page"
-	url={`${BLOG_URL}404`}
+	url={BLOG_URL ?? ''}
 	description="Offline page for the Toronto JS blog. If you are offline, you can still navigate the site, but some content might not be available."
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 >

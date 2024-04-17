@@ -1,5 +1,6 @@
 ---
 import PageHeader from '../components/PageHeader/index.astro';
+import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from './Base.astro';
 
@@ -43,6 +44,7 @@ const {
 >
 
 	<SkipToContent slot="header" />
+	<SiteNav slot="header" />
 	<PageHeader slot="header">
 		<slot name="header"></slot>
 	</PageHeader>

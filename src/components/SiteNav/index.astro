@@ -3,18 +3,18 @@ import { Image } from 'astro:assets';
 import logo from '../../assets/images/logo.png';
 const BLOG_URL = Astro.site?.href;
 ---
-<nav id="site-nav" class="p-2 bg-[#130E02] font-bold text-white w-[100%]" aria-label="Primary navigation">
+<nav id="site-nav" class="p-2 bg-[#13110b] font-bold text-white w-[100%]" aria-label="Primary navigation">
 	<ul class="flex gap-2 justify-center items-center p-3">
 		<li>
 			<Image src={logo} alt="Toronto Js Logo!" height={90} width={70} class="flex items-start" />
 		</li>
 		<li>
-			<a href={BLOG_URL} class="inline-flex items-center gap-4 break-words ml-3">
+			<a href={`${BLOG_URL}about`} class="inline-flex items-center gap-4 break-words ml-3">
 				About
 			</a>
 		</li>
 		<li>
-			<a href={`${BLOG_URL}about`} class="inline-flex items-center gap-4 break-words ml-3">
+			<a href={`${BLOG_URL}blog`} class="inline-flex items-center gap-4 break-words ml-3">
 				Blog
 			</a>
 		</li>

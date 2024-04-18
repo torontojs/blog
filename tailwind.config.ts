@@ -5,15 +5,11 @@ const config: Config = {
 	theme: {
 		extend: {},
 		colors: {
-			darkRed: '#5F1513',
-			mainRed: '#EE3124',
-			lightRed: '#F8ADAB',
+			mainRed: '#EA4F4A',
 			darkGrey: '#9B9BA9',
 			mediumGrey: '#B9B4AD',
-			lightGrey: '#D3D3E3',
-			black: '#120606',
-			white: '#ffffff',
-			yellow: '#fff854'
+			black: '#130E02',
+			white: '#ffffff'
 		},
 		fontFamily: {
 			sans: ['Roboto', 'sans-serif'],

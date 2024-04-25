@@ -1,14 +1,17 @@
 ---
-
+	import { Image } from 'astro:assets';
+import cnTower from '../../assets/images/cnTowerMain.png';
 ---
 
-<main class="w-full h-screen bg-mainRed">
+
 	<div>
 		<h1>Welcome to the TorontoJS Blog!</h1>
 
-		<div class="bg-[rgb(255, 162, 111)] w-[50%] border-double "></div>
+		<div class="bg-white w-[50%] border-double ">
+			<Image src={cnTower} alt="line drawing of the cn tower" />
+		</div>
 	</div>
-</main>
+
 
 <!-- .intro-desc{
     background: rgb(255, 162, 111);

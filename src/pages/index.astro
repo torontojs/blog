@@ -5,10 +5,6 @@ import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
 const BLOG_URL = Astro.site?.href;
 ---
-
-
-<!-- i think eventually this will be the home page for the blog but right now it will be under /home, have a conversation with marco
-about this!  -->
 <BaseLayout
 	htmlTitle={['Home Page', 'Toronto JS Blog']}
 	title="Home Page"
@@ -23,6 +19,6 @@ about this!  -->
 
 	<HomeMain />
 
-	<div id="contents">
-	</div>
+	<!-- <div id="contents">
+	</div> -->
 </BaseLayout>

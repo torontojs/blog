@@ -1,0 +1,25 @@
+nav {
+	padding: .5rem;
+	--tw-bg-opacity: 1;
+    background-color: rgb(19 17 11 / var(--tw-bg-opacity));
+	font-weight: bold;
+	--tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity))
+
+}
+
+ul {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	padding: 0.75rem;
+}
+
+a {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+	overflow-wrap: break-word;
+	margin-left: 0.75rem
+}

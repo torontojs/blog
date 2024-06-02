@@ -1,0 +1,14 @@
+header {
+	width: auto;
+	margin: 1.25rem auto;
+	padding: 0 1rem;
+
+	@media (min-width: 1024px) {
+    .desktop\:px-9 {
+        padding-left: 2.25rem/* 36px */;
+        padding-right: 2.25rem/* 36px */;
+		font-size: 2rem;
+		font-weight: 300;
+    }
+}
+}

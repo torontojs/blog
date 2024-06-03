@@ -12,8 +12,7 @@ const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest
 const mode = process.env['NODE_ENV'] === 'production' ? 'production' : 'development';
 
 export default defineConfig({
-	// TODO: update to final URL
-	site: 'https://torontojs.github.io/blog/',
+	site: 'https://blog.torontojs.com/',
 	base: '/',
 	trailingSlash: 'ignore',
 	compressHTML: true,

@@ -61,6 +61,16 @@
 	// CSS
 	"css.format.enable": false,
 
+	// CSS Vars
+	"cssvar.files": [
+		"./node_modules/open-props/open-props.min.css",
+		"./src/**/*.css",
+	],
+	"cssvar.extensions": [
+		"css",
+		"astro"
+	],
+	
 	//TypeScript
 	"js/ts.implicitProjectConfig.checkJs": true,
 	"js/ts.implicitProjectConfig.target": "ESNext",

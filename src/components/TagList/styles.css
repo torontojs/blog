@@ -1,8 +1,10 @@
+.tag-list, .tag-list summary { background: none; }
+
 .tag-list ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: start;
-	gap: var(--spacing-medium);
+	gap: var(--size-2);
 	list-style-type: none;
 	padding: 0;
 }

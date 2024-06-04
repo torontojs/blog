@@ -3,7 +3,8 @@
 		"astro-build.astro-vscode",
 		"dbaeumer.vscode-eslint",
 		"yusukehirao.vscode-markuplint",
-		"stylelint.vscode-stylelint",
+		"vunguyentuan.vscode-css-variables",
+		"stylelint.vscode-stylelint"
 	],
 	"unwantedRecommendations": [
 		"esbenp.prettier-vscode"

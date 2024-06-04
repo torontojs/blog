@@ -61,6 +61,12 @@
 	// CSS
 	"css.format.enable": false,
 
+	// CSS Auto complete
+	"cssVariables.lookupFiles": [
+		"**/*.css",
+		"./node_modules/open-props/open-props.min.css"
+	],
+
 	//TypeScript
 	"js/ts.implicitProjectConfig.checkJs": true,
 	"js/ts.implicitProjectConfig.target": "ESNext",

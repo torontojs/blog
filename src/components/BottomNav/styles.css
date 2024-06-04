@@ -1,31 +1,29 @@
 #bottom-nav ul {
 	display: flex;
 	width: 100%;
-	gap: 1rem;
-	padding: 0.5rem 1rem;
+	gap: var(--size-3);
+	padding: var(--size-2) var(--size-3);
 	margin: 0;
-	background-color: #8a1b14;
+	background-color: var(--tjs-red-12);
 }
 
 #bottom-nav a {
-	color: white;
+	color: var(--gray-0);
 }
 
 #bottom-nav a:visited {
-	color: khaki;
+	color: var(--yellow-2);
 }
 
 #bottom-nav a:hover {
-	color: yellow;
+	color: var(--yellow-5);
 }
 
 #bottom-nav a:focus {
-	color: yellow;
-	outline-offset: 0.5em;
-	outline: solid yellow medium;
+	color: var(--yellow-5);
 }
 
 #bottom-nav a:active {
-	color: wheat;
-	outline-color: wheat;
+	color: var(--orange-3);
+	outline-color: var(--orange-3);
 }

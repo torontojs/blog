@@ -1,33 +1,23 @@
 :root {
-	/* Sizes */
+	/* Base size */
 	--body-text: 20px;
-	--small-text: 0.75rem;
-
-	--min-width: 5rem;
-	--medium-width: 30rem;
-	--max-width: 76rem;
-
-	--iframe-size: var(--min-width);
-	--button-size: 2.5rem;
-
-	--avatar-size: calc(var(--medium-width) * 0.45);
-	--avatar-small-size: var(--min-width);
-	--avatar-size-mini: calc(var(--avatar-size) * 0.6);
-
-	/* Spacing */
-	--spacing-large: 1rem;
-	--spacing-medium: 0.5rem;
-	--spacing-small: 0.2rem;
 
 	/* Theme colors */
-	--theme-color: #ee2e24;
+	--tjs-red-0: #fec2b8;
+	--tjs-red-1: #ffad9e;
+	--tjs-red-2: #ff9785;
+	--tjs-red-3: #fc816c;
+	--tjs-red-4: #f96a54;
+	--tjs-red-5: #f4503c;
+	--tjs-red-6: #ee2e24;
+	--tjs-red-7: #dd2b21;
+	--tjs-red-8: #cc281f;
+	--tjs-red-9: #bb241c;
+	--tjs-red-10: #aa2119;
+	--tjs-red-11: #9a1e17;
+	--tjs-red-12: #8a1b14;
 
-	color-scheme: dark light;
+	--theme-color: var(--tjs-red-7);
+
 	accent-color: var(--theme-color);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		color-scheme: dark;
-	}
 }

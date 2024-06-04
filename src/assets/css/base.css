@@ -1,3 +1,5 @@
+@import "open-props/style";
+@import "open-props/normalize";
 @import url('./variables.css');
 
 :not(:defined) { display: none; }
@@ -9,14 +11,7 @@ html, body {
 	width: 100%;
 	box-sizing: border-box;
 
-	font-family: system-ui, sans-serif;
 	font-size: var(--body-text);
-	font-weight: normal;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: stretch;
-	align-items: stretch;
 }
 
 *, *::after, *::before {
@@ -37,13 +32,6 @@ html, body {
 	min-height: 1em;
 }
 
-
-img, picture {
-	width: 100%;
-	max-width: 100%;
-	display: block;
-}
-
 main {
 	flex-grow: 1;
 }
@@ -52,9 +40,11 @@ nav ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	list-style-type: "";
+	list-style-type: none;
 	width: 100%;
 }
+
+nav ul > li { padding: 0; }
 
 iframe {
 	border: none;
@@ -64,18 +54,4 @@ iframe {
 	height: auto;
 	max-height: 100%;
 	aspect-ratio: 3 / 2;
-}
-
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-	opacity: 0;
-	pointer-events: none;
-	z-index: calc(infinity * -1);
 }

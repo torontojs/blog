@@ -1,0 +1,5 @@
+#posts-list {
+	max-width: var(--size-content-3);
+	margin-inline: auto;
+	padding: var(--size-3);
+}

@@ -64,7 +64,8 @@
 	// CSS Auto complete
 	"cssVariables.lookupFiles": [
 		"**/*.css",
-		"./node_modules/open-props/open-props.min.css"
+		"./node_modules/open-props/open-props.min.css",
+		"./node_modules/open-props/normalize.min.css",
 	],
 
 	//TypeScript

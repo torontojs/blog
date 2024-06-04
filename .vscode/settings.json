@@ -70,7 +70,10 @@
 		"css",
 		"astro"
 	],
-	
+	"cssvar.ignore": [
+		"**/node_modules/**"
+	],
+
 	//TypeScript
 	"js/ts.implicitProjectConfig.checkJs": true,
 	"js/ts.implicitProjectConfig.target": "ESNext",

@@ -3,7 +3,7 @@
 		"astro-build.astro-vscode",
 		"dbaeumer.vscode-eslint",
 		"yusukehirao.vscode-markuplint",
-		"phoenisx.cssvar",
+		"vunguyentuan.vscode-css-variables",
 		"stylelint.vscode-stylelint"
 	],
 	"unwantedRecommendations": [

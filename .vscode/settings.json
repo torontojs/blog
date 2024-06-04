@@ -61,17 +61,10 @@
 	// CSS
 	"css.format.enable": false,
 
-	// CSS Vars
-	"cssvar.files": [
-		"./node_modules/open-props/open-props.min.css",
-		"./src/**/*.css",
-	],
-	"cssvar.extensions": [
-		"css",
-		"astro"
-	],
-	"cssvar.ignore": [
-		"**/node_modules/**"
+	// CSS Auto complete
+	"cssVariables.lookupFiles": [
+		"**/*.css",
+		"./node_modules/open-props/open-props.min.css"
 	],
 
 	//TypeScript

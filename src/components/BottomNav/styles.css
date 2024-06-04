@@ -1,0 +1,31 @@
+#bottom-nav ul {
+	display: flex;
+	width: 100%;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	background-color: #8a1b14;
+}
+
+#bottom-nav a {
+	color: white;
+}
+
+#bottom-nav a:visited {
+	color: khaki;
+}
+
+#bottom-nav a:hover {
+	color: yellow;
+}
+
+#bottom-nav a:focus {
+	color: yellow;
+	outline-offset: 0.5em;
+	outline: solid yellow medium;
+}
+
+#bottom-nav a:active {
+	color: wheat;
+	outline-color: wheat;
+}

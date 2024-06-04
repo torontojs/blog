@@ -1,7 +1,6 @@
 #pwa-toast {
-	visibility: hidden;
-	position: fixed;
-	display: flex;
+	position: absolute;
+	display: none;
 	gap: var(--spacing-medium);
 	align-items: center;
 	justify-content: space-between;
@@ -16,7 +15,7 @@
 }
 
 #pwa-toast:is([data-offline], [data-refresh]) {
-	visibility: visible;
+	display: flex;
 }
 
 #pwa-toast div {

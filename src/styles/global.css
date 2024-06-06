@@ -514,24 +514,6 @@ button:focus-visible {
 	gap: var(--space-xs);
 }
 
-/* header {
-	display: grid;
-	place-items: center;
-	grid-gap: var(--space-sm);
-	gap: var(--space-sm);
-	text-align: center;
-}
-
-header .container {
-	display: grid;
-	place-items: center;
-	grid-gap: var(--space-sm);
-	gap: var(--space-sm);
-	text-align: center;
-	margin-top: var(--space-lg);
-	margin-bottom: var(--space-sm);
-} */
-
 .post-content {
 	display: grid;
 	justify-content: center;

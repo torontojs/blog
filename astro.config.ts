@@ -15,7 +15,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  site: 'https://torontojs.github.io/blog/',
+  site: 'https://blog.torontojs.com',
   base: '/',
   trailingSlash: 'ignore',
   compressHTML: true,
@@ -78,4 +78,5 @@ astroIcon({
   }),
 tailwind()
 ]
+
 });

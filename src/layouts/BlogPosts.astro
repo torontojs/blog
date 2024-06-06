@@ -4,6 +4,7 @@ import type { Post } from '../utils/post';
 import PageHeader from '../components/PageHeader/index.astro';
 import Pagination from '../components/Pagination/index.astro';
 import PostCard from '../components/PostCard/index.astro';
+import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
 
@@ -47,11 +48,12 @@ const {
 		slot="header"
 		target="posts-list"
 	/>
+	<SiteNav slot="header" />
 	<PageHeader slot="header">
 		<slot name="header"></slot>
 	</PageHeader>
 
-	<div id="posts-list">
+	<div id="posts-list" class="space-y-8">
 		{posts.map((post) => (
 			<PostCard
 				url={`${BLOG_URL}${post.url}`}

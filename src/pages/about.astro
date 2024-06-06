@@ -2,34 +2,35 @@
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base.astro';
-
+import '../styles/about.css';
 const BLOG_URL = Astro.site?.href;
 
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.png';
-
 ---
+
 <BaseLayout
-	htmlTitle={['Offline', 'Toronto JS Blog']}
-	title="Offline Page"
-	url={`${BLOG_URL}404`}
-	description="Offline page for the Toronto JS blog. If you are offline, you can still navigate the site, but some content might not be available."
+	htmlTitle={['About', 'Toronto JS Blog']}
+	title="About Toronto JS Blog"
+	url={`${BLOG_URL}about`}
+	description="About the Toronto JS blog."
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 >
 	<SkipToContent slot="header" />
 	<header slot="header">
 		<SiteNav />
-		<h1>Our Blog</h1>
+		<h1 class="centerElements">TorontoJS Blog</h1>
 	</header>
-
-	<Image src={logo} alt="Toronto JS Logo" />
-
-	<div id="contents">
-		<p>Welpm this is awkward!</p>
-		<p>We seem to have misplaced something</p>
-
-		<p>
-			<a href={BLOG_URL}>Go back to the blog home</a>
-		</p>
-	</div>
+		<div class="centerElements">
+			<Image src={logo} alt="Toronto JS Logo" class="resizeImage" />
+		</div>
+		<div id="contents">
+			<p class="font-bold text-mainRed">
+				You may be asking.....what is all of this? We aren't really sure
+				frankly, if we are being honest with you... What we do know
+				though, is that this is a place for ideas, words, creations,
+				community and hopefully......expansion, building, friendship,
+				structure!
+			</p>
+		</div>
 </BaseLayout>

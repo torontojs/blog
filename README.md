@@ -1,4 +1,4 @@
-# Toronto JS blog
+# TorontoJS Blog
 
 ## Pre-requisites
 

@@ -1,8 +1,9 @@
 ---
-import '../assets/css/base.css';
-
 import HtmlHead from '../components/HtmlHead.astro';
 import RefreshBanner from '../components/RefreshBanner/index.astro';
+import SiteFooter from '../components/SiteFooter/index.astro';
+
+import './base.css';
 
 interface Props {
 	title: string,
@@ -49,14 +50,15 @@ const {
 		updatedAt={updatedAt}
 		hasFeed={hasFeed}
 	/>
-	<body class:list={[{ 'h-entry': hasFeed }]}>
+	<body class:list={[{ 'h-entry': hasFeed, 'font-sans mb-6': true }]}>
 		<slot name="header"></slot>
-		<main>
+		<main class="w-auto mx-auto px-4 desktop:px-9 bg-mainRed">
 			<slot></slot>
 		</main>
 
-		<footer slot="footer">
+		<footer id="site-footer" class="p-2 bg-[#13110b] font-bold text-white w-full">
 			<slot name="footer"></slot>
+			<SiteFooter />
 			<RefreshBanner />
 		</footer>
 	</body>

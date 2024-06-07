@@ -13,4 +13,4 @@ Marco is a Senior web developer with over 10 years of experience, ranging from f
 
 He has a passion for accessibility and PWAs and loves to teach and share his knowledge with others.
 
-He strongly believe that technology and specially the web should be open and available to eveyone, and that's why he's always looking for ways to make the web a better place and contribute to open source projects.
+He strongly believes that technology and especially the web should be open and available to everyone, and that's why he's always looking for ways to make the web a better place and contribute to open source projects.

@@ -1,0 +1,57 @@
+@import "open-props/style";
+@import "open-props/normalize";
+@import url('./variables.css');
+
+:not(:defined) { display: none; }
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+
+	font-size: var(--body-text);
+}
+
+*, *::after, *::before {
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
+*:has(> svg) {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3em;
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+*:has(> svg) svg {
+	min-width: 1em;
+	min-height: 1em;
+}
+
+main {
+	flex-grow: 1;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	width: 100%;
+}
+
+nav ul > li { padding: 0; }
+
+iframe {
+	border: none;
+	display: block;
+	margin-inline: auto;
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	aspect-ratio: 3 / 2;
+}

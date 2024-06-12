@@ -13,7 +13,6 @@ This project uses the tools listed below. You can find more information about ea
 - [Markuplint](https://markuplint.dev/) - To lint the HTML/Astro code
 - [Stylelint](https://stylelint.io/) - To lint CSS
 - [Husky](https://typicode.github.io/husky/) - To run tasks before committing
-- [`lint-staged`](https://github.com/lint-staged/lint-staged) - To run linters on staged files
 - [`changeloggen`](https://github.com/unjs/changelogen) - To generate changelogs
 
 ## Build/Generator tools

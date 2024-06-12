@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 import AuthorCard from '../../components/AuthorCard/index.astro';
 import PageHeader from '../../components/PageHeader/index.astro';
-import BaseLayout from '../../layouts/Base.astro';
+import BaseLayout from '../../layouts/Base/index.astro';
 
 const authors = await getCollection('authors');
 

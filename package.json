@@ -14,7 +14,8 @@
 		"defaults"
 	],
 	"scripts": {
-		"postinstall": "husky install && astro sync",
+		"prepare": "husky",
+		"postinstall": "astro sync",
 		"predev": "astro sync",
 		"dev": "astro dev --site=https://localhost:3000/",
 		"start": "npm run dev",
@@ -27,27 +28,9 @@
 		"lint:md": "astro check",
 		"lint:html": "markuplint src/**/*.{html,astro} --fix && markuplint src/**/**/*.{html,astro} --fix",
 		"lint": "npm run typecheck && npm run lint:js && npm run lint:css && npm run lint:md && npm run lint:html",
-		"lint-staged": "lint-staged",
 		"astro": "astro",
 		"version": "changelogen",
 		"build-assets": "pwa-assets-generator --config ./pwa-assets-generator.config.ts"
-	},
-	"lint-staged": {
-		"*.ts": "eslint --ext .ts --fix",
-		"*.cts": "eslint --ext .cts --fix",
-		"*.mts": "eslint --ext .mts --fix",
-		"*.js": "eslint --ext .js --fix",
-		"*.cjs": "eslint --ext .cjs --fix",
-		"*.mjs": "eslint --ext .mjs --fix",
-		"*.astro": [
-			"astro check",
-			"eslint --ext .astro --fix",
-			"stylelint --fix",
-			"markuplint --fix"
-		],
-		"*.css": "stylelint --fix",
-		"*.md": "astro check",
-		"*.html": "markuplint --fix"
 	},
 	"commitlint": {
 		"extends": [
@@ -90,7 +73,6 @@
 		"eslint-plugin-astro": "^0.31.4",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
 		"marked": "^12.0.1",
 		"markuplint": "^4.3.0",
 		"postcss": "^8.4.35",

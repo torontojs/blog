@@ -1,0 +1,23 @@
+:root {
+	/* Base size */
+	--body-text: 20px;
+
+	/* Theme colors */
+	--tjs-red-0: #fec2b8;
+	--tjs-red-1: #ffad9e;
+	--tjs-red-2: #ff9785;
+	--tjs-red-3: #fc816c;
+	--tjs-red-4: #f96a54;
+	--tjs-red-5: #f4503c;
+	--tjs-red-6: #ee2e24;
+	--tjs-red-7: #dd2b21;
+	--tjs-red-8: #cc281f;
+	--tjs-red-9: #bb241c;
+	--tjs-red-10: #aa2119;
+	--tjs-red-11: #9a1e17;
+	--tjs-red-12: #8a1b14;
+
+	--theme-color: var(--tjs-red-7);
+
+	accent-color: var(--theme-color);
+}

@@ -1,6 +1,6 @@
 ---
 name: drey moreau
-avatar: ./assets/logo.jpg
+avatar: ./assets/logo.png
 avatarAlt: A picture of the torontoJS logo.
 email: drey@torontojs.com
 website: https://dreymoreau.netlify.app

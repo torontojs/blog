@@ -1,9 +1,32 @@
 ---
-import HomeMain from '../components/HomeMain/index.astro';
 import SiteNav from '../components/SiteNav/index.astro';
 import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base/index.astro';
-const BLOG_URL = Astro.site?.href;
+
+import type { GetStaticPaths, InferGetStaticPropsType, PaginateFunction } from 'astro';
+import { MAX_POSTS_PER_PAGE, listAllPosts } from 'src/utils/post';
+import BlogPostsLayout from '../layouts/BlogPosts.astro';
+
+
+// eslint-disable-next-line @typescript-eslint/no-use-before-define
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+export const getStaticPaths = (async ({ paginate }: { paginate: PaginateFunction }) => {
+	const postsList = await listAllPosts();
+
+	return paginate(postsList, {
+		pageSize: MAX_POSTS_PER_PAGE
+	});
+}) satisfies GetStaticPaths;
+
+const {
+	data: posts,
+	url,
+	currentPage, lastPage,
+	start, end, total, size
+} = Astro.props.page;
+
+const BLOG_URL = Astro.site?.href ?? '';
 ---
 <BaseLayout
 	htmlTitle={['Home Page', 'Toronto JS Blog']}
@@ -17,7 +40,23 @@ const BLOG_URL = Astro.site?.href;
 		<SiteNav />
 	</header>
 
-	<HomeMain />
+	<BlogPostsLayout
+		posts={posts}
+		baseUrl={BLOG_URL}
+		currentUrl={url.current}
+		currentPage={currentPage}
+		lastPage={lastPage}
+		prevUrl={url.prev}
+		nextUrl={url.next}
+		start={start}
+		end={end}
+		total={total}
+		size={size}
+	>
+	<Fragment slot="header">
+		TorontoJS Blog
+	</Fragment>
+ </BlogPostsLayout>
 
 	<!-- <div id="contents">
 	</div> -->

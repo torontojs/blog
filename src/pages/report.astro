@@ -1,0 +1,26 @@
+---
+import SiteNav from '../components/SiteNav/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from '../layouts/Base/index.astro';
+import '../styles/report.css';
+const BLOG_URL = Astro.site?.href;
+
+---
+
+
+<BaseLayout
+	htmlTitle={['About', 'Toronto JS Blog']}
+	title="About Toronto JS Blog"
+	url={`${BLOG_URL}about`}
+	description="About the Toronto JS blog."
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+>
+	<SkipToContent slot="header" />
+	<header slot="header">
+		<SiteNav />
+		<div class="centerElements">
+			<h2>REPORT A VIOLATION (with or without your name)</h2>
+		</div>
+	</header>
+
+</BaseLayout>

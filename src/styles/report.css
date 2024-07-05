@@ -1,0 +1,15 @@
+/* .centerElements {
+	display: flex;
+} */
+
+h2 {
+	font-size: 3rem;
+}
+
+.buttonStyle {
+	background-color: white;
+	width: 3.5rem;
+	height: 2.5rem;
+	border-radius: 10px;
+	border: 2px solid black;
+}

@@ -2,6 +2,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin-inline: auto;
+	margin-block-end: var(--size-8);
 }
 
 #post-header-wrapper {
@@ -55,6 +56,13 @@
 	border: var(--tjs-red-6) solid var(--size-2);
 	border-inline-end: none;
 	margin-block-end: var(--size-7);
+}
+
+#post-header-wrapper:not(:has(#hero-image)) #post-title {
+	margin-block: 0;
+	border-inline: none;
+	border-radius: 0;
+	width: 100%;
 }
 
 #post-header #hero-image {

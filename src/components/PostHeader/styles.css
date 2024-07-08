@@ -138,3 +138,10 @@
 		grid-area: hero-image;
 	}
 }
+
+@media (min-width: 1025px) {
+	#post-header #post-title,
+	#post-header-wrapper:not(:has(#hero-image)) #post-title {
+		border: var(--tjs-red-6) solid var(--size-2);
+	}
+}

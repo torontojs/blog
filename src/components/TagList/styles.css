@@ -1,0 +1,11 @@
+.tag-list, .tag-list summary {
+	background: none;
+}
+
+.tag-list ul {
+	display: flex;
+	margin: 0;
+	padding-inline-start: 0;
+	list-style: none;
+	gap: var(--size-2);
+}

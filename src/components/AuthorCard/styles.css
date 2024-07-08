@@ -1,8 +1,8 @@
 .author-card {
 	display: grid;
 	padding-inline: var(--size-3);
-	grid-template-columns: 1fr auto;
-	grid-template-rows: 1fr auto;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
 	gap: var(--size-3);
 	place-items: center;
 	grid-template-areas:

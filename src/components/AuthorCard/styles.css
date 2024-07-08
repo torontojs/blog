@@ -26,7 +26,12 @@
 	grid-area: name;
 	justify-self: start;
 }
-.author-card .author-bio { grid-area: bio; }
+
+.author-card .author-bio {
+	grid-area: bio;
+	width: 100%;
+	place-self: start start;
+}
 
 @media (max-width: 768px) {
 	.author-card {

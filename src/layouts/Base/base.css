@@ -53,6 +53,7 @@ iframe {
 	width: 100%;
 	height: auto;
 	max-height: 100%;
+	aspect-ratio: var(--ratio-landscape);
 }
 
 a {

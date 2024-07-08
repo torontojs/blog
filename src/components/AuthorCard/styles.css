@@ -1,17 +1,21 @@
 .author-card {
 	display: grid;
-	padding-inline: var(--spacing-large);
+	padding-inline: var(--size-3);
 	grid-template-columns: 1fr auto;
 	grid-template-rows: 1fr auto;
-	gap: var(--spacing-large);
+	gap: var(--size-3);
 	place-items: center;
 	grid-template-areas:
 		"avatar name"
 		"avatar bio";
-	margin: var(--spacing-large) 0;
+	margin: var(--size-3) 0;
 }
 
-.author-card .author-name * { margin: 0; }
+.author-card .author-name * {
+	margin: 0;
+	color: var(--tjs-red-6);
+	text-shadow: var(--size-1) var(--size-1) var(--gray-12);
+}
 
 .author-card .author-picture {
 	grid-area: avatar;

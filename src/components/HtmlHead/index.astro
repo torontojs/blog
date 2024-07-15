@@ -88,11 +88,6 @@ const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\/
 	{publishedDate && (<meta property="article:published_time" content={publishedDate.toISOString()} />)}
 	{updatedDate && (<meta property="article:modified_time" content={updatedDate.toISOString()} />)}
 
-	<!-- Webmention -->
-	<!-- TODO: implement webmention mechanism -->
-	<!-- <link rel="webmention" href="" /> -->
-	<!-- <link rel="pingback" href="" /> -->
-
 	<!-- Changelog -->
 	<link rel="alternate" type="application/rss+xml" href={`${BLOG_URL}changelog.xml`} title="Changelog (Version History)" />
 

@@ -1,12 +1,15 @@
 .user-avatar {
-	--image-size: var(--avatar-size);
+	--image-size: var(--size-13);
 
 	display: block;
 
 	width: var(--image-size);
 	height: var(--image-size);
-	border-radius: 100vmax;
+	aspect-ratio: var(--ratio-square);
+	border-radius: var(--radius-round);
 	overflow: hidden;
+	border: solid var(--tjs-red-6) var(--size-2);
+	box-shadow: var(--size-1) var(--size-1) var(--gray-12);
 }
 
 .user-avatar img {
@@ -17,5 +20,5 @@
 }
 
 @media (max-width: 768px) {
-	.user-avatar { --image-size: var(--avatar-small-size); }
+	.user-avatar { --image-size: var(--size-12); }
 }

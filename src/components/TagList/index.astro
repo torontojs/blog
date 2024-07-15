@@ -1,4 +1,6 @@
 ---
+import './styles.css';
+
 interface Props {
 	title?: string,
 	tags: Record<string, string>,
@@ -9,9 +11,9 @@ const { title, tags, isOpen } = Astro.props;
 ---
 <details class="tag-list" open={isOpen}>
 	<summary>{title ?? 'Tags'}</summary>
-	<ul class="flex flex-wrap justify-start gap-2 pt-2">
+	<ul>
 		{Object.entries(tags).map(([tag, url]) => (
-			<li class="p-category tag rounded-md bg-lightGrey px-2 py-1 text-black underline underline-offset-2 decoration-2 decoration-mainRed hover:text-white hover:bg-black hover:decoration-lightRed hover:decoration-4"><a href={url}>{tag}</a></li>
+			<li class="p-category tag"><a href={url}>{tag}</a></li>
 		))}
 	</ul>
 </details>

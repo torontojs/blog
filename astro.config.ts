@@ -3,7 +3,6 @@ import astroPWA, { type PwaOptions } from '@vite-pwa/astro';
 import astroIcon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
-import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.ts';
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
   encoding: 'utf8'
@@ -52,22 +51,19 @@ export default defineConfig({
 		astroPWA({
 			registerType: 'prompt',
 			minify: true,
-			includeAssets: ['/icons/icon.svg'],
 			manifest,
 			workbox: {
-			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			maximumFileSizeToCacheInBytes: 1024 * 128,
-			cleanupOutdatedCaches: true,
-			clientsClaim: true,
-			skipWaiting: false,
-			navigateFallback: '/offline',
-			navigateFallbackDenylist: [/\.(?:png|gif|jpg|jpeg|webp|svg|ico)$/iu],
-			directoryIndex: 'index.html',
-			runtimeCaching: [externalResourcesCache, assetsCache, scriptsCache, pagesCache]
+				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+				maximumFileSizeToCacheInBytes: 1024 * 128,
+				cleanupOutdatedCaches: true,
+				clientsClaim: false,
+				skipWaiting: false,
+				runtimeCaching: []
 			},
 			devOptions: {
-			enabled: false
-			}
+				enabled: false
+			},
+			selfDestroying: true
 		}),
 		sitemap({
 			changefreq: 'weekly',

@@ -1,6 +1,5 @@
 ---
 import HtmlHead from '../../components/HtmlHead/index.astro';
-import RefreshBanner from '../../components/RefreshBanner/index.astro';
 import SiteFooter from '../../components/SiteFooter/index.astro';
 
 import './base.css';
@@ -59,7 +58,6 @@ const {
 		<footer id="site-footer" class="p-2 bg-[#13110b] font-bold text-white w-full">
 			<slot name="footer"></slot>
 			<SiteFooter />
-			<RefreshBanner />
 		</footer>
 	</body>
 </html>

@@ -9,10 +9,10 @@ const BLOG_URL = Astro.site?.href;
 
 
 <BaseLayout
-	htmlTitle={['About', 'Toronto JS Blog']}
-	title="About Toronto JS Blog"
-	url={`${BLOG_URL}about`}
-	description="About the Toronto JS blog."
+	htmlTitle={['Report', 'Toronto JS Blog']}
+	title="Report Toronto JS Blog"
+	url={`${BLOG_URL}report`}
+	description="Submitting a report to TorontoJS."
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 >
 	<SkipToContent slot="header" />
@@ -20,6 +20,21 @@ const BLOG_URL = Astro.site?.href;
 		<SiteNav />
 		<div class="centerElements">
 			<h2>REPORT A VIOLATION (with or without your name)</h2>
+		</div>
+
+		<div>
+			// eslint-disable-next-line @stylistic/max-len
+			<p>Did you experience something awry or questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct. Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
+
+			<p>
+				Please provide the following information:
+
+				<ul>
+					<li>the time and place the harassment took place</li>
+					<li>the member(s) involved in the event</li>
+					<li>any surrounding details you think are relevant to the report</li>
+				</ul>
+			</p>
 		</div>
 	</header>
 

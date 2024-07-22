@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo_optimized.png';
 import './styles.css';
 const BLOG_URL = Astro.site?.href;
 ---
@@ -8,7 +8,7 @@ const BLOG_URL = Astro.site?.href;
 	<ul>
 		<li>
 			<a href={BLOG_URL}>
-				<Image src={logo} alt="Toronto Js Logo!" height={90} width={70} class="flex items-start" />
+				<Image src={logo} alt="Toronto Js Logo!" class="flex items-start" />
 			</a>
 		</li>
 		<li>

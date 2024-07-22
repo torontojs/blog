@@ -1,9 +1,26 @@
-/* .centerElements {
+
+.fullWidth  {
 	display: flex;
-} */
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* max-inline-size is the problem here, nested style for h2 */
+}
 
 h2 {
 	font-size: 3rem;
+	text-align: center;
+}
+
+.spaceMain {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 2rem;
+}
+
+.centering {
+	margin: auto;
 }
 
 .buttonStyle {

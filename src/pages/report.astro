@@ -16,22 +16,22 @@ const BLOG_URL = Astro.site?.href;
 	<SkipToContent slot="header" />
 	<header slot="header">
 		<SiteNav />
-		<div class="centerElements">
+		<div class="fullWidth">
 			<h2>REPORT A VIOLATION (with or without your name)</h2>
 		</div>
 
 		<div>
-			<p>Did you experience something awry or questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.</p>
-			<p>Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
-
-			<p>
-				Please provide the following information:
-				<ul>
-					<li>the time and place the harassment took place</li>
-					<li>the member(s) involved in the event</li>
-					<li>any surrounding details you think are relevant to the report</li>
-				</ul>
-			</p>
+			<div class="spaceMain">
+				<h3 class="centering">Did you experience something questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.
+				</h3>
+					<p class="centering">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
+			</div>
+			<div class="spaceMain">
+				<h3 class="centering">Please provide the following information:</h3>
+					<p class="centering">
+					the time and place the harassment took place, the member(s) involved in the violation, any surrounding details you think are relevant to the report.
+					</p>
+			</div>
 		</div>
 	</header>
 </BaseLayout>

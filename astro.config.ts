@@ -1,7 +1,6 @@
 import sitemap from '@astrojs/sitemap';
 import astroPWA, { type PwaOptions } from '@vite-pwa/astro';
 import astroIcon from 'astro-icon';
-import stylisticJs from '@stylistic/eslint-plugin-js';
 import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
 import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.ts';

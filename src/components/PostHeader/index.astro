@@ -53,32 +53,36 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 		</blockquote>
 
 		<aside id="post-metadata">
-			<small>
-				<span>
+			<p>
+				<small>
 					Published on <time itemprop="datePublished" class="dt-published" datetime={createdAt.toISOString()}>{formatter.format(createdAt)}</time>.
-				</span>
+				</small>
+			</p>
 
-				{updatedAt && (
-					<span>
+			{updatedAt && (
+				<p>
+					<small>
 						Updated on <time itemprop="dateModified" class="dt-updated" datetime={updatedAt.toISOString()}>{formatter.format(updatedAt)}</time>
 						{hasUpdates && (
 							<a href="#update-history" aria-label="Go to updates section">
 								<Icon name="uil:sync-exclamation" />
 							</a>
 						)}
-					</span>
-				)}
-			</small>
+					</small>
+				</p>
+			)}
 
 			{readingTime && (
-				<small>
-					<time itemprop="timeRequired" class="dt-duration" datetime={`PT${readingTime}M`}>
-						{readingTime} minute read
-					</time>
-					{wordCount && (
-						<span> &mdash; {wordCount} words</span>
-					)}
-				</small>
+				<p>
+					<small>
+						<time itemprop="timeRequired" class="dt-duration" datetime={`PT${readingTime}M`}>
+							{readingTime} minute read
+						</time>
+						{wordCount && (
+							<span> &mdash; {wordCount} words</span>
+						)}
+					</small>
+				</p>
 			)}
 		</aside>
 

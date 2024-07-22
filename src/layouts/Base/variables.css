@@ -2,6 +2,9 @@
 	/* Base size */
 	--body-text: 20px;
 
+	/* Max width for part of the page to grow */
+	--max-width: 1024px;
+
 	/* Theme colors */
 	--tjs-red-0: #fec2b8;
 	--tjs-red-1: #ffad9e;

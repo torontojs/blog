@@ -14,6 +14,7 @@ html, body {
 	font-size: var(--body-text);
 }
 
+
 *, *::after, *::before {
 	box-sizing: inherit;
 	font-family: inherit;
@@ -58,4 +59,8 @@ iframe {
 
 a {
 	overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {
+    max-inline-size: 100%;
 }

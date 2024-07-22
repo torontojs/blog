@@ -1,0 +1,55 @@
+---
+import SiteNav from '../components/SiteNav/index.astro';
+import SkipToContent from '../components/SkipToContent/index.astro';
+import BaseLayout from '../layouts/Base/index.astro';
+import '../styles/report.css';
+const BLOG_URL = Astro.site?.href;
+
+---
+<BaseLayout
+	htmlTitle={['Report', 'Toronto JS Blog']}
+	title="Report Toronto JS Blog"
+	url={`${BLOG_URL}report`}
+	description="Submitting a report to TorontoJS."
+	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
+>
+	<SkipToContent slot="header" />
+	<header slot="header">
+		<SiteNav />
+		<div class="fullWidth">
+			<h1>Report Violation</h1>
+		</div>
+	</header>
+
+		<div>
+			<div class="spaceMain">
+				<p class="centering">Did you experience something questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.
+				</p>
+				<p class="centering">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
+			</div>
+			<div class="spaceMain">
+				<h3 class="centering">Please provide the following information:</h3>
+					<p class="centering">
+					the time and place the harassment took place, the member(s) involved in the violation, any surrounding details you think are relevant to the report.
+					</p>
+			</div>
+		</div>
+
+		<div>
+			<form>
+				<label for="name">
+					Name
+				</label>
+					<input id="name" />
+				<label for="email">
+					Email (required)
+				</label>
+					<input type="email" id="email" required />
+				<label for="comment">
+					Explain what happened (required)
+				</label>
+					<textarea name="comment" id="comment" required></textarea>
+					<button type="submit" value="submit">Submit</button>
+			</form>
+		</div>
+</BaseLayout>

@@ -1,0 +1,32 @@
+
+.fullWidth  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* max-inline-size is the problem here, nested style for h2 */
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.spaceMain {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 2rem;
+}
+
+.centering {
+	margin: auto;
+}
+
+.buttonStyle {
+	background-color: white;
+	width: 3.5rem;
+	height: 2.5rem;
+	border-radius: 10px;
+	border: 2px solid black;
+}

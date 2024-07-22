@@ -17,15 +17,15 @@ const BLOG_URL = Astro.site?.href;
 	<header slot="header">
 		<SiteNav />
 		<div class="fullWidth">
-			<h2>REPORT A VIOLATION (with or without your name)</h2>
+			<h1>Report Violation</h1>
 		</div>
 	</header>
 
 		<div>
 			<div class="spaceMain">
-				<h3 class="centering">Did you experience something questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.
-				</h3>
-					<p class="centering">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
+				<p class="centering">Did you experience something questionable at a Toronto JS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.
+				</p>
+				<p class="centering">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
 			</div>
 			<div class="spaceMain">
 				<h3 class="centering">Please provide the following information:</h3>
@@ -42,16 +42,14 @@ const BLOG_URL = Astro.site?.href;
 				</label>
 					<input type="text" id="name" />
 				<label for="email">
-					Email
+					Email (required)
 				</label>
-					<input type="email" id="email" />
+					<input type="email" id="email" required />
 				<label for="comment">
-					Explain what happened
+					Explain what happened (required)
 				</label>
-					<textarea name="comment" id="comment"></textarea>
-				<label>
-					<input type="button" value="submit">Submit
-				</label>
+					<textarea name="comment" id="comment" required></textarea>
+					<input type="submit" value="submit">Submit
 			</form>
 		</div>
 </BaseLayout>

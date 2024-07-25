@@ -3,6 +3,8 @@ import { Picture } from 'astro:assets';
 
 import TagList from '../TagList/index.astro';
 
+import './styles.css';
+
 interface Props {
 	url: string,
 	title: string,
@@ -21,7 +23,7 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 ---
 <article
 	class:list={[
-		'post-card bg-gradient-to-t rounded-3xl p-4 hover:from-yellow to-transparent grid gap-2 shadow-md',
+		'container post-card bg-gradient-to-t rounded-3xl p-4 hover:from-yellow to-transparent grid gap-2 shadow-md',
 		{
 			'grid-cols-[auto] desktop:grid-cols-[min-content_auto] grid-rows-[auto_auto_auto_auto_auto] desktop:grid-rows-[auto_1fr_auto_auto]': image,
 			'grid-cols-[auto] grid-rows-[auto_auto_auto]': !image

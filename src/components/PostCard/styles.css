@@ -1,0 +1,25 @@
+.container {
+  border-radius: 5px;
+  border: 5px solid #ED342F;
+  padding: 20px;
+  width: 75%;
+  margin: 2rem auto;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input {
+	width: 100%;
+	margin-top: 20px;
+}
+
+button[type="submit"]{
+	background: #ED342F;
+}
+
+button[type="submit"]:hover{
+	background: #A8569A;
+}

@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 
 import { parseMarkdown } from '../utils/markdown';
 
-import defaultImage from '../assets/images/logo.png';
+import defaultImage from '../assets/icons/logo.png';
 
 export const GET: APIRoute = async (context) => {
 	// eslint-disable-next-line @typescript-eslint/no-magic-numbers

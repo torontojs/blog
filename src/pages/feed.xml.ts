@@ -5,7 +5,7 @@ import { getImage } from 'astro:assets';
 
 import { listAllPosts } from '../utils/post';
 
-import defaultImage from '../assets/images/logo.png';
+import defaultImage from '../assets/icons/logo.png';
 import { parseMarkdown } from '../utils/markdown';
 
 export const GET: APIRoute = async (context) => {

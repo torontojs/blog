@@ -1,9 +1,17 @@
 .container {
+  background: #ED342F;
   border-radius: 5px;
-  border: 5px solid #ED342F;
+  border: 5px solid black;
   padding: 20px;
   width: 75%;
   margin: 2rem auto;
+   text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {

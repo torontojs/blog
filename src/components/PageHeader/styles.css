@@ -1,11 +1,8 @@
-.center-h1 {
-	text-align: center;
-}
-
 #page-header {
 	width: auto;
 	margin: 1.25rem auto;
 	padding: 0 1rem;
+	text-align: center;
 
 	@media (min-width: 1024px) {
     .desktop\:px-9 {

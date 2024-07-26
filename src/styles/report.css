@@ -1,8 +1,3 @@
-
-* {
-  box-sizing: border-box;
-}
-
 .fullWidth  {
 	display: flex;
 	justify-content: center;
@@ -35,15 +30,7 @@ h1 {
 	border: 2px solid black;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.container {
+#report-form {
   border-radius: 5px;
   border: 5px solid #ED342F;
   padding: 20px;
@@ -51,20 +38,27 @@ input, textarea {
   margin: 0 auto;
 }
 
-label {
+#report-form :is(input, textarea) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#report-form label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
-input {
-	width: 100%;
-	margin-top: 20px;
+#report-form input {
+	margin-block-start: 20px;
 }
 
-button[type="submit"]{
+#report-form button[type="submit"]{
 	background: #ED342F;
 }
 
-button[type="submit"]:hover{
+#report-form button[type="submit"]:hover{
 	background: #A8569A;
 }

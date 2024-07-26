@@ -2,6 +2,10 @@
 @import "open-props/normalize";
 @import url('./variables.css');
 
+:root {
+	font-family: var(--font-system-ui);
+}
+
 :not(:defined) { display: none; }
 
 html, body {
@@ -63,4 +67,17 @@ a {
 
 h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {
     max-inline-size: 100%;
+}
+
+.visually-hidden {
+	color: transparent;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	pointer-events: none;
+	user-select: none;
 }

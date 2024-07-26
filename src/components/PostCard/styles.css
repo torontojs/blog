@@ -1,0 +1,14 @@
+.post-card {
+  border-radius: 5px;
+  border: 5px solid #ED342F;
+  padding: 20px;
+  width: 75%;
+  margin: 2rem auto;
+   text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

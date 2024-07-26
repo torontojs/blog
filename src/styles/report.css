@@ -1,4 +1,3 @@
-
 .fullWidth  {
 	display: flex;
 	justify-content: center;
@@ -29,4 +28,37 @@ h1 {
 	height: 2.5rem;
 	border-radius: 10px;
 	border: 2px solid black;
+}
+
+#report-form {
+  border-radius: 5px;
+  border: 5px solid #ED342F;
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#report-form :is(input, textarea) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#report-form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#report-form input {
+	margin-block-start: 20px;
+}
+
+#report-form button[type="submit"]{
+	background: #ED342F;
+}
+
+#report-form button[type="submit"]:hover{
+	background: #A8569A;
 }

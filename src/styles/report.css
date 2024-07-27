@@ -3,6 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: var(--size-3)
 	/* max-inline-size is the problem here, nested style for h2 */
 }
 
@@ -27,12 +28,12 @@ h1 {
 	width: 3.5rem;
 	height: 2.5rem;
 	border-radius: 10px;
-	border: 2px solid black;
+	border: var(--size-1) solid black;
 }
 
 #report-form {
-  border-radius: 5px;
-  border: 5px solid #ED342F;
+  border-radius: var(--size-1);
+  border: var(--size-1) solid #ED342F;
   padding: 20px;
   width: 75%;
   margin: 0 auto;
@@ -40,14 +41,14 @@ h1 {
 
 #report-form :is(input, textarea) {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #cccccc;
+  padding: var(--size-2);
+  border: var(--size-00) solid #cccccc;
   border-radius: 4px;
   resize: vertical;
 }
 
 #report-form label {
-  padding: 12px 12px 12px 0;
+  padding: var(--size-4) var(--size-4) var(--size-4) 0;
   display: inline-block;
 }
 
@@ -56,9 +57,9 @@ h1 {
 }
 
 #report-form button[type="submit"]{
-	background: #ED342F;
+	background-color: #ED342F;
 }
 
 #report-form button[type="submit"]:hover{
-	background: #A8569A;
+	background-color: --var(--tjs-red-7);
 }

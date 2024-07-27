@@ -23,30 +23,30 @@ const BLOG_URL = Astro.site?.href;
 
 		<div>
 			<div class="spaceMain">
-				<p class="centering">Did you experience something questionable at a TorontoJS event, or on our discussion channels? Feel free to direct others to our Code Of Conduct.
+				<p class="centering">Did you experience something questionable at a TorontoJS event, or on our discussion channels? Feel free to direct others to our <a href="https://torontojs.com/code_of_conduct" target="_blank">Code Of Conduct.</a>
 				</p>
 				<p class="centering">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
 			</div>
 			<div class="spaceMain">
 				<h3 class="centering">Please provide the following information:</h3>
-					<p class="centering">
+					<!-- <p class="centering">
 					the time and place the harassment took place, the member(s) involved in the violation, any surrounding details you think are relevant to the report.
-					</p>
+					</p> -->
 			</div>
 		</div>
 
 		<div id="report-form">
 			<form>
 				<label for="name">
-					Name
+					Name:
 				</label>
 					<input id="name" />
 				<label for="email">
-					Email (required)
+					Email: (required)
 				</label>
 					<input type="email" id="email" required />
 				<label for="comment">
-					Explain what happened (required)
+					Explain what happened: (required)
 				</label>
 					<textarea name="comment" id="comment" required></textarea>
 					<button type="submit" value="submit">Submit</button>

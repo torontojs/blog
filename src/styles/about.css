@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: var(--size-4);
 }
 
 h1 {
@@ -16,13 +16,5 @@ p {
 
 .resize-image {
 	width: 30%;
-	border-radius: 10px;
-}
-
-.button-style {
-	background-color: white;
-	width: 3.5rem;
-	height: 2.5rem;
-	border-radius: 10px;
-	border: 2px solid black;
+	border-radius: var(--size-2);
 }

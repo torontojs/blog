@@ -1,4 +1,4 @@
-# Toronto JS Blog Project Structure
+# TorontoJS Blog Project Structure
 
 The project consists of the following list of files and folders:
 
@@ -177,7 +177,7 @@ For example, if we have the following list of markdown files, each representing 
 
 - `hello-world.md`, created in January 2024
 - `selusa-secundus.md`, created in February 2024
-- `trivial-triple-triumvirate.md`, created in March 2024 
+- `trivial-triple-triumvirate.md`, created in March 2024
 
 Those files, when built, will translate to:
 - `/2024/01/hello-world/index.html`

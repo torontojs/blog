@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #2"
+title: "TorontoJS TL;DR Issue #2"
 createdAt: 2023-07-12T11:11:00
 author: drey
 summary: Wow!! Over the half way point of the year, isn't that something? One day its January 1st, maybe we were thinking about goals, resolutions, routines and new habits to implement and then all of a sudden, we are over the 6 month mark.
@@ -14,7 +14,7 @@ Summer!! Sunshine!! In-person events??? Time outside?? The heat though.
 
 Lots of awesome upcoming events in the city either in-person or online, check them out below!
 
-If you have anything to share for the next edition, find us on the [Toronto JS slack](https://torontojs.slack.com/).
+If you have anything to share for the next edition, find us on the [TorontoJS slack](https://torontojs.slack.com/).
 
 # Upcoming events
 

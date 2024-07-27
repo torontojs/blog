@@ -1,4 +1,4 @@
-# Documentation for Toronto JS blog
+# Documentation for TorontoJS blog
 
 Here you will find documentation about the project structure, how to contribute, and how to write blog posts.
 
@@ -8,6 +8,6 @@ Here you will find documentation about the project structure, how to contribute,
 - [Setting up the project](setup.md)
 - [Commands to run the project](commands.md)
 - [Project structure](project-structure.md)
-- [Contributing to Toronto JS blog](contributing.md)
+- [Contributing to TorontoJS blog](contributing.md)
 - [Writing blog posts](writing-posts.md)
 - [Adding a new author](adding-authors.md)

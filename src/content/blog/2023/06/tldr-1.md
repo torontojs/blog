@@ -1,22 +1,22 @@
 ---
-title: "Toronto JS TL;DR Issue #1"
+title: "TorontoJS TL;DR Issue #1"
 createdAt: 2023-06-28T15:45:00
 author: evert
 image: ./assets/runescape.png
 imageAlt: A screenshot of RuneSweeper, a Runescape inspired Minesweeper game
-summary: Summer is here, and welcome to the first issue of Toronto JS TL;DR. This is the Toronto Javascript newsletter, by you for you.
+summary: Summer is here, and welcome to the first issue of TorontoJS TL;DR. This is the Toronto Javascript newsletter, by you for you.
 tags:
   - TLDR
   - Newsletter
   - Community
 ---
-Summer is here, and welcome to the first issue of Toronto JS TL;DR. This is the Toronto Javascript newsletter, by you for you.
+Summer is here, and welcome to the first issue of TorontoJS TL;DR. This is the Toronto Javascript newsletter, by you for you.
 
-Our goal with this newsletter to is keep you apprised of what's going on with Toronto JS and provide a spotlight of your projects. If you have anything to share for the next edition, find us on the [Toronto JS slack](https://torontojs.slack.com/).
+Our goal with this newsletter to is keep you apprised of what's going on with TorontoJS and provide a spotlight of your projects. If you have anything to share for the next edition, find us on the [TorontoJS slack](https://torontojs.slack.com/).
 
 # Upcoming events
 
-We got a packed schedule the next few weeks, with 4 Toronto JS events:
+We got a packed schedule the next few weeks, with 4 TorontoJS events:
 
 - [JS Social: Online - June 28](https://www.meetup.com/torontojs/events/mrmfftyfcjblc/) - TODAY!
 - [JS Technical Interview Prep - June 29](https://guild.host/events/js-technical-interview-awf6em)
@@ -44,7 +44,7 @@ Marco Campos wrote about "[Web Components: A (Not So) Gentle Introduction](https
 
 We're getting a new keyword `using`, existing alongside `var`, `let` and `const`, which has the unique property that it lets library developers ‘do something' when a symbol goes out of scope.
 
-The news is that this will be part of the next Typescript 5.2 release, and sparked some interesting discussions on the [Toronto JS Slack](https://torontojs.slack.com/). Read all about it on: [Total Typescript.](https://www.totaltypescript.com/typescript-5-2-new-keyword-using)
+The news is that this will be part of the next Typescript 5.2 release, and sparked some interesting discussions on the [TorontoJS Slack](https://torontojs.slack.com/). Read all about it on: [Total Typescript.](https://www.totaltypescript.com/typescript-5-2-new-keyword-using)
 
 Last week, Svelte [released version 4](https://svelte.dev/blog/svelte-4) of their frontend framework. The release seems mostly incremental with a focus on performance improvements and the Developer experience.
 

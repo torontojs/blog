@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #7"
+title: "TorontoJS TL;DR Issue #7"
 createdAt: 2023-09-20T13:34:00
 author: evert
 image: ./assets/party-paint.png
@@ -46,7 +46,7 @@ In this section we show projects and articles by _YOU_! Have something to share 
 
 ![](./assets/party-paint.png)
 
-[Dann](https://danntoliver.com/) has been working with his **7 year old** on Party Paint! Is this the youngest member of the Toronto JS community? Check it out here: [https://inatree.net/partypaint/](https://inatree.net/partypaint/)
+[Dann](https://danntoliver.com/) has been working with his **7 year old** on Party Paint! Is this the youngest member of the TorontoJS community? Check it out here: [https://inatree.net/partypaint/](https://inatree.net/partypaint/)
 
 [Mike Vautour](https://www.linkedin.com/in/michael-vautour-a1617ab2/?originalSubdomain=ca) built an open-source tool to make it easy for his non-technical clients to share information bout setting up DNS records. Check out the [Github Project](https://github.com/igMike-V/dns-builder), or a [demo video](https://youtu.be/JBbR-F57McE).
 
@@ -72,4 +72,4 @@ If you're on a recent mac, you're probably already using ZSH instead of the prev
 
 Works on Mac, Linux, FreeBSD, GNU/Herd, AIX, OpenSolaris or Windows (with WSL).
 
-Thanks for reading Toronto JS TL;DR!
+Thanks for reading TorontoJS TL;DR!

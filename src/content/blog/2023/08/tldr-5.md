@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #5"
+title: "TorontoJS TL;DR Issue #5"
 createdAt: 2023-08-23T11:11:00
 author: drey
 summary: This is a blog post about the JavaScript programming language. Like it, love it, hate it, it's here to stay.
@@ -10,7 +10,7 @@ tags:
 ---
 How quickly time goes by!! We hope you had a great summer, filled with joy, expansion, learning more along your coding journey, as well as meeting new people through in person or online events. It was definitely an interesting summer with the up and down weathers. With fall on the way, the changing of weathers and leaves on the trees, this doesn't mean an end to in person or virtual events!
 
-If you have anything to share for the next edition, find us on the [Toronto JS slack](https://torontojs.slack.com/).
+If you have anything to share for the next edition, find us on the [TorontoJS slack](https://torontojs.slack.com/).
 
 # Contest!!!!
 
@@ -70,7 +70,7 @@ article.card {
 
 Check out the article on CSS Nesting [here](https://creatures.dev/blog/getting-started-with-css-nesting/)!
 
-A few of folks in TorontoJS have started building a public Toronto JS member website, where people in the community can create public profiles and show off their projects. It's early in the building process, but there's a [Github Repo](https://github.com/torontojs/members). Join the Code Club if wanting to contribute!
+A few of folks in TorontoJS have started building a public TorontoJS member website, where people in the community can create public profiles and show off their projects. It's early in the building process, but there's a [Github Repo](https://github.com/torontojs/members). Join the Code Club if wanting to contribute!
 
 # Industry News
 

@@ -22,7 +22,6 @@ const IMAGE_WIDTHS = [256, 512, 768, image?.width ?? 1024];
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 ---
 <article class="post-card">
-
 	<header>
 		<h2>
 			<a href={url}>
@@ -35,20 +34,20 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 
 	{image && (
 		<Picture
+			pictureAttributes={{ 'class': 'post-card-image' }}
 			src={image}
 			alt={imageAlt ?? ''}
 			widths={IMAGE_WIDTHS}
 			sizes={`(max-width: 360px) 256px, (max-width: 720px) 512px, (max-width: 1280px) 768px, ${image.width}px`}
 			quality="high"
-			pictureAttributes={{ 'class': 'col-start-1 row-start-2 desktop:row-span-2 w-64 flex items-start justify-center' }}
 		/>
 	)}
 
-	<div>
+	<div class="post-card-content">
 		<slot></slot>
 	</div>
 
-	<a href={url}><span class="sr-only">({title}) </span>Read more...</a>
+	<a href={url} class="post-card-read-more">Read more<span class="visually-hidden">: {title}</span></a>
 
 	<footer>
 		{tags && tags.length > 0 && (

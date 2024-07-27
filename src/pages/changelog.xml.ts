@@ -18,8 +18,8 @@ export const GET: APIRoute = async (context) => {
 	const BLOG_URL = new URL(context.site!).href;
 
 	return rss({
-		title: 'Toronto JS Blog Changelog',
-		description: 'Changelog (Version History) for Toronto JS Blog, containing all recent changes.',
+		title: 'TorontoJS Blog Changelog',
+		description: 'Changelog (Version History) for TorontoJS Blog, containing all recent changes.',
 		site: BLOG_URL,
 		items: await Promise.all((await getCollection('changelog')).map(async (changelog) => {
 			const versionNumber = changelog.id.replace('.md', '');
@@ -41,8 +41,8 @@ export const GET: APIRoute = async (context) => {
 		<language>en-us</language>
 		<image>
 			<url>${new URL(siteImage.src, BLOG_URL).toString()}</url>
-			<title>Toronto JS Blog Changelog</title>
-			<description>Logo for Toronto JS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.</description>
+			<title>TorontoJS Blog Changelog</title>
+			<description>Logo for TorontoJS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.</description>
 			<link>${BLOG_URL}changelog.xml</link>
 			<width>142</width>
 			<height>116</height>

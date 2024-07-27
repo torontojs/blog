@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #12"
+title: "TorontoJS TL;DR Issue #12"
 createdAt: 2023-11-30T09:31:00
 author: marco
 summary: On the 10th day of JS, Brendan Eich gave to me...
@@ -21,7 +21,7 @@ It is also a time of fun challenges and quick projects, so brush up your IDE and
 
 Happy holidays and happy coding!
 
-## Upcoming Toronto JS Events
+## Upcoming TorontoJS Events
 
 - **December 6th, Wednesday**: [JS Tech Talk [In-Person]: Simplify Complex Apps, React and React native Code Share, Apollo Caching](https://guild.host/events/js-tech-talk-inperson-wku7de)
 

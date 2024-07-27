@@ -1,16 +1,16 @@
 ---
-title: "Toronto JS TL;DR Issue #4"
+title: "TorontoJS TL;DR Issue #4"
 createdAt: 2023-08-09T11:01:00
 author: evert
 image: ./assets/d784bf5a-e5d5-47f3-a6c8-0b95d50c9b22_2048x1536.jpg
 imageAlt: A top down photo of a room with people seated in chairs and couches forming a semi circle. In front of the people there is a speaker pointing to a presentation. The room is well lit with big windows on the background and lots of sun light coming in.
-summary: Normally summers are a bit quiet for events, but this year seems like an exception. We've had 6(!) Toronto JS events in the last 2 weeks and more on the way.
+summary: Normally summers are a bit quiet for events, but this year seems like an exception. We've had 6(!) TorontoJS events in the last 2 weeks and more on the way.
 tags:
   - TLDR
   - Newsletter
   - Community
 ---
-Normally summers are a bit quiet for events, but this year seems like an exception. We've had 6(!) Toronto JS events in the last 2 weeks and more on the way. Don't forget to touch grass!
+Normally summers are a bit quiet for events, but this year seems like an exception. We've had 6(!) TorontoJS events in the last 2 weeks and more on the way. Don't forget to touch grass!
 
 ![A top down photo of a room with people seated in chairs and couches forming a semi circle. In front of the people there is a speaker pointing to a presentation. The room is well lit with big windows on the background and lots of sun light coming in.](./assets/d784bf5a-e5d5-47f3-a6c8-0b95d50c9b22_2048x1536.jpg)
 
@@ -18,7 +18,7 @@ JS Tech Talk event at Spaces. Photo by Tehseen Chaudhry.
 
 # Upcoming events
 
-We have the following Toronto JS events on the docket:
+We have the following TorontoJS events on the docket:
 
 - Most Saturdays from 4pm-6pm Danny is hosting **JS Code Club: Online** on Zoom. This is a mob hacking event where 1 or more people bring projects or problems to work on together. I try to go every week as they're always inspiring and Danny is a great host. Look out for a link on the #events channel in Slack close to **August 12th** and **August 19th.**
 - On **August 30th** we also have the monthly [JS Social: Online](https://guild.host/events/js-social-online-mrmfftyfclbnc) scheduled. A good place to meet like-minded individuals over a snack or drink from the comfort of your home.
@@ -44,7 +44,7 @@ You can play around with it [on his github pages website.](https://petertyliu.g
 
 ![A screenshot of a interface inspired by Star Trek's LCARS, in dark gray and orange.](./assets/647d8683-affd-4e37-a35e-d613f79f4e88_1641x848.png)
 
-A few of us also have started working on a public Toronto JS member website, where people in the community can create public profiles and show off their projects. It's early days, but there's a [Github Repo](https://github.com/torontojs/members). Join the Code Club if you want to pitch in!
+A few of us also have started working on a public TorontoJS member website, where people in the community can create public profiles and show off their projects. It's early days, but there's a [Github Repo](https://github.com/torontojs/members). Join the Code Club if you want to pitch in!
 
 # Industry news & hot takes
 

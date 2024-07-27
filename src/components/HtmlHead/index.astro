@@ -34,7 +34,7 @@ const {
 const BLOG_URL = Astro.site?.href;
 const fullUrl = new URL(url, Astro.site).toString();
 
-const socialImageAlt = imageAlt ?? 'Logo for Toronto JS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.';
+const socialImageAlt = imageAlt ?? 'Logo for TorontoJS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.';
 const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\//iu, '')}`;
 ---
 <head>
@@ -46,7 +46,7 @@ const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\/
 	<!-- URLs -->
 	<link rel="canonical" href={fullUrl} />
 	<link rel="sitemap" href={`${BLOG_URL}sitemap-index.xml`} />
-	{ hasFeed && <link rel="alternate" type="application/rss+xml" href={`${BLOG_URL}feed.xml`} title="Toronto JS Blog" /> }
+	{ hasFeed && <link rel="alternate" type="application/rss+xml" href={`${BLOG_URL}feed.xml`} title="TorontoJS Blog" /> }
 
 	<!-- App Metadata -->
 	<link rel="icon" href={`${BLOG_URL}icons/icon.svg`} sizes="any" type="image/svg+xml" />

@@ -11,20 +11,20 @@ const BLOG_URL = Astro.site?.href;
 
 ---
 <BaseLayout
-	htmlTitle={['Authors', 'Toronto JS Blog']}
-	title="Toronto JS Blog Authors"
-	description="Toronto JS Blog Authors"
+	htmlTitle={['Authors', 'TorontoJS Blog']}
+	title="TorontoJS Blog Authors"
+	description="TorontoJS Blog Authors"
 	url={`${BLOG_URL}authors`}
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 	hasFeed={true}
 	pageSchema="ItemList"
 >
-	<meta itemprop="name" content="Toronto JS Blog Authors" />
+	<meta itemprop="name" content="TorontoJS Blog Authors" />
 	<link itemprop="itemListOrder" href="https://schema.org/ItemListUnordered" />
 	<meta itemprop="numberOfItems" content={authors.length.toString()} />
 
 	<PageHeader slot="header">
-		Toronto JS Blog Authors
+		TorontoJS Blog Authors
 	</PageHeader>
 
 

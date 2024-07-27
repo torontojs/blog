@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #8"
+title: "TorontoJS TL;DR Issue #8"
 createdAt: 2023-10-04T11:11:00
 author: drey
 summary: October is here!!!!! Which means that the leaves are changing, there is a mix of crisp air in the morning and more blue sky days but this also means that Hacktober!!! is among us!!! which they are celebrating the 10th year of existence!!!!

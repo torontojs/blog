@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #3"
+title: "TorontoJS TL;DR Issue #3"
 createdAt: 2023-07-26T12:00:00
 author: marco
 summary: Community and growth
@@ -40,7 +40,7 @@ Also, happening in Toronto:
 # Happening in the community
 
 - An interesting, albeit very technical, discussion happened on slack about [Fractional Indexing](https://madebyevan.com/algos/crdt-fractional-indexing/). It is a way of indexing items on a list using floating point numbers where to add or move items we only need to change the index of that item. Find the thread [here](https://torontojs.slack.com/archives/C0664SCTG/p1689692101093849).
-- The [Toronto JS](https://torontojs.com/) home page is getting some well-deserved love thanks to Michal Svatos with the help of Jen Chan, Kieran Huggins, and Taz Singh. Now you can see events directly from there!
+- The [TorontoJS](https://torontojs.com/) home page is getting some well-deserved love thanks to Michal Svatos with the help of Jen Chan, Kieran Huggins, and Taz Singh. Now you can see events directly from there!
 - A heated debate around UML and the use of diagrams also happened, it has interesting opinions and ideas and is worth checking. [Here](https://torontojs.slack.com/archives/C0649AUFL/p1689884290862179) is the thread on slack.
 
 # What's new in Javascript?

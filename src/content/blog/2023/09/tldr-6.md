@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #6"
+title: "TorontoJS TL;DR Issue #6"
 createdAt: 2023-09-06T11:11:00
 author: marco
 summary: And now for something completely different...
@@ -16,9 +16,9 @@ There is [news about a possible whiteout coming this winter](https://www.blogto
 
 Happening **tomorrow (September 7th)** [Toast](https://www.trytoast.ca/) will be hosting an Online Hiring Event focused on female and non-binary people. Registration for the event is [here](https://www.eventbrite.ca/e/septembersurge-online-hiring-event-for-women-software-developers-tickets-704965018347?aff=oddtdtcreator).
 
-On **September 16th** at **4 PM EST** we will have the next [Toronto JS Code Club](https://guild.host/events/js-code-club-online-294792793). It will be an online mob programming event, so please bring your projects!
+On **September 16th** at **4 PM EST** we will have the next [TorontoJS Code Club](https://guild.host/events/js-code-club-online-294792793). It will be an online mob programming event, so please bring your projects!
 
-Our next Toronto JS in-person event will happen on **September 27th** (a.k.a. last Wednesday of the month), so stay tuned on the **#events** channel on slack for more information.
+Our next TorontoJS in-person event will happen on **September 27th** (a.k.a. last Wednesday of the month), so stay tuned on the **#events** channel on slack for more information.
 
 **September 29th** also brings us ["Cracking the Silicon Valley North Ceiling: Tackling Challenges Faced by Women and Non-Binary People in Tech"](https://queertech.org/events/56021). An in-person event hosted by [Queertech](https://queertech.org/) for queer woman and non-binary people.
 

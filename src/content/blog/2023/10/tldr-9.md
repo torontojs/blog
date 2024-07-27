@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #9"
+title: "TorontoJS TL;DR Issue #9"
 createdAt: 2023-10-19T23:16:00
 author: marco
 image: ./assets/317fe584-0a70-4ac7-8f50-67c9a76b427c_4080x3072.jpg
@@ -95,6 +95,6 @@ Now, a shout out to a full past week with lots of people showing their projects!
 - Liz shared a [project](https://github.com/GingerKiwi/302-gingerkiwi-redirect-vercel) for a custom 302 redirect page for Vercel.
 
 
-## Support Toronto JS
+## Support TorontoJS
 
 If you happen to have a few bucks laying around or would just want to help our community to grow and maintain itself, head to our [Open Collective page](https://opencollective.com/torontojs) and make a contribution!

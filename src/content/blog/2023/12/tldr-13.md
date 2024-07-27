@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #13"
+title: "TorontoJS TL;DR Issue #13"
 createdAt: 2023-12-21T20:05:00
 author: evert
 summary: 🍾 This year, wrapped 🍾
@@ -48,4 +48,4 @@ This will ensure you will have native ES modules running on node with the least 
 
 ## Happy holidays!
 
-Hope you all get the rest you deserve and an excellent 2024, from Drey, Marco & Evert and all of the Toronto JS volunteer team!
+Hope you all get the rest you deserve and an excellent 2024, from Drey, Marco & Evert and all of the TorontoJS volunteer team!

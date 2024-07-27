@@ -1,5 +1,5 @@
 ---
-title: "Toronto JS TL;DR Issue #11"
+title: "TorontoJS TL;DR Issue #11"
 createdAt: 2023-11-15T11:11:00
 author: drey
 image: ./assets/7f819de0-057b-4626-8421-5193bfb9fd8b_800x800.jpg
@@ -16,10 +16,10 @@ We are starting this issue off by honouring [Jen Chan](https://www.jenchan.biz/
 
 Through figuring how to bring events online, returning to in-person events, mentoring new event organizers, onboarding volunteers, organizing a donation drive for TorontoJS self-sustainability, expanding the spirit of life, light and love which is the core of our community, Jen will be missed! We wish her all the best in future endeavours. If you see Jen at an upcoming event then please thank her for the time, effort and contribution she has put into our community!
 
-## Upcoming Toronto JS Events
+## Upcoming TorontoJS Events
 
-- [Toronto JS Social (In-Person)](https://guild.host/events/toronto-js-social-in-27ewzx) - TONIGHT!!!!
-- **November 19th at 2:00pm** - [Toronto JS Code Club (Online)](https://guild.host/events/code-club-online-november-czcet9)
+- [TorontoJS Social (In-Person)](https://guild.host/events/toronto-js-social-in-27ewzx) - TONIGHT!!!!
+- **November 19th at 2:00pm** - [TorontoJS Code Club (Online)](https://guild.host/events/code-club-online-november-czcet9)
 - **November 26nd** **at 1:00pm** - [JS Social: OpenTTD (Online)](https://guild.host/events/js-social-openttd-online-a76bbz) - Love public transit? Play a 30 year old game together, online!
 - **December 6th at 6pm -** [JS Tech Talk (In-Person): Simplify Complex Apps, React and React native Code Share, Apollo Caching](https://guild.host/events/js-tech-talk-inperson-wku7de)
 
@@ -43,6 +43,6 @@ What does this mean and how can it benefit developers? When the static shell rou
 
 Here are some steps to help you step up your personal project using [Partial Rendering](https://nextjs.org/docs/app/api-reference/next-config-js/partial-prerendering)!
 
-## Support Toronto JS
+## Support TorontoJS
 
 If you happen to have a few bucks laying around or would just want to help our community to grow and maintain itself, head to our [Open Collective page](https://opencollective.com/torontojs) and make a contribution!

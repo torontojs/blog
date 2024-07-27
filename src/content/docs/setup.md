@@ -1,4 +1,4 @@
-# Setup for contributing to Toronto JS Blog
+# Setup for contributing to TorontoJS Blog
 
 ## Pre-requisites
 

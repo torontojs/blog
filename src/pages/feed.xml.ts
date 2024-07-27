@@ -20,7 +20,7 @@ export const GET: APIRoute = async (context) => {
 	const allPosts = await listAllPosts();
 
 	return rss({
-		title: 'Toronto JS Blog',
+		title: 'TorontoJS Blog',
 		description: 'TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in the GTA area.',
 		site: BLOG_URL,
 		xmlns: {
@@ -33,8 +33,8 @@ export const GET: APIRoute = async (context) => {
 			<atom:link href="${new URL(blogImage.src, BLOG_URL).toString()}" rel="self" type="application/rss+xml" />
 			<image>
 				<url>${new URL(blogImage.src, BLOG_URL).toString()}</url>
-				<title>Toronto JS Blog</title>
-				<description>Logo for Toronto JS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.</description>
+				<title>TorontoJS Blog</title>
+				<description>Logo for TorontoJS, consisting of a red square with the letters &quot;JS&quot; in black on the left, and a sillouette of the CN Tower seen from the ground up on the right.</description>
 				<link>${BLOG_URL}</link>
 				<width>142</width>
 				<height>116</height>
@@ -43,7 +43,7 @@ export const GET: APIRoute = async (context) => {
 			<lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 			<ttl>${ONE_WEEK_IN_MINUTES}</ttl>
 			<generator>Astro</generator>
-			<dc:creator>Toronto JS Community</dc:creator>
+			<dc:creator>TorontoJS Community</dc:creator>
 		`,
 		items: await Promise.all(allPosts.map(async (post) => {
 			let image;

@@ -10,20 +10,20 @@ const BLOG_URL = Astro.site?.href;
 const tags = await listTags();
 ---
 <BaseLayout
-	htmlTitle={['Tags', 'Toronto JS Blog']}
-	title="Toronto JS Blog Tags"
-	description="Toronto JS Blog Tags"
+	htmlTitle={['Tags', 'TorontoJS Blog']}
+	title="TorontoJS Blog Tags"
+	description="TorontoJS Blog Tags"
 	url={`${BLOG_URL}tags`}
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 	hasFeed={true}
 	pageSchema="ItemList"
 >
-	<meta itemprop="name" content="Toronto JS Blog Tags" />
+	<meta itemprop="name" content="TorontoJS Blog Tags" />
 	<link itemprop="itemListOrder" href="https://schema.org/ItemListUnordered" />
 	<meta itemprop="numberOfItems" content={tags.length.toString()} />
 
 	<PageHeader slot="header">
-		Toronto JS Blog Tags
+		TorontoJS Blog Tags
 	</PageHeader>
 
 

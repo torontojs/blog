@@ -1,4 +1,4 @@
-.fullWidth  {
+.full-width  {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -12,23 +12,15 @@ h1 {
 	text-align: center;
 }
 
-.spaceMain {
+.space-main {
 	display: block;
 	width: 100%;
 	text-align: center;
 	padding: 2rem;
 }
 
-.centering {
+.center-text {
 	margin: auto;
-}
-
-.buttonStyle {
-	background-color: white;
-	width: 3.5rem;
-	height: 2.5rem;
-	border-radius: 10px;
-	border: var(--size-1) solid black;
 }
 
 #report-form {

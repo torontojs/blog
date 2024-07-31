@@ -4,6 +4,7 @@
 
 .tag-list ul {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding-inline-start: 0;
 	list-style: none;

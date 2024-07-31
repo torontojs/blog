@@ -1,0 +1,17 @@
+#post-contents {
+	padding-inline: var(--size-5);
+	width: 100%;
+	max-width: var(--max-width);
+	margin-inline: auto;
+}
+
+#post-contents :is(p, ul, ol) {
+	margin-block: var(--size-3);
+}
+
+#post-contents p > :is(img, picture, figure):only-child,
+#post-contents iframe {
+	margin-inline: auto;
+	width: 100%;
+	max-width: var(--size-15);
+}

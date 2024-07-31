@@ -63,7 +63,7 @@
 
 .post-card h2 a {
 	color: var(--tjs-red-6);
-	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 }
 
 img {

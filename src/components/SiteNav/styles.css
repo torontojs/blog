@@ -1,6 +1,6 @@
 #site-nav {
 	padding: var(--size-2);
-	background-color: rgb(19 17 11);
+	background-color: var(--tjs-dark-bg);
 	font-weight: bold;
 	color: white;
 }

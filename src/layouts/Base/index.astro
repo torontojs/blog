@@ -50,13 +50,13 @@ const {
 		updatedAt={updatedAt}
 		hasFeed={hasFeed}
 	/>
-	<body class:list={[{ 'h-entry': hasFeed, 'font-sans mb-6': true }]}>
+	<body class:list={[{ 'h-entry': hasFeed }]}>
 		<slot name="header"></slot>
-		<main class="w-auto mx-auto px-4 desktop:px-9 bg-mainRed">
+		<main>
 			<slot></slot>
 		</main>
 
-		<footer id="site-footer" class="p-2 bg-[#13110b] font-bold text-white w-full">
+		<footer id="site-footer">
 			<slot name="footer"></slot>
 			<SiteFooter />
 			<RefreshBanner />

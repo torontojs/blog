@@ -26,7 +26,7 @@ We have one last [JS Code Club: Online](https://guild.host/events/js-code-club-
 
 In the next year our first event will be a new [Code Buddy](https://guild.host/events/torontojs-code-buddy-kq8vnp) event on Discord. Code Buddy is like a book club, but instead of books the group will study tutorials and courses together. This is happening January 16th. Read all about it on [Guild](https://en.wikipedia.org/wiki/Metropolitan_Opera#Origins).
 
-## The year in JS - Marco Campos
+## The year in JS (by Marco Campos)
 
 2023 went so fast, it seems like January 1st was yesterday! Lots of things happened on the web recently, so here are some reviews and highlights:
 

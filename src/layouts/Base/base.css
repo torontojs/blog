@@ -66,7 +66,19 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {
-    max-inline-size: 100%;
+	max-inline-size: 100%;
+}
+
+h1 {
+	hyphenate-character: '-';
+	hyphenate-limit-chars: 8 3 2;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	line-break: loose;
+	overflow-wrap: break-word;
+	text-wrap: balance;
+	word-break: break-word;
 }
 
 .visually-hidden {

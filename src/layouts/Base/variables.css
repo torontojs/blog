@@ -20,6 +20,8 @@
 	--tjs-red-11: #9a1e17;
 	--tjs-red-12: #8a1b14;
 
+	--tjs-dark-bg: #13110b;
+
 	--theme-color: var(--tjs-red-7);
 
 	accent-color: var(--theme-color);

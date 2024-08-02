@@ -26,7 +26,6 @@
 		'read-more'
 		'footer'
 	;
-
 }
 
 .post-card header { grid-area: header; }
@@ -50,15 +49,39 @@
 
 .post-card h2 {
 	margin-block-end: var(--size-3);
+
+	hyphenate-character: '-';
+	hyphenate-limit-chars: 8 3 2;
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	line-break: loose;
+	overflow-wrap: break-word;
+	text-wrap: balance;
+	word-break: break-word;
 }
 
 .post-card h2 a {
 	color: var(--tjs-red-6);
-	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 }
 
 img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media (max-width: 800px) {
+	.post-card {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto auto auto;
+		grid-template-areas:
+			'header'
+			'image'
+			'content'
+			'read-more'
+			'footer'
+		;
+	}
 }

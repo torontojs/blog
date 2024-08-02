@@ -1,11 +1,13 @@
 ---
-import AuthorCard from '../components/AuthorCard/index.astro';
-import PostCardSmall from '../components/PostCardSmall/index.astro';
-import PostHeader from '../components/PostHeader/index.astro';
-import SkipToContent from '../components/SkipToContent/index.astro';
-import TagList from '../components/TagList/index.astro';
-import type { RelatedPost } from '../utils/post';
-import BaseLayout from './Base/index.astro';
+import AuthorCard from '../../components/AuthorCard/index.astro';
+import PostCardSmall from '../../components/PostCardSmall/index.astro';
+import PostHeader from '../../components/PostHeader/index.astro';
+import SkipToContent from '../../components/SkipToContent/index.astro';
+import TagList from '../../components/TagList/index.astro';
+import type { RelatedPost } from '../../utils/post';
+import BaseLayout from '../Base/index.astro';
+
+import './styles.css';
 
 interface Props {
 	title: string,

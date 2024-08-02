@@ -7,18 +7,19 @@ const BLOG_URL = Astro.site?.href;
 
 ---
 <BaseLayout
-	htmlTitle={['About', 'TorontoJS Blog']}
-	title="About TorontoJS Blog"
-	url={`${BLOG_URL}about`}
-	description="About the TorontoJS blog."
+	htmlTitle={['Code of Conduct', 'TorontoJS Blog']}
+	title="Code of Conduct TorontoJS Blog"
+	url={`${BLOG_URL}codeofc`}
+	description="Our Code of Conduct for TorontoJs."
 	tags={['development', 'javascript', 'toronto', 'community', 'blog']}
 >
 	<SkipToContent slot="header" />
 	<header slot="header">
 		<SiteNav />
-		<h1 class="centerElements">Code of Conduct</h1>
+		<h1 class="center-elements">Code of Conduct</h1>
 	</header>
 		<div id="contents">
-			<p class="centerElements">This Code of Conduct is from the <a href="https://torontojs.com/code_of_conduct" target="_blank">TorontoJS Website!</a></p>
+			<p class="center-text">Here is our <a href="https://torontojs.com/code_of_conduct" target="_blank">Code Of Conduct.</a>
+			</p>
 		</div>
 </BaseLayout>

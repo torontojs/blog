@@ -42,7 +42,7 @@
 
 .post-card .post-card-read-more {
 	grid-area: read-more;
-	color: var(--yellow-6);
+	color: var(--title-color);
 	font-weight: bold;
 	text-transform: uppercase;
 	text-decoration-color: var(--tjs-red-7);
@@ -66,7 +66,7 @@
 }
 
 .post-card h2 a {
-	color: var(--yellow-6);
+	color: var(--title-color);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 	text-decoration-color: var(--tjs-red-7);
 	text-underline-offset: var(--size-2);

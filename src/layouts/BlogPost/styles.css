@@ -18,7 +18,7 @@
 }
 
 #post-contents :is(h2, h3, h4, h5, h6) {
-	color: var(--yellow-6);
+	color: var(--title-color);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 }
 

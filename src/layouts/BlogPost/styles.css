@@ -7,6 +7,7 @@
 
 #post-contents :is(p, ul, ol) {
 	margin-block: var(--size-3);
+	font-weight: 450;
 }
 
 #post-contents p > :is(img, picture, figure):only-child,
@@ -14,6 +15,11 @@
 	margin-inline: auto;
 	width: 100%;
 	max-width: var(--size-15);
+}
+
+#post-contents :is(h2, h3, h4, h5, h6) {
+	color: var(--yellow-6);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 }
 
 #post-contents h2 { font-size: var(--font-size-5); }

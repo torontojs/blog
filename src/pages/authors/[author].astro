@@ -3,10 +3,11 @@ import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import { getCollection } from 'astro:content';
 
 import Avatar from '../../components/Avatar/index.astro';
-import PageHeader from '../../components/PageHeader/index.astro';
-import BaseLayout from '../../layouts/Base/index.astro';
+import InternalPageLayout from '../../layouts/InternalPage/index.astro';
 
 import { parseMarkdown } from '../../utils/markdown';
+
+import './authors.css';
 
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -24,7 +25,7 @@ const {
 const description = await parseMarkdown(body);
 
 ---
-<BaseLayout
+<InternalPageLayout
 	htmlTitle={[name, 'Author', 'TorontoJS Blog']}
 	title={name}
 	description={name}
@@ -33,19 +34,20 @@ const description = await parseMarkdown(body);
 	hasFeed={true}
 	pageSchema="ProfilePage"
 >
-	<PageHeader slot="header">
-		{name}
-	</PageHeader>
 
-	<div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">
-		<meta itemprop="name" content={name} />
-		<a id="author-picture" class="p-author h-card author-name" rel="author" itemprop="url" href={Astro.url}>
-			<Avatar image={avatar} imageAlt={avatarAlt} />
-		</a>
+<Fragment slot="header">
+	<a id="author-picture" class="p-author h-card author-name" rel="author" itemprop="url" href={Astro.url}>
+		<Avatar image={avatar} imageAlt={avatarAlt} />
+	</a>
+	<a href={Astro.url}>{name}</a>
+</Fragment>
 
-		<article id="author-bio">
-			{/* eslint-disable-next-line astro/no-set-html-directive */}
-			<Fragment set:html={description} />
-		</article>
-	</div>
-</BaseLayout>
+<div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">
+	<meta itemprop="name" content={name} />
+
+	<article id="author-bio">
+		{/* eslint-disable-next-line astro/no-set-html-directive */}
+		<Fragment set:html={description} />
+	</article>
+</div>
+</InternalPageLayout>

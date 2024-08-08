@@ -11,10 +11,12 @@
 	margin: var(--size-3) 0;
 }
 
-.author-card .author-name * {
+.author-card .author-name {
 	margin: 0;
 	color: var(--title-color);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
+	text-decoration-color: var(--tjs-red-7);
+	text-underline-offset: var(--size-1);
 }
 
 .author-card .author-picture {

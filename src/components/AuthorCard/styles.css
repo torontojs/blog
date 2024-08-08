@@ -17,16 +17,14 @@
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
 	text-decoration-color: var(--tjs-red-7);
 	text-underline-offset: var(--size-1);
+
+	grid-area: name;
+	justify-self: start;
 }
 
 .author-card .author-picture {
 	grid-area: avatar;
 	align-self: start;
-}
-
-.author-card .author-name {
-	grid-area: name;
-	justify-self: start;
 }
 
 .author-card .author-bio {

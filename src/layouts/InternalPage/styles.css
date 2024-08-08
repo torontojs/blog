@@ -1,0 +1,22 @@
+#contents {
+	padding-inline: var(--size-5);
+	width: 100%;
+	max-width: var(--max-width);
+	margin-inline: auto;
+}
+
+#contents :is(p, ul, ol) {
+	margin-block: var(--size-3);
+	font-weight: 450;
+}
+
+#contents :is(h2, h3, h4, h5, h6) {
+	color: var(--title-color);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
+}
+
+#contents h2 { font-size: var(--font-size-5); }
+#contents h3 { font-size: var(--font-size-4); }
+#contents h4 { font-size: var(--font-size-3); }
+#contents h5 { font-size: var(--font-size-2); }
+#contents h6 { font-size: var(--font-size-1); }

@@ -3,14 +3,16 @@ import { getCollection } from 'astro:content';
 
 import AuthorCard from '../../components/AuthorCard/index.astro';
 import PageHeader from '../../components/PageHeader/index.astro';
-import BaseLayout from '../../layouts/Base/index.astro';
+import InternalPageLayout from '../../layouts/InternalPage/index.astro';
+
+import './authors.css';
 
 const authors = await getCollection('authors');
 
 const BLOG_URL = Astro.site?.href;
 
 ---
-<BaseLayout
+<InternalPageLayout
 	htmlTitle={['Authors', 'TorontoJS Blog']}
 	title="TorontoJS Blog Authors"
 	description="TorontoJS Blog Authors"
@@ -40,4 +42,4 @@ const BLOG_URL = Astro.site?.href;
 			))}
 		</ul>
 	</div>
-</BaseLayout>
+</InternalPageLayout>

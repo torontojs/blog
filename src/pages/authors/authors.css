@@ -1,0 +1,11 @@
+#author-list {
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+#author-list li {
+	padding: var(--size-2);
+}

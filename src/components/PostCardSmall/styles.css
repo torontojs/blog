@@ -7,12 +7,12 @@
 		'picture content';
 	grid-template-columns: var(--image-size) 1fr;
 	grid-template-rows: auto 1fr;
-	gap: var(--spacing-medium);
+	gap: var(--size-3);
 
-	margin: var(--spacing-large) 0;
-	padding: var(--spacing-medium);
+	margin: var(--size-3) 0;
+	padding: var(--size-2);
 	width: clamp(var(--min-width), 35cqw, var(--medium-width));
-	height: calc(100% - (var(--spacing-large) * 3));
+	height: calc(100% - (var(--size-3) * 3));
 }
 
 .post-card:not(:has( picture)) {

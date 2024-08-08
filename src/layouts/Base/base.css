@@ -68,7 +68,7 @@ iframe {
 
 a {
 	overflow-wrap: break-word;
-	text-decoration-color: currentColor;
+	text-decoration-color: currentcolor;
 }
 
 h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {

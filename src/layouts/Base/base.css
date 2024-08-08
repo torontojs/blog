@@ -18,6 +18,11 @@ html, body {
 	font-size: var(--body-text);
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 
 *, *::after, *::before {
 	box-sizing: inherit;
@@ -63,6 +68,7 @@ iframe {
 
 a {
 	overflow-wrap: break-word;
+	text-decoration-color: currentColor;
 }
 
 h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {
@@ -79,6 +85,9 @@ h1 {
 	overflow-wrap: break-word;
 	text-wrap: balance;
 	word-break: break-word;
+
+	color: white;
+	text-shadow: 0.2rem 0.2rem 0.4rem black;
 }
 
 .visually-hidden {

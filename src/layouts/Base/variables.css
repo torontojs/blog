@@ -26,6 +26,7 @@
 	--surface-1: var(--gray-4);
 
 	--link: maroon;
+	--link-visited: var(--yellow-10);
 	--title-color: rgb(255 193 36);
 
 	accent-color: var(--theme-color);
@@ -34,6 +35,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--link: rgb(255 59 59);
+		--link-visited: var(--yellow-9);
 		--title-color: var(--yellow-6);
 		--surface-1: var(--gray-9);
 	}

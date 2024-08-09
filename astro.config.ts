@@ -55,18 +55,19 @@ export default defineConfig({
 			includeAssets: ['/icons/icon.svg'],
 			manifest,
 			workbox: {
-			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			maximumFileSizeToCacheInBytes: 1024 * 128,
-			cleanupOutdatedCaches: true,
-			clientsClaim: true,
-			skipWaiting: false,
-			navigateFallback: '/offline',
-			navigateFallbackDenylist: [/\.(?:png|gif|jpg|jpeg|webp|svg|ico)$/iu],
-			directoryIndex: 'index.html',
-			runtimeCaching: [externalResourcesCache, assetsCache, scriptsCache, pagesCache]
+				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+				maximumFileSizeToCacheInBytes: 1024 * 128,
+				cleanupOutdatedCaches: true,
+				clientsClaim: true,
+				skipWaiting: false,
+				navigateFallback: '/offline',
+				navigateFallbackDenylist: [/\.(?:png|gif|jpg|jpeg|webp|svg|ico)$/iu],
+				directoryIndex: 'index.html',
+				runtimeCaching: [externalResourcesCache, assetsCache, scriptsCache, pagesCache]
 			},
+			selfDestroying: true,
 			devOptions: {
-			enabled: false
+				enabled: false
 			}
 		}),
 		sitemap({

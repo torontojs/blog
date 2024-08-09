@@ -35,3 +35,8 @@
 	padding-inline: var(--size-1);
 	padding-block: calc(var(--size-1) * 0.5);
 }
+
+#post-license {
+	padding: var(--size-1) var(--size-3);
+	text-align: center;
+}

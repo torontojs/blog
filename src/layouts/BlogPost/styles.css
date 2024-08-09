@@ -3,6 +3,7 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin-inline: auto;
+	line-height: var(--size-7);
 }
 
 #post-contents :is(p, ul, ol) {
@@ -27,3 +28,10 @@
 #post-contents h4 { font-size: var(--font-size-3); }
 #post-contents h5 { font-size: var(--font-size-2); }
 #post-contents h6 { font-size: var(--font-size-1); }
+
+#post-contents :where(:not(pre)>code) {
+	white-space: break-spaces;
+	word-break: break-word;
+	padding-inline: var(--size-1);
+	padding-block: calc(var(--size-1) * 0.5);
+}

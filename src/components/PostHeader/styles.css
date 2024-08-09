@@ -49,9 +49,10 @@
 	text-align: center;
 
 
-	color: var(--tjs-red-6);
+	color: var(--yellow-6);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
-	text-decoration-color: currentcolor;
+	text-decoration-color: var(--tjs-red-7);
+	text-underline-offset: var(--size-2);
 	padding: var(--size-3) var(--size-4);
 }
 
@@ -75,7 +76,6 @@
 	font-size: smaller;
 	margin: 0;
 	padding: var(--size-1);
-	font-style: italic;
 	grid-area: summary;
 }
 

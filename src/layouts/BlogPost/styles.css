@@ -3,10 +3,12 @@
 	width: 100%;
 	max-width: var(--max-width);
 	margin-inline: auto;
+	line-height: var(--size-7);
 }
 
 #post-contents :is(p, ul, ol) {
 	margin-block: var(--size-3);
+	font-weight: 450;
 }
 
 #post-contents p > :is(img, picture, figure):only-child,
@@ -16,8 +18,20 @@
 	max-width: var(--size-15);
 }
 
+#post-contents :is(h2, h3, h4, h5, h6) {
+	color: var(--title-color);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
+}
+
 #post-contents h2 { font-size: var(--font-size-5); }
 #post-contents h3 { font-size: var(--font-size-4); }
 #post-contents h4 { font-size: var(--font-size-3); }
 #post-contents h5 { font-size: var(--font-size-2); }
 #post-contents h6 { font-size: var(--font-size-1); }
+
+#post-contents :where(:not(pre)>code) {
+	white-space: break-spaces;
+	word-break: break-word;
+	padding-inline: var(--size-1);
+	padding-block: calc(var(--size-1) * 0.5);
+}

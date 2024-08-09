@@ -1,7 +1,9 @@
 .post-card {
 	border-radius: var(--size-7);
-	border: var(--size-1) solid color-mix(in srgb, var(--gray-12), var(--tjs-red-6));
-	box-shadow: 0 0 0.7rem var(--tjs-red-6);
+	border: var(--size-1) solid var(--yellow-6);
+	box-shadow:
+		0 0 0 0.3rem var(--tjs-red-6),
+		inset 0 0 1.2rem 0.2rem var(--gray-10);
 	padding: var(--size-3);
 	width: 75%;
 	margin: 2rem auto;
@@ -40,9 +42,11 @@
 
 .post-card .post-card-read-more {
 	grid-area: read-more;
-	color: var(--tjs-red-7);
+	color: var(--title-color);
 	font-weight: bold;
 	text-transform: uppercase;
+	text-decoration-color: var(--tjs-red-7);
+	text-underline-offset: var(--size-1);
 }
 
 .post-card footer { grid-area: footer; }
@@ -62,8 +66,10 @@
 }
 
 .post-card h2 a {
-	color: var(--tjs-red-6);
+	color: var(--title-color);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
+	text-decoration-color: var(--tjs-red-7);
+	text-underline-offset: var(--size-2);
 }
 
 img {

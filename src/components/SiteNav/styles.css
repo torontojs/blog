@@ -2,7 +2,6 @@
 	padding: var(--size-2);
 	background-color: var(--tjs-dark-bg);
 	font-weight: bold;
-	color: white;
 }
 
 #site-nav ul {
@@ -11,6 +10,12 @@
 	padding: var(--size-3);
 }
 
+#site-nav a { color: white; }
+
 #logo-rounded {
 	border-radius: var(--size-2);
+}
+
+@media (max-width: 500px) {
+	#site-nav ul { flex-direction: column; }
 }

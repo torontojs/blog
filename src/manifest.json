@@ -7,7 +7,7 @@
 	"short_name": "TJS Blog",
 	"lang": "en-US",
 	"dir": "ltr",
-	"description": "TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in Greater Toronto Area.",
+	"description": "The blog is about the TorontoJS community and news about JavaScript, web development, and programming in Greater Toronto Area.",
 	"categories": [ "development", "tools", "utilities" ],
 	"display": "minimal-ui",
 	"orientation": "any",

@@ -21,7 +21,7 @@ export const GET: APIRoute = async (context) => {
 
 	return rss({
 		title: 'TorontoJS Blog',
-		description: 'TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in the GTA area.',
+		description: 'TorontoJS Blog is a blog about the TorontoJS community and news about JavaScript, web development, and programming in the Greater Toronto Area.',
 		site: BLOG_URL,
 		xmlns: {
 			atom: 'http://www.w3.org/2005/Atom',

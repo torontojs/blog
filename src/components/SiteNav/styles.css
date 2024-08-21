@@ -6,6 +6,10 @@
 
 #site-nav a { color: white; }
 
+#logo-rounded {
+	border-radius: var(--size-2);
+}
+
 #nav-menubar {
 	gap: var(--size-2);
 	align-items: center;
@@ -51,20 +55,17 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	padding: var(--size-3);
 }
 
 #mobile-menu:popover-open ul {
 	display: flex;
 	flex-direction: column;
-	padding: var(--size-3);
+	padding: var(--size-2);
 }
 
 #mobile-menu:popover-open button {
 	background-color: transparent;
 	margin-left: auto;
-	padding: var(--size-3);
-}
-
-#logo-rounded {
-	border-radius: var(--size-2);
+	padding: var(--size-2);
 }

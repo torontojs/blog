@@ -1,42 +1,51 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../../assets/icons/logo.svg';
+import closeIcon from './assets/close-icon.svg';
 import hamburgerIcon from './assets/hamburger-menu.svg';
 import './styles.css';
 const BLOG_URL = Astro.site?.href;
 ---
 
-<nav id="site-nav">
-	<div id="nav-bar">
-		<ul id="left-nav">
-			<li>
-				<a href={BLOG_URL}>
-					<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} id="logo-rounded" />
-				</a>
-			</li>
-		</ul>
-		<ul id="right-nav">
-			<li class="mobile-screen">
-				<button id="nav-menu-button"><Image src={hamburgerIcon} alt="Navbar Menu Icon" width={70} height={70} color="white" /></button>
-			</li>
-			<li>
-				<a href={`${BLOG_URL}accessibility`}>
-					Accessibility
-				</a>
-			</li>
-			<li>
-				<a href={`${BLOG_URL}license`}>
-					License
-				</a>
-			</li>
-			<li>
-				<a href={`${BLOG_URL}about`}>
-					About
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div id="mobile-menu">
+<nav id="site-nav" aria-label="Main navigation menu">
+	<ul id="nav-menubar">
+		<li>
+			<a href={BLOG_URL}>
+				<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} id="logo-rounded" />
+			</a>
+		</li>
+		<li class="desktop-only">
+			<a href={`${BLOG_URL}accessibility`}>
+				Accessibility
+			</a>
+		</li>
+		<li class="desktop-only">
+			<a href={`${BLOG_URL}license`}>
+				License
+			</a>
+		</li>
+		<li class="desktop-only">
+			<a href={`${BLOG_URL}about`}>
+				About
+			</a>
+		</li>
+		<li class="mobile-only">
+			<button
+				id="nav-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-haspopup="true"
+				aria-label="Open blog navigation" popovertarget="mobile-menu"
+			>
+				<Image
+					id="hamburger-icon" src={hamburgerIcon} alt="Hamburger Menu Icon" width={70} height={70}
+				/>
+			</button>
+		</li>
+	</ul>
+	<div popover id="mobile-menu">
+		<button popovertarget="mobile-menu" aria-controls="mobile-menu" aria-expanded="true" aria-label="Close blog navigation">
+			<Image
+				id="close-icon" src={closeIcon} alt="Close Icon" width={70} height={70}
+			/>
+		</button>
 		<ul>
 			<li>
 				<a href={`${BLOG_URL}accessibility`}>
@@ -55,11 +64,4 @@ const BLOG_URL = Astro.site?.href;
 			</li>
 		</ul>
 	</div>
-	<script>
-		const navMenuButton = document.getElementById('nav-menu-button');
-		const mobileMenu = document.querySelector('#mobile-menu');
-		navMenuButton?.addEventListener('click', () => {
-			mobileMenu?.classList.toggle('active');
-		});
-	</script>
 </nav>

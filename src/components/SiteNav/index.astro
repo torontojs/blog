@@ -1,67 +1,28 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '../../assets/icons/logo.svg';
-import closeIcon from './assets/close-icon.svg';
-import hamburgerIcon from './assets/hamburger-menu.svg';
+import { Icon } from 'astro-icon/components';
+import SiteNavLinks from '../SiteNavLinks/index.astro';
 import './styles.css';
-const BLOG_URL = Astro.site?.href;
 ---
 
-<nav id="site-nav" aria-label="Main navigation menu">
-	<ul id="nav-menubar">
-		<li>
-			<a href={BLOG_URL}>
-				<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} id="logo-rounded" />
-			</a>
-		</li>
-		<li class="desktop-only">
-			<a href={`${BLOG_URL}accessibility`}>
-				Accessibility
-			</a>
-		</li>
-		<li class="desktop-only">
-			<a href={`${BLOG_URL}license`}>
-				License
-			</a>
-		</li>
-		<li class="desktop-only">
-			<a href={`${BLOG_URL}about`}>
-				About
-			</a>
-		</li>
-		<li class="mobile-only">
-			<button
-				id="nav-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-haspopup="true"
-				aria-label="Open blog navigation" popovertarget="mobile-menu"
-			>
-				<Image
-					id="hamburger-icon" src={hamburgerIcon} alt="Hamburger Menu Icon" width={70} height={70}
-				/>
-			</button>
-		</li>
-	</ul>
-	<div popover id="mobile-menu">
-		<button popovertarget="mobile-menu" aria-controls="mobile-menu" aria-expanded="true" aria-label="Close blog navigation">
-			<Image
-				id="close-icon" src={closeIcon} alt="Close Icon" width={70} height={70}
+<nav id="desktop-navigation" aria-label="Main blog navigation">
+	<SiteNavLinks />
+</nav>
+
+<div id="mobile-navigation">
+	<button
+		id="hamburger-button" aria-controls="mobile-menu" aria-expanded="false" aria-haspopup="true"
+		aria-label="Open blog navigation" popovertarget="mobile-menu"
+	>
+		<Icon
+			id="hamburger-icon" name="mdi:hamburger-menu" title="Hamburger Menu Icon" width={70} height={70}
+		/>
+	</button>
+	<nav popover id="mobile-menu" aria-label="Main blog navigation">
+		<button popovertarget="mobile-menu" aria-controls="mobile-menu" aria-label="Close blog navigation">
+			<Icon
+				id="close-icon" name="mdi:close" title="Close Icon" width={70} height={70}
 			/>
 		</button>
-		<ul>
-			<li>
-				<a href={`${BLOG_URL}accessibility`}>
-					Accessibility
-				</a>
-			</li>
-			<li>
-				<a href={`${BLOG_URL}license`}>
-					License
-				</a>
-			</li>
-			<li>
-				<a href={`${BLOG_URL}about`}>
-					About
-				</a>
-			</li>
-		</ul>
-	</div>
-</nav>
+		<SiteNavLinks />
+	</nav>
+</div>

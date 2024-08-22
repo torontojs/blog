@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/icons/logo.svg';
+import './styles.css';
+const BLOG_URL = Astro.site?.href;
+---
+
+<ul id="nav-links">
+	<li>
+		<a href={BLOG_URL}>
+			<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} id="logo-rounded" />
+		</a>
+	</li>
+	<li>
+		<a href={`${BLOG_URL}accessibility`}>
+			Accessibility
+		</a>
+	</li>
+	<li>
+		<a href={`${BLOG_URL}license`}>
+			License
+		</a>
+	</li>
+	<li>
+		<a href={`${BLOG_URL}about`}>
+			About
+		</a>
+	</li>
+</ul>

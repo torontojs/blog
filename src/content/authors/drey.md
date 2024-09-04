@@ -1,6 +1,7 @@
 ---
 name: drey moreau
 avatar: ./assets/drey.jpg
+pronouns: they/them
 avatarAlt: A picture of drey's face at sunrise.
 email: drey@torontojs.com
 website: https://dreymoreau.netlify.app

@@ -3,14 +3,37 @@
 	margin: 1.25rem auto;
 	padding: 0 1rem;
 	text-align: center;
-
-	@media (min-width: 1024px) {
-    .desktop\:px-9 {
-        padding-left: 2.25rem;
-        padding-right: 2.25rem;
-		font-size: 2rem;
-		font-weight: 300;
-    }
+	gap: var(--size-3);
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		'picture title'
+		'picture aside'
+	;
 }
 
+#page-header > *:not(h1):not(aside) { grid-area: picture; }
+#page-header > h1 { grid-area: title; }
+#page-header > aside { grid-area: aside; }
+
+#page-header:has(> h1:first-child) {
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		'title'
+		'aside'
+	;
+}
+
+@media (max-width: 550px) {
+	#page-header {
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
+		grid-template-areas:
+			'picture'
+			'title'
+			'aside'
+		;
+	}
 }

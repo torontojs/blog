@@ -2,7 +2,11 @@
 import './styles.css';
 ---
 <header id="page-header">
+	<slot name="header-picture"></slot>
 	<h1>
 		<slot></slot>
 	</h1>
+	<aside>
+		<slot name="header-extra"></slot>
+	</aside>
 </header>

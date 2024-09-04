@@ -20,7 +20,9 @@ export const getStaticPaths = (async () => (await getCollection('authors')).map(
 const {
 	name,
 	body,
-	avatar, avatarAlt
+	avatar, avatarAlt,
+	pronouns,
+	socialMedia
 } = Astro.props;
 const description = await parseMarkdown(body);
 
@@ -35,11 +37,22 @@ const description = await parseMarkdown(body);
 	pageSchema="ProfilePage"
 >
 
-<Fragment slot="header">
-	<a id="author-picture" class="p-author h-card author-name" rel="author" itemprop="url" href={Astro.url}>
-		<Avatar image={avatar} imageAlt={avatarAlt} />
-	</a>
-	<a href={Astro.url}>{name}</a>
+<a
+	slot="header-picture"
+	id="author-picture"
+	class="p-author h-card author-name"
+	rel="author"
+	itemprop="url"
+	href={Astro.url}
+>
+	<Avatar image={avatar} imageAlt={avatarAlt} />
+</a>
+<a slot="header" href={Astro.url}>{name}</a>
+<Fragment slot="header-extra">
+	{pronouns && (<p>{pronouns}</p>)}
+	<ul>
+		{Object.entries(socialMedia ?? {}).map(([name, url]) => (<li><a href={url} rel="nofollow noopener noreferrer">{name}</a></li>))}
+	</ul>
 </Fragment>
 
 <div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">

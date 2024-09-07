@@ -1,6 +1,7 @@
 ---
 name: Marco Campos
 avatar: ./assets/marco.jpg
+pronouns: he/him
 avatarAlt: A picture of my face with a smile looking at the camera. I'm wearing aviator glasses, a fake fur winter hat and an orange scarf.
 email: me@madcampos.dev
 website: https://madcampos.dev/

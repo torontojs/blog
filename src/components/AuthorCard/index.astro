@@ -16,7 +16,7 @@ const { author } = Astro.props;
 const BLOG_URL = Astro.site?.href;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const { data: { avatar, avatarAlt, name }, body } = (await getEntry('authors', author))!;
+const { data: { avatar, avatarAlt, name, pronouns }, body } = (await getEntry('authors', author))!;
 const description = await parseMarkdown(body);
 ---
 <div class="author-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -24,9 +24,12 @@ const description = await parseMarkdown(body);
 		<Avatar image={avatar} imageAlt={avatarAlt} />
 	</a>
 
-	<a class="p-author h-card author-name" rel="author" itemprop="url" href={`${BLOG_URL}authors/${author}`}>
-		<h2 itemprop="name">{name}</h2>
-	</a>
+	<div class="author-name">
+		<a class="p-author h-card" rel="author" itemprop="url" href={`${BLOG_URL}authors/${author}`}>
+			<h2 itemprop="name">{name}</h2>
+		</a>
+		{pronouns && (<small>{pronouns}</small>)}
+	</div>
 
 	<div class="author-bio">
 		{/* eslint-disable-next-line astro/no-set-html-directive */}

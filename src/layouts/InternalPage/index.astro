@@ -48,7 +48,9 @@ const {
 	<SkipToContent slot="header" />
 	<SiteNav slot="header" />
 	<PageHeader slot="header">
+		<slot name="header-picture" slot="header-picture"></slot>
 		<slot name="header"></slot>
+		<slot name="header-extra" slot="header-extra"></slot>
 	</PageHeader>
 
 	<div id="contents">

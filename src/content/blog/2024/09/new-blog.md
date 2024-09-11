@@ -6,7 +6,8 @@ tags:
   - Community
   - blog
   - meta
-author: marco
+authors:
+  - marco
 ---
 We have a new home! Expect more frequent content and more of the nice and quirky newsletters!
 

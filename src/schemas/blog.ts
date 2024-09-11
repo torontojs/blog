@@ -7,7 +7,7 @@ export const blogSchema = ({ image }: SchemaContext) => zod.object({
 	createdAt: zod.coerce.date().describe('The post\'s creation date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
 	updatedAt: zod.coerce.date().optional().describe('The post\'s last update date. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'),
 
-	author: zod.string().describe('The slug for the author of this post from the "authors" collection.'),
+	authors: zod.array(zod.string()).describe('The slug for the list of author(s) of this post from the "authors" collection.'),
 
 	draft: zod.boolean().optional().describe('Whether the post is a draft or not. Draft posts will not be added to the list of posts.'),
 

@@ -10,7 +10,7 @@ interface Props {
 	url: string,
 	description: string,
 	tags?: string[],
-	author?: string,
+	authors?: string[],
 	image?: string,
 	imageAlt?: string,
 	createdAt?: Date,
@@ -21,7 +21,7 @@ interface Props {
 const {
 	htmlTitle, title, url,
 	description, tags,
-	author,
+	authors,
 
 	image, imageAlt,
 
@@ -71,11 +71,15 @@ const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\/
 	<meta property="og:image" name="twitter:image" itemprop="image" content={socialImage} />
 	<meta property="og:image:alt" name="twitter:image:alt" content={socialImageAlt} />
 
-	{author && (
-		<meta property="article:author" name="author" content={author} />
-		<!-- TODO: fix to specifically reference to twitter handle -->
-		<meta name="twitter:creator" content={author} />
+	{authors && (
+		<meta property="article:authors" name="authors" content={authors.join(', ')} />
+
 	)}
+
+	{authors?.map((author) => (
+		<meta name="twitter:creator" content={author} />
+		<!-- TODO: fix to specifically reference to twitter handle -->
+	))}
 
 	<meta name="twitter:dnt" content="on" />
 	<meta name="twitter:widgets:csp" content="on" />

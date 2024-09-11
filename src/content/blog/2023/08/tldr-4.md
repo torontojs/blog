@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #4"
 createdAt: 2023-08-09T11:01:00
-author: evert
+authors:
+  - evert
 image: ./assets/d784bf5a-e5d5-47f3-a6c8-0b95d50c9b22_2048x1536.jpg
 imageAlt: A top down photo of a room with people seated in chairs and couches forming a semi circle. In front of the people there is a speaker pointing to a presentation. The room is well lit with big windows on the background and lots of sun light coming in.
 summary: Normally summers are a bit quiet for events, but this year seems like an exception. We've had 6(!) TorontoJS events in the last 2 weeks and more on the way.

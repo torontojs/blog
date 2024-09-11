@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #6"
 createdAt: 2023-09-06T11:11:00
-author: marco
+authors:
+  - marco
 summary: And now for something completely different...
 tags:
   - TLDR

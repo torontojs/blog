@@ -217,3 +217,18 @@ export async function listTags() {
 
 	return tags;
 }
+
+export function getFormattedAuthorsList(authors: string[]) {
+	switch (authors.length) {
+		case 0:
+			return '';
+		case 1:
+			return authors[0];
+		default: {
+			const allButLast = authors.slice(0, -1).join(', ');
+			const lastAuthor = authors[authors.length - 1];
+
+			return `${allButLast} & ${lastAuthor}`;
+		}
+	}
+}

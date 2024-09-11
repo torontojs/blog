@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #12"
 createdAt: 2023-11-30T09:31:00
-author: marco
+authors:
+  - marco
 summary: On the 10th day of JS, Brendan Eich gave to me...
 tags:
   - TLDR

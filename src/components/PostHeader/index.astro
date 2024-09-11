@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 
+import { getFormattedAuthorsList } from '../../utils/post';
 import SiteNav from '../SiteNav/index.astro';
 
 import './styles.css';
@@ -17,7 +18,8 @@ interface Props {
 	imageAlt?: string,
 	readingTime?: number,
 	wordCount?: number,
-	letterCount?: number
+	letterCount?: number,
+	authors: string[]
 }
 
 const {
@@ -26,7 +28,8 @@ const {
 	createdAt, updatedAt,
 	hasUpdates,
 	image, imageAlt,
-	readingTime, wordCount
+	readingTime, wordCount,
+	authors
 } = Astro.props;
 
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'long' });
@@ -81,6 +84,13 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 						{wordCount && (
 							<span> &mdash; {wordCount} words</span>
 						)}
+					</small>
+				</p>
+			)}
+			{authors && (
+				<p>
+					<small>
+						By {getFormattedAuthorsList(authors)}
 					</small>
 				</p>
 			)}

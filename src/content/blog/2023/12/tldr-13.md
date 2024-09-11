@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #13"
 createdAt: 2023-12-21T20:05:00
-author: evert
+authors:
+  - evert
 summary: 🍾 This year, wrapped 🍾
 tags:
   - TLDR

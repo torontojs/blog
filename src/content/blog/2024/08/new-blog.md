@@ -27,7 +27,7 @@ At the same time two other things happened in parallel:
 - Discussions about a blog for general posts from and to the community
 - A Request For Comment (RFC) style proposals system for improvements
 
-On the organizers group, we started discussing that it may be very nice and useful to have a blog to post the newsletter as well as a way to send emails!!!
+On the organizers group, we started discussing that it may be very nice and useful to have a blog to post the newsletter, as well as a way to send emails!!!
 
 That also gives us a venue to post community content, from anyone that is interested in writing something cool and sharing that with others. Basically a more permanent and longer form version of the `#show-and-tell` channel on Slack.
 

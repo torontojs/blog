@@ -2,7 +2,6 @@
 title: New Blog!
 summary: TorontoJS community content has a new home, this blog!
 createdAt: 2024-08-08T17:00:22.476-04:00
-draft: true
 tags:
   - Community
   - blog

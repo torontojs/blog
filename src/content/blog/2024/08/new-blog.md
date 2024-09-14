@@ -35,7 +35,7 @@ The blog also opens up space to post reports and pictures of events that we run,
 
 Along side to that, the organizers group changed, we saw the departure of Jen Chan as the main organizer and the succession by Dann Toliver on that role. At the same time we saw an influx of people who were _de facto_ organizers getting the title.
 
-All the change brought with it exciting new ideas and we wanted a way to organize and be more open for improving the community. Since we are very influenced by the engineering side of things (although it is changing), the best idea on how to implement "proposals for improving the community" was a RFC process.
+The change brought exciting new ideas and we wanted a way to organize and be more open for improving the community. Since we are very influenced by the engineering side of things (although it is changing), the best idea on how to implement "proposals for improving the community" was a RFC process.
 
 To test out the proposals system, we thought it would be a good idea use the blog.
 

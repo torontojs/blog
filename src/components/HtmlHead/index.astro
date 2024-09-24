@@ -77,8 +77,11 @@ const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\/
 	)}
 
 	{authors?.map((author) => (
-		<meta name="twitter:creator" content={author} />
-		<!-- TODO: fix to specifically reference to twitter handle -->
+		<>
+			<meta property="article:authors" name="authors" content={author} />
+			<meta name="twitter:creator" content={author} />
+			<!-- TODO: fix to specifically reference to twitter handle -->
+		</>
 	))}
 
 	<meta name="twitter:dnt" content="on" />

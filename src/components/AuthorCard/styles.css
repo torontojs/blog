@@ -47,5 +47,8 @@
 		place-self: center center;
 	}
 
-	.author-card .author-name { justify-self: center; }
+	.author-card .author-name {
+		justify-self: center;
+		text-align: center;
+	}
 }

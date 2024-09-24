@@ -219,16 +219,10 @@ export async function listTags() {
 }
 
 export function getFormattedAuthorsList(authors: string[]) {
-	switch (authors.length) {
-		case 0:
-			return '';
-		case 1:
-			return authors[0];
-		default: {
-			const allButLast = authors.slice(0, -1).join(', ');
-			const lastAuthor = authors[authors.length - 1];
+	const formatter = new Intl.ListFormat('en', {
+		style: 'long',
+		type: 'conjunction',
+	});
 
-			return `${allButLast} & ${lastAuthor}`;
-		}
-	}
+	return formatter.format(authors);
 }

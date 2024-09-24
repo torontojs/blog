@@ -16,7 +16,7 @@
 	color: white;
 }
 
-#logo-rounded {
+.logo-rounded {
 	border-radius: var(--size-2);
 }
 

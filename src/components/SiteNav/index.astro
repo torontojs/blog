@@ -32,6 +32,9 @@ const BLOG_URL = Astro.site?.href;
 </nav>
 
 <div id="mobile-navigation">
+	<a id="mobile-logo" href={BLOG_URL}>
+		<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} class="logo-rounded" />
+	</a>
 	<button
 		id="hamburger-button" aria-controls="mobile-menu" aria-expanded="false" aria-haspopup="true"
 		aria-label="Open blog navigation" popovertarget="mobile-menu"

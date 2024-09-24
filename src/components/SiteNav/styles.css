@@ -50,9 +50,15 @@
 	padding: var(--size-2);
 }
 
+#mobile-logo {
+	align-content: center;
+	padding: var(--size-3);
+}
+
 @media (max-width: 32rem) {
 	#mobile-navigation {
-		display: block;
+		display: flex;
+		justify-content: space-between;
 		text-align: right;
 	}
 

@@ -71,14 +71,9 @@ const socialImage = `${BLOG_URL}${(image ?? defaultSocialImage.src).replace(/^\/
 	<meta property="og:image" name="twitter:image" itemprop="image" content={socialImage} />
 	<meta property="og:image:alt" name="twitter:image:alt" content={socialImageAlt} />
 
-	{authors && (
-		<meta property="article:authors" name="authors" content={authors.join(', ')} />
-
-	)}
-
 	{authors?.map((author) => (
 		<>
-			<meta property="article:authors" name="authors" content={author} />
+			<meta property="article:author" name="author" content={author} />
 			<meta name="twitter:creator" content={author} />
 			<!-- TODO: fix to specifically reference to twitter handle -->
 		</>

@@ -1,11 +1,34 @@
 ---
 import { Icon } from 'astro-icon/components';
-import SiteNavLinks from '../SiteNavLinks/index.astro';
+import { Image } from 'astro:assets';
+import logo from '../../assets/icons/logo.svg';
 import './styles.css';
+const BLOG_URL = Astro.site?.href;
 ---
 
 <nav id="desktop-navigation" aria-label="Main blog navigation">
-	<SiteNavLinks />
+	<ul class="nav-links">
+		<li>
+			<a href={BLOG_URL}>
+				<Image src={logo} class="logo-rounded" alt="TorontoJS Logo!" height={70} width={70} />
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}accessibility`}>
+				Accessibility
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}license`}>
+				License
+			</a>
+		</li>
+		<li>
+			<a href={`${BLOG_URL}about`}>
+				About
+			</a>
+		</li>
+	</ul>
 </nav>
 
 <div id="mobile-navigation">
@@ -23,6 +46,27 @@ import './styles.css';
 				id="close-icon" name="mdi:close" title="Close Icon" width={70} height={70}
 			/>
 		</button>
-		<SiteNavLinks />
+		<ul class="nav-links">
+			<li>
+				<a href={BLOG_URL}>
+					<Image src={logo} alt="TorontoJS Logo!" height={70} width={70} class="logo-rounded" />
+				</a>
+			</li>
+			<li>
+				<a href={`${BLOG_URL}accessibility`}>
+					Accessibility
+				</a>
+			</li>
+			<li>
+				<a href={`${BLOG_URL}license`}>
+					License
+				</a>
+			</li>
+			<li>
+				<a href={`${BLOG_URL}about`}>
+					About
+				</a>
+			</li>
+		</ul>
 	</nav>
 </div>

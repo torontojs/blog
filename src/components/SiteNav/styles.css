@@ -4,6 +4,22 @@
 	padding: var(--size-2);
 }
 
+.nav-links {
+	gap: var(--size-2);
+	align-items: center;
+	list-style: none;
+	display: flex;
+	padding: var(--size-3)
+}
+
+.nav-links a {
+	color: white;
+}
+
+#logo-rounded {
+	border-radius: var(--size-2);
+}
+
 #hamburger-button {
 	background-color: transparent;
 	padding: var(--size-3)
@@ -34,7 +50,7 @@
 	padding: var(--size-2);
 }
 
-@media (max-width: 31.25rem) {
+@media (max-width: 32rem) {
 	#mobile-navigation {
 		display: block;
 		text-align: right;
@@ -42,5 +58,11 @@
 
 	#desktop-navigation {
 		display: none;
+	}
+}
+
+@media (max-width: 32rem) {
+	.nav-links {
+		flex-direction: column;
 	}
 }

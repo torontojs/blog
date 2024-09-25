@@ -10,7 +10,7 @@ interface Props {
 	htmlTitle?: string[],
 	url: string,
 	description: string,
-	author?: string,
+	authors?: string[],
 	tags?: string[],
 	image?: string,
 	imageAlt?: string,
@@ -24,7 +24,7 @@ const {
 	title,
 	htmlTitle,
 	description,
-	author,
+	authors,
 	url,
 	tags,
 	image,
@@ -42,7 +42,7 @@ const {
 		title={title}
 		url={url}
 		description={description}
-		author={author}
+		authors={authors}
 		tags={tags}
 		image={image}
 		imageAlt={imageAlt}

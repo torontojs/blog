@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #11"
 createdAt: 2023-11-15T11:11:00
-author: drey
+authors:
+  - drey
 image: ./assets/7f819de0-057b-4626-8421-5193bfb9fd8b_800x800.jpg
 imageAlt: A picture of Jen Chan with a slight smile, she has dark brown hair with green accents and is wearing a coral winter coat. Behind her is a brick wall.
 summary: 🎃 Next.js vs Remix. Fight! 🎃

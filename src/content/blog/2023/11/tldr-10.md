@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #10"
 createdAt: 2023-11-01T11:11:00
-author: evert
+authors:
+  - evert
 image: ./assets/06af6b9a-b422-4132-8f22-2948814d4361_720x378.jpg
 imageAlt: A grap of the OKLCH color space, with the word "OKLCH" written in big black letters. The graph axes show Lightness (dark-bright); Chroma (dull-vivid); and Hue (red, yellow, etc.). On the left there is the words "Perceptual Uniformity" and on the right there is "p3-gamut".
 summary: 🎃 Next.js vs Remix. Fight! 🎃

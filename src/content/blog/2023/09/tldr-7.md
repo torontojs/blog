@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #7"
 createdAt: 2023-09-20T13:34:00
-author: evert
+authors:
+  - evert
 image: ./assets/party-paint.png
 imageAlt: A screenshot of "Party Paint" showing choppy colors overlayed on top of one another.
 summary: Bi-weekly weather updates delivered to your inbox

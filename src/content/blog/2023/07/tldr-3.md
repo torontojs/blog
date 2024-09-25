@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #3"
 createdAt: 2023-07-26T12:00:00
-author: marco
+authors:
+  - marco
 summary: Community and growth
 tags:
   - TLDR

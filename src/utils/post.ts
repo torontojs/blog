@@ -217,3 +217,12 @@ export async function listTags() {
 
 	return tags;
 }
+
+export function getFormattedAuthorsList(authors: string[]) {
+	const formatter = new Intl.ListFormat('en', {
+		style: 'long',
+		type: 'conjunction',
+	});
+
+	return formatter.format(authors);
+}

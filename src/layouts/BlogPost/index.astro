@@ -12,7 +12,7 @@ import './styles.css';
 interface Props {
 	title: string,
 	summary: string,
-	author: string,
+	authors: string[],
 	image?: ImageMetadata,
 	imageAlt?: string,
 	createdAt: Date,
@@ -31,7 +31,7 @@ const BLOG_URL = Astro.site?.href;
 const {
 	url,
 	title, summary,
-	author,
+	authors,
 	image, imageAlt,
 	createdAt, updatedAt, updates,
 	tags,
@@ -45,7 +45,7 @@ const postUrl = `${BLOG_URL}${url}`;
 	htmlTitle={[title, 'TorontoJS Blog']}
 	title={title}
 	description={summary}
-	author={author}
+	authors={authors}
 	tags={tags}
 	url={postUrl}
 	image={image?.src}
@@ -73,6 +73,7 @@ const postUrl = `${BLOG_URL}${url}`;
 		readingTime={readingTime}
 		wordCount={wordCount}
 		letterCount={letterCount}
+		authors={authors}
 	/>
 
 	<article id="post-contents" itemprop="articleBody" class="e-content">
@@ -107,7 +108,11 @@ const postUrl = `${BLOG_URL}${url}`;
 	<hr />
 
 	<Fragment slot="footer" id="post-footer">
-		<AuthorCard author={author} />
+		<div id="author-cards-wrapper">
+			{authors.map((author) => (
+				<AuthorCard author={author} />
+			))}
+		</div>
 
 		{tags && tags.length > 0 && (
 			<TagList

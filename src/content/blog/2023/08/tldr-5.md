@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #5"
 createdAt: 2023-08-23T11:11:00
-author: drey
+authors:
+  - drey
 summary: This is a blog post about the JavaScript programming language. Like it, love it, hate it, it's here to stay.
 tags:
   - TLDR

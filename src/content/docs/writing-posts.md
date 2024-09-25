@@ -30,8 +30,10 @@ summary: A short summary of the post.
 # The date the post was created. It must be in a format parseable by JavaScript's Date object. It is advised to include the time and timezone to avoid ambiguity.
 createdAt: 2020-01-01T00:00:00.000Z
 
-# The slug for the author of the post. Please look at the docs about adding authors.
-author: author-name
+# The slug for the author(s) of the post. Please look at the docs about adding authors.
+authors:
+  - author1
+  - author2
 
 ### Optional fields ###
 

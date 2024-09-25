@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #1"
 createdAt: 2023-06-28T15:45:00
-author: evert
+authors:
+  - evert
 image: ./assets/runescape.png
 imageAlt: A screenshot of RuneSweeper, a Runescape inspired Minesweeper game
 summary: Summer is here, and welcome to the first issue of TorontoJS TL;DR. This is the Toronto Javascript newsletter, by you for you.

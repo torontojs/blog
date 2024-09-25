@@ -1,7 +1,8 @@
 ---
 title: "TorontoJS TL;DR Issue #9"
 createdAt: 2023-10-19T23:16:00
-author: marco
+authors:
+  - marco
 image: ./assets/317fe584-0a70-4ac7-8f50-67c9a76b427c_4080x3072.jpg
 imageAlt: A picture of a group of people smiling to the photo
 summary: Security treats so you won't get tricked

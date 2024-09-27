@@ -4,7 +4,6 @@ import rss, { type RSSFeedItem } from '@astrojs/rss';
 import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
-
 import defaultImage from '../assets/icons/logo.png';
 
 export const GET: APIRoute = async (context) => {
@@ -23,7 +22,7 @@ export const GET: APIRoute = async (context) => {
 		title: 'TorontoJS Blog Changelog',
 		description: 'Changelog (Version History) for TorontoJS Blog, containing all recent changes.',
 		site: BLOG_URL,
-		items: await Promise.all((await getCollection('changelog')).map(async (changelog) => {
+		items: (await getCollection('changelog')).map((changelog) => {
 			const versionNumber = changelog.id.replace('.md', '');
 			const { versionName } = changelog.data;
 
@@ -41,7 +40,7 @@ export const GET: APIRoute = async (context) => {
 			};
 
 			return item;
-		})),
+		}),
 		customData: `
 		<language>en-us</language>
 		<image>

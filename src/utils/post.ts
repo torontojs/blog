@@ -196,7 +196,6 @@ export async function listPostPagesByTag() {
 	}
 
 	for (const tag of Object.keys(tags)) {
-		// eslint-disable-next-line max-len
 		tags[tag]?.sort(sortPostsByDate);
 	}
 

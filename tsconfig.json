@@ -2,7 +2,7 @@
 	"include": [ "globals.d.ts", "astro.config.ts", "src/**/*.ts", "src/**/*.d.ts", ".astro/**/*.d.ts" ],
 	"exclude": [ "node_modules/**/*", "dist/**/*", "src/content/**/*.js" ],
 	"compilerOptions": {
-		"allowImportingTsExtensions": false,
+		"allowImportingTsExtensions": true,
 		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"allowUnreachableCode": false,

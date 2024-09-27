@@ -1,10 +1,9 @@
-import type { APIRoute } from 'astro';
+import type { APIRoute, MarkdownInstance } from 'astro';
 
 import rss, { type RSSFeedItem } from '@astrojs/rss';
 import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
-import { parseMarkdown } from '../utils/markdown';
 
 import defaultImage from '../assets/icons/logo.png';
 
@@ -17,6 +16,9 @@ export const GET: APIRoute = async (context) => {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const BLOG_URL = new URL(context.site!).href;
 
+	// INFO: hack to parse markdown
+	const changelogFiles = import.meta.glob<MarkdownInstance<{}>>('../content/changelog/*.md', { eager: true });
+
 	return rss({
 		title: 'TorontoJS Blog Changelog',
 		description: 'Changelog (Version History) for TorontoJS Blog, containing all recent changes.',
@@ -24,10 +26,13 @@ export const GET: APIRoute = async (context) => {
 		items: await Promise.all((await getCollection('changelog')).map(async (changelog) => {
 			const versionNumber = changelog.id.replace('.md', '');
 			const { versionName } = changelog.data;
-			const content = await parseMarkdown(changelog.body);
+
+			// INFO: hack to parse markdown
+			const [, changelogMarkdown] = Object.entries(changelogFiles).find(([filePath]) => filePath.includes(changelog.id)) ?? [];
+			const content = changelogMarkdown?.compiledContent() ?? '';
 
 			const item: RSSFeedItem = {
-				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
 				title: `${versionNumber}${versionName ? ` (${versionName})` : ''}`,
 				description: content,
 				content,

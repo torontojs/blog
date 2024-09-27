@@ -1,4 +1,4 @@
-import type { APIRoute } from 'astro';
+import type { APIRoute, MarkdownInstance } from 'astro';
 
 import rss, { type RSSFeedItem } from '@astrojs/rss';
 import { getImage } from 'astro:assets';
@@ -6,7 +6,6 @@ import { getImage } from 'astro:assets';
 import { listAllPosts } from '../utils/post';
 
 import defaultImage from '../assets/icons/logo.png';
-import { parseMarkdown } from '../utils/markdown';
 
 export const GET: APIRoute = async (context) => {
 	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
@@ -18,6 +17,9 @@ export const GET: APIRoute = async (context) => {
 	const BLOG_URL = new URL(context.site!).href;
 
 	const allPosts = await listAllPosts();
+
+	// INFO: hack to parse markdown
+	const postFiles = import.meta.glob<MarkdownInstance<{}>>('../../content/blog/**/*.md', { eager: true });
 
 	return rss({
 		title: 'TorontoJS Blog',
@@ -52,7 +54,9 @@ export const GET: APIRoute = async (context) => {
 				image = await getImage({ src: post.data.image, format: 'png' });
 			}
 
-			const content = await parseMarkdown(post.body);
+			// INFO: hack to parse markdown
+			const [, postMarkdown] = Object.entries(postFiles).find(([filePath]) => filePath.includes(post.url)) ?? [];
+			const content = postMarkdown?.compiledContent() ?? '';
 
 			const item: RSSFeedItem = {
 				title: post.data.title,

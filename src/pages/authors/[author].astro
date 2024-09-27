@@ -5,8 +5,6 @@ import { getCollection } from 'astro:content';
 import Avatar from '../../components/Avatar/index.astro';
 import InternalPageLayout from '../../layouts/InternalPage/index.astro';
 
-import { parseMarkdown } from '../../utils/markdown';
-
 import '../../styles/authors.css';
 
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -14,17 +12,17 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const getStaticPaths = (async () => (await getCollection('authors')).map(((author) => ({
 	params: { author: author.slug },
-	props: { ...author.data, body: author.body, slug: author.slug }
+	props: { ...author.data, render: author.render, slug: author.slug }
 })))) satisfies GetStaticPaths;
 
 const {
 	name,
-	body,
+	render,
 	avatar, avatarAlt,
 	pronouns,
 	socialMedia
 } = Astro.props;
-const description = await parseMarkdown(body);
+const description = await render();
 
 ---
 <InternalPageLayout

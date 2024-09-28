@@ -9,6 +9,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 _"I love deadlines. I love the whooshing noise they make as they go by." ― Douglas Adams_
 
 Well, we've reached the last issue of TL;DR of the year, and the _first_ that's a week late! Oops! But we made it to 13 issues. Not bad! Perhaps we can double it next year.

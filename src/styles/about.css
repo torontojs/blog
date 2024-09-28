@@ -1,7 +1,7 @@
 .center-elements {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	padding: var(--size-4);
 }
 
@@ -10,11 +10,9 @@ h1 {
 	text-align: center;
 }
 
-p {
-	text-align: center;
-}
+p { text-align: center; }
 
 .resize-image {
-	width: 30%;
 	border-radius: var(--size-2);
+	width: 30%;
 }

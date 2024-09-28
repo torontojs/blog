@@ -1,22 +1,20 @@
 #skip-to-main {
-	position: absolute;
-	inset-inline: var(--size-3);
-	inset-block-start: -100%;
-	text-align: center;
-	padding: var(--size-3);
-	z-index: calc(infinity * 1);
-	display: block;
 	background-color: var(--gray-0);
 	color: var(--gray-12);
+	display: block;
 	font-size: var(--font-size-3);
 	font-weight: bold;
+	inset-block-start: -100%;
+	inset-inline: var(--size-3);
+	padding: var(--size-3);
+	position: absolute;
+	text-align: center;
+	z-index: calc(infinity * 1);
 }
 
-#skip-to-main:focus {
-	inset-block-start: var(--size-3);
-}
+#skip-to-main:focus { inset-block-start: var(--size-3); }
 
 :target {
-	scroll-snap-align: start;
 	scroll-margin: var(--size-5);
+	scroll-snap-align: start;
 }

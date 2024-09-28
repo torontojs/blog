@@ -11,6 +11,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 ## Next.js vs Remix
 
 In the category of bulky backend frameworks that solve problems React introduced, new problems are afoot.
@@ -22,7 +23,7 @@ Is Next.js or React going away? Of course not! But it's a glimpse in the shiftin
 ## Upcoming TorontoJS Events
 
 - **Thursday, November 9th** - [React, Graphs, Realtime, Embeds - JS Tech Talk Night](https://guild.host/events/react-graphs-realtime-lcaib9) - in person!
-- **Wednesday, November 15th -** [TorontoJS Social](https://guild.host/events/toronto-js-social-in-27ewzx) - in person!
+- **Wednesday, November 15th -** [TorontoJS Social](https://guild.host/events/toronto-js-social-in-27ewzx) - in person!
 - **November 26nd** - [JS Social: OpenTTD online](https://guild.host/events/js-social-openttd-online-a76bbz) - Love public transit? Play a 30 year old game together, online!
 
 ### Other events happening in Toronto
@@ -47,7 +48,7 @@ Special thanks to [Ibrahim Ahmed](https://www.linkedin.com/in/ibraheemdev/?orig
 
 [Jacky Tea](https://www.linkedin.com/in/jackytea/) has been working on a mock stock market MERN application and is looking for contributors. Read more about it on his [Slack message](https://torontojs.slack.com/archives/C06HNH45U/p1697917393203799) or check out [the code on github.](https://github.com/JackyTea/Mock-Stocks-Collaborative)
 
-[Jen Chan](https://www.jenchan.biz/) *tried* to launch a [new channel on software architecture](https://torontojs.slack.com/archives/C060NFVLW15), but due to unclear requirements this has turned into a place to discuss the design of buildings. If you want to help get that train back on the rails, or discuss your favourite [McMansion](https://en.wikipedia.org/wiki/McMansion), join!
+[Jen Chan](https://www.jenchan.biz/) _tried_ to launch a [new channel on software architecture](https://torontojs.slack.com/archives/C060NFVLW15), but due to unclear requirements this has turned into a place to discuss the design of buildings. If you want to help get that train back on the rails, or discuss your favourite [McMansion](https://en.wikipedia.org/wiki/McMansion), join!
 
 ## Support TorontoJS
 

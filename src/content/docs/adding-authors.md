@@ -16,6 +16,7 @@ website: https://jay-doe.example.com/
 socialMedia:
   Mastodon: https://mastodon.example.com/@jay-doe
 ---
+
 A short bio about Jay Doe. This will be displayed on the author's page and on the footer for blog posts authored by them.
 
 The bio is **markdown** content and will be processed before displaying.
@@ -37,5 +38,6 @@ title: "Example blog post"
 createdAt: 2020-01-01
 author: jay-doe
 ---
+
 ...
 ```

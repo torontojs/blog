@@ -1,7 +1,6 @@
 @media print {
 	:root {
 		--body-text: 12pt;
-
 		color-scheme: light;
 	}
 
@@ -10,17 +9,11 @@
 		margin-inline: 1.5rem;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		page-break-after: avoid;
-	}
+	h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
 
-	p, li, blockquote, figure, img, pre .line {
-		page-break-inside: avoid;
-	}
+	p, li, blockquote, figure, img, pre .line { page-break-inside: avoid; }
 
-	a {
-		text-decoration: underline;
-	}
+	a { text-decoration: underline; }
 
 	a:not(:has(> :is(img, picture)))[href]::after {
 		content: ' (' attr(href) ')';
@@ -28,24 +21,17 @@
 	}
 
 	a[rel~='external']::after {
+		background: none;
 		display: inline;
 		font-size: smaller;
-		background: none;
 		vertical-align: baseline;
 	}
 
 	iframe { display: none; }
 
-	#post-share {
-		/* stylelint-disable-next-line declaration-no-important */
-		display: none !important;
-	}
+	#post-share { /* stylelint-disable-next-line declaration-no-important */ display: none !important; }
 
-	#related-posts ul {
-		flex-wrap: wrap;
-	}
+	#related-posts ul { flex-wrap: wrap; }
 
-	#post-contents p > img:only-child {
-		--image-size: 10rem;
-	}
+	#post-contents p > img:only-child { --image-size: 10rem; }
 }

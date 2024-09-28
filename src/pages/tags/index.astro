@@ -26,16 +26,17 @@ const tags = await listTags();
 		TorontoJS Blog Tags
 	</PageHeader>
 
-
 	<div id="contents">
 		<ul id="tag-list">
-			{tags.map((tag) => (
-				<li class="tag">
-					<a href={`${BLOG_URL}tags/${tag}`} itemprop="url">
-						<span itemprop="itemListElement">{tag}</span>
-					</a>
-				</li>
-			))}
+			{
+				tags.map((tag) => (
+					<li class="tag">
+						<a href={`${BLOG_URL}tags/${tag}`} itemprop="url">
+							<span itemprop="itemListElement">{tag}</span>
+						</a>
+					</li>
+				))
+			}
 		</ul>
 	</div>
 	<PageFooter slot="footer">

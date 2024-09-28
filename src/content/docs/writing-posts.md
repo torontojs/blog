@@ -63,6 +63,7 @@ updates:
   - date: 2020-09-23T00:00:00.000Z
     changes: Yet another update.
 ---
+
 The post text itself in _markdown_ format.
 ```
 

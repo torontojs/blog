@@ -1,87 +1,80 @@
 #post-header {
-	width: 100%;
-	max-width: var(--max-width);
-	margin-inline: auto;
 	margin-block-end: var(--size-8);
+	margin-inline: auto;
+	max-width: var(--max-width);
+	width: 100%;
 }
 
 #post-header-wrapper {
-	justify-self: stretch;
 	display: grid;
-	place-items: end center;
 	gap: var(--size-3);
-	grid-template-rows: 1fr auto auto auto auto;
-	grid-template-columns: 100%;
 	grid-template-areas:
 		'hero'
 		'title'
 		'summary'
 		'metadata'
 		'share';
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr auto auto auto auto;
+	justify-self: stretch;
+	place-items: end center;
 }
 
 #post-header h1 {
-	height: auto;
+	display: block;
 	font-size: var(--font-size-6);
-
-	overflow-wrap: break-word;
-	word-break: break-word;
-	line-break: loose;
+	height: auto;
+	hyphenate-character: '-';
+	hyphenate-limit-chars: 8 3 2;
 	/* stylelint-disable-next-line property-no-vendor-prefix */
 	-webkit-hyphens: auto;
 	hyphens: auto;
-	hyphenate-character: '-';
-	hyphenate-limit-chars: 8 3 2;
-
-	width: 100%;
-	display: block;
-	margin-inline: auto;
-
-	text-wrap: balance;
+	line-break: loose;
 	margin: 0;
+	margin-inline: auto;
+	overflow-wrap: break-word;
 	padding: 0;
+	text-wrap: balance;
+	width: 100%;
+	word-break: break-word;
 }
 
 #post-header #post-title {
+	color: var(--yellow-6);
 	grid-area: title;
-	z-index: 1;
+	padding: var(--size-3) var(--size-4);
 	place-self: end stretch;
 	text-align: center;
-
-
-	color: var(--yellow-6);
-	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 	text-decoration-color: var(--tjs-red-7);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);
 	text-underline-offset: var(--size-2);
-	padding: var(--size-3) var(--size-4);
+	z-index: 1;
 }
 
 #post-header-wrapper:not(:has(#hero-image)) #post-title {
-	margin-block: 0;
 	border-inline: none;
 	border-radius: 0;
+	margin-block: 0;
 	width: 100%;
 }
 
 #post-header #hero-image {
-	width: 100%;
+	grid-area: hero;
 	height: 100%;
 	object-fit: contain;
-	grid-area: hero;
 	overflow: hidden;
+	width: 100%;
 }
 
 #post-summary {
 	border: none;
 	font-size: smaller;
+	grid-area: summary;
 	margin: 0;
 	padding: var(--size-1);
-	grid-area: summary;
 }
 
-#post-summary p {
-	padding: 0;
-}
+#post-summary p { padding: 0; }
 
 #post-metadata {
 	grid-area: metadata;
@@ -89,24 +82,24 @@
 }
 
 #post-share {
-	grid-area: share;
+	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
 	gap: var(--size-3);
+	grid-area: share;
+	justify-content: center;
 }
 
 #post-share button {
-	display: flex;
 	align-items: center;
-	justify-content: center;
+	display: flex;
 	height: var(--size-7);
+	justify-content: center;
 	padding: var(--size-1) var(--size-2);
 }
 
 #post-share button svg {
-	height: 100%;
 	aspect-ratio: var(--ratio-square);
+	height: 100%;
 	pointer-events: none;
 }

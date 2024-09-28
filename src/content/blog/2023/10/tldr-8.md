@@ -9,13 +9,14 @@ tags:
   - Newsletter
   - Community
 ---
+
 October is here!!!!! Which means that the leaves are changing, there is a mix of crisp air in the morning and more blue sky days but this also means that [Hacktober](https://hacktoberfest.com/)!!! is among us!!! which they are celebrating the 10th year of existence!!!!
 
 What is Hacktober? It is a yearly event to encourage open source contributions where be it through code or no code issues! [Registration](https://hacktoberfest.com/) is open now with lots of projects awaiting for help!
 
 ## Upcoming Events
 
-**(TONIGHT)** - **[JS Workshop for Women Developers](https://www.meetup.com/torontojs/events/296156813/) [In Person] - (at Capacity).** This workshop covers topics like writing documentation and public speaking!
+**(TONIGHT)** - **[JS Workshop for Women Developers](https://www.meetup.com/torontojs/events/296156813/)[In Person] - (at Capacity).** This workshop covers topics like writing documentation and public speaking!
 
 **(October 12th from 2pm - 6pm)** - We are introducing a new type of event called [JS Website Club](https://guild.host/events/js-website-club-1-3bi8wo)! Bring your laptop, write a blog post. We can also help figuring out tech stacks, buying domains or figure out hosting. Any experience level can join, because WordPress is still a thing too!
 

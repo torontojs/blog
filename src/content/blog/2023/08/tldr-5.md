@@ -9,6 +9,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 How quickly time goes by!! We hope you had a great summer, filled with joy, expansion, learning more along your coding journey, as well as meeting new people through in person or online events. It was definitely an interesting summer with the up and down weathers. With fall on the way, the changing of weathers and leaves on the trees, this doesn't mean an end to in person or virtual events!
 
 If you have anything to share for the next edition, find us on the [TorontoJS slack](https://torontojs.slack.com/).
@@ -40,15 +41,15 @@ Let's see an example without nesting:
 ```css
 /* No nesting */
 article.card {
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  overflow: hidden;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	overflow: hidden;
 }
 
 article.card header {
-  border-bottom: 1px solid lightgrey;
-  background: #f1f3f4;
-  padding: 16px;
+	background: #f1f3f4;
+	border-bottom: 1px solid lightgrey;
+	padding: 16px;
 }
 ```
 
@@ -57,15 +58,15 @@ This example can be written with nesting like this:
 ```css
 /* With nesting */
 article.card {
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  overflow: hidden;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	overflow: hidden;
 
-  & header {
-    border-bottom: 1px solid lightgrey;
-    background: #f1f3f4;
-    padding: 16px;
-  }
+	& header {
+		background: #f1f3f4;
+		border-bottom: 1px solid lightgrey;
+		padding: 16px;
+	}
 }
 ```
 

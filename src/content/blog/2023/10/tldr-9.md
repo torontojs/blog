@@ -11,6 +11,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 Hey folks, let's talk security because the season is spooky!
 
 Starting with the basics: [have I been pwned](https://haveibeenpwned.com/) is a website where you can check if your email has shown up in data breaches.
@@ -94,7 +95,6 @@ Now, a shout out to a full past week with lots of people showing their projects!
 - Divish shared their [personal project](https://github.com/divishram/Youtube-downloader) for a Youtube downloader written in react, node.js and socket.io.
 
 - Liz shared a [project](https://github.com/GingerKiwi/302-gingerkiwi-redirect-vercel) for a custom 302 redirect page for Vercel.
-
 
 ## Support TorontoJS
 

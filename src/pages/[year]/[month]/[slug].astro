@@ -7,7 +7,8 @@ import { listAllPosts } from '../../../utils/post.ts';
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-export const getStaticPaths = (async () => (await listAllPosts()).map((post) => ({
+export const getStaticPaths = (async () =>
+	(await listAllPosts()).map((post) => ({
 		params: {
 			year: post.year,
 			month: post.month,
@@ -19,34 +20,40 @@ export const getStaticPaths = (async () => (await listAllPosts()).map((post) => 
 
 const {
 	render,
-	url, data: {
-		title, summary,
-		image, imageAlt,
-		createdAt, updatedAt,
+	url,
+	data: {
+		title,
+		summary,
+		image,
+		imageAlt,
+		createdAt,
+		updatedAt,
 		updates,
 		tags,
 		authors
 	},
-	readingTime, letterCount, wordCount,
+	readingTime,
+	letterCount,
+	wordCount,
 	relatedPosts
 } = Astro.props;
 const { Content } = await render();
 ---
 <BlogPostLayout
-	url={url}
-	title={title}
-	summary={summary}
-	authors={authors}
-	image={image}
-	imageAlt={imageAlt}
-	createdAt={createdAt}
-	updatedAt={updatedAt}
-	updates={updates}
-	tags={tags}
-	readingTime={readingTime}
-	wordCount={wordCount}
-	letterCount={letterCount}
-	relatedPosts={relatedPosts}
+	{url}
+	{title}
+	{summary}
+	{authors}
+	{image}
+	{imageAlt}
+	{createdAt}
+	{updatedAt}
+	{updates}
+	{tags}
+	{readingTime}
+	{wordCount}
+	{letterCount}
+	{relatedPosts}
 >
 	<Content />
 </BlogPostLayout>

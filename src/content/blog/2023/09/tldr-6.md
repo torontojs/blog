@@ -9,13 +9,14 @@ tags:
   - Newsletter
   - Community
 ---
+
 I hope we have an amazing and long fall ahead of us, full of amber leaves all over, because as the meme says: winter is coming!
 
 There is [news about a possible whiteout coming this winter](https://www.blogto.com/city/2023/08/winter-weather-forecast/), so let's enjoy all the heat and news before everything freezes up!
 
 ## Upcoming events
 
-Happening **tomorrow (September 7th)** [Toast](https://www.trytoast.ca/) will be hosting an Online Hiring Event focused on female and non-binary people. Registration for the event is [here](https://www.eventbrite.ca/e/septembersurge-online-hiring-event-for-women-software-developers-tickets-704965018347?aff=oddtdtcreator).
+Happening **tomorrow (September 7th)** [Toast](https://www.trytoast.ca/) will be hosting an Online Hiring Event focused on female and non-binary people. Registration for the event is [here](https://www.eventbrite.ca/e/septembersurge-online-hiring-event-for-women-software-developers-tickets-704965018347?aff=oddtdtcreator).
 
 On **September 16th** at **4 PM EST** we will have the next [TorontoJS Code Club](https://guild.host/events/js-code-club-online-294792793). It will be an online mob programming event, so please bring your projects!
 

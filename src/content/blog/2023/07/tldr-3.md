@@ -9,6 +9,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 Hello everyone!
 
 It is amazing to see the community growing and people getting involved in it. If the number of events and happy faces all around is a sign of success, then we _are_ successful!

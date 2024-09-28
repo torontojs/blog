@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.ts';
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
-  encoding: 'utf8'
+	encoding: 'utf8'
 }));
 
 const mode = process.env['NODE_ENV'] === 'production' ? 'production' : 'development';
@@ -29,23 +29,23 @@ export default defineConfig({
 	},
 	...(mode !== 'production' && {
 		vite: {
-		server: {
-			https: {
-			cert: './certs/server.crt',
-			key: './certs/server.key'
+			server: {
+				https: {
+					cert: './certs/server.crt',
+					key: './certs/server.key'
+				}
 			}
-		}
 		}
 	}),
 	markdown: {
 		syntaxHighlight: 'shiki',
 		shikiConfig: {
-		theme: 'css-variables',
-		themes: {
-			light: 'light-plus',
-			dark: 'dark-plus'
-		},
-		wrap: true
+			theme: 'css-variables',
+			themes: {
+				light: 'light-plus',
+				dark: 'dark-plus'
+			},
+			wrap: true
 		}
 	},
 	integrations: [

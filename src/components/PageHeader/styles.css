@@ -1,16 +1,15 @@
 #page-header {
-	width: auto;
+	display: grid;
+	gap: var(--size-3);
+	grid-template-areas:
+		'picture title'
+		'picture aside';
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
 	margin: 1.25rem auto;
 	padding: 0 1rem;
 	text-align: center;
-	gap: var(--size-3);
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
-	grid-template-areas:
-		'picture title'
-		'picture aside'
-	;
+	width: auto;
 }
 
 #page-header > *:not(h1):not(aside) { grid-area: picture; }
@@ -18,22 +17,20 @@
 #page-header > aside { grid-area: aside; }
 
 #page-header:has(> h1:first-child) {
-	grid-template-columns: auto;
-	grid-template-rows: auto auto;
 	grid-template-areas:
 		'title'
-		'aside'
-	;
+		'aside';
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
 }
 
 @media (max-width: 550px) {
 	#page-header {
-		grid-template-columns: auto;
-		grid-template-rows: repeat(3, auto);
 		grid-template-areas:
 			'picture'
 			'title'
-			'aside'
-		;
+			'aside';
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
 	}
 }

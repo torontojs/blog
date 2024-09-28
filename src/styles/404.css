@@ -1,8 +1,8 @@
 #contents {
-	text-align: right;
 	background-image: url('../assets/images/MainSectionLogo.svg');
-	background-repeat: no-repeat;
 	background-position: bottom left;
+	background-repeat: no-repeat;
 	background-size: 50vmin;
 	height: 100%;
+	text-align: right;
 }

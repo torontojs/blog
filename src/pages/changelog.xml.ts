@@ -31,7 +31,6 @@ export const GET: APIRoute = async (context) => {
 			const content = changelogMarkdown?.compiledContent() ?? '';
 
 			const item: RSSFeedItem = {
-
 				title: `${versionNumber}${versionName ? ` (${versionName})` : ''}`,
 				description: content,
 				content,

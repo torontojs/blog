@@ -1,5 +1,4 @@
 ---
-
 import PageHeader from '../components/PageHeader/index.astro';
 import Pagination from '../components/Pagination/index.astro';
 import PostCard from '../components/PostCard/index.astro';
@@ -8,20 +7,19 @@ import SkipToContent from '../components/SkipToContent/index.astro';
 import type { Post } from '../utils/post';
 import BaseLayout from './Base/index.astro';
 
-
 interface Props {
-	posts: Post[],
-	title?: string,
-	baseUrl: string,
-	currentUrl: string,
-	currentPage: number,
-	lastPage: number,
-	prevUrl?: string,
-	nextUrl?: string,
-	start: number,
-	end: number,
-	total: number,
-	size: number
+	posts: Post[];
+	title?: string;
+	baseUrl: string;
+	currentUrl: string;
+	currentPage: number;
+	lastPage: number;
+	prevUrl?: string;
+	nextUrl?: string;
+	start: number;
+	end: number;
+	total: number;
+	size: number;
 }
 
 const BLOG_URL = Astro.site?.href;
@@ -29,10 +27,16 @@ const BLOG_URL = Astro.site?.href;
 const {
 	title = '',
 	posts,
-	baseUrl, currentUrl,
-	currentPage, lastPage,
-	prevUrl, nextUrl,
-	start, end, total, size
+	baseUrl,
+	currentUrl,
+	currentPage,
+	lastPage,
+	prevUrl,
+	nextUrl,
+	start,
+	end,
+	total,
+	size
 } = Astro.props;
 ---
 <BaseLayout
@@ -54,33 +58,34 @@ const {
 	</PageHeader>
 
 	<div id="posts-list" class="space-y-8">
-		{posts.map((post) => (
-			<PostCard
-				variant="large"
-				url={`${BLOG_URL}${post.url}`}
-				title={post.data.title}
-				createdAt={post.data.createdAt.toISOString()}
-				image={post.data.image}
-				imageAlt={post.data.imageAlt}
-				tags={post.data.tags}
-			>
-				<span slot="title">{post.data.title}</span>
-				{post.data.summary}
-			</PostCard>
-		))}
+		{
+			posts.map((post) => (
+				<PostCard
+					variant="large"
+					url={`${BLOG_URL}${post.url}`}
+					title={post.data.title}
+					createdAt={post.data.createdAt.toISOString()}
+					image={post.data.image}
+					imageAlt={post.data.imageAlt}
+					tags={post.data.tags}
+				>
+					<span slot="title">{post.data.title}</span> {post.data.summary}
+				</PostCard>
+			))
+		}
 	</div>
 
 	<footer slot="footer">
 		<Pagination
-			baseUrl={baseUrl}
-			currentPage={currentPage}
-			lastPage={lastPage}
-			prevUrl={prevUrl}
-			nextUrl={nextUrl}
-			start={start}
-			end={end}
-			total={total}
-			size={size}
+			{baseUrl}
+			{currentPage}
+			{lastPage}
+			{prevUrl}
+			{nextUrl}
+			{start}
+			{end}
+			{total}
+			{size}
 		/>
 	</footer>
 </BaseLayout>

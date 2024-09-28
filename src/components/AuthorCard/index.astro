@@ -5,7 +5,7 @@ import Avatar from '../Avatar/index.astro';
 import './styles.css';
 
 interface Props {
-	author: string
+	author: string;
 }
 
 const { author } = Astro.props;
@@ -24,7 +24,7 @@ const { Content } = await render();
 		<a class="p-author h-card" rel="author" itemprop="url" href={`${BLOG_URL}authors/${author}`}>
 			<h2 itemprop="name">{name}</h2>
 		</a>
-		{pronouns && (<small>{pronouns}</small>)}
+		{pronouns && <small>{pronouns}</small>}
 	</div>
 
 	<div class="author-bio">

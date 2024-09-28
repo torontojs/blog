@@ -4,7 +4,6 @@ import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base/index.astro';
 import '../styles/about.css';
 const BLOG_URL = Astro.site?.href;
-
 ---
 <BaseLayout
 	htmlTitle={['Code of Conduct', 'TorontoJS Blog']}
@@ -18,8 +17,9 @@ const BLOG_URL = Astro.site?.href;
 		<SiteNav />
 		<h1 class="center-elements">Code of Conduct</h1>
 	</header>
-		<div id="contents">
-			<p class="center-text">Here is our <a href="https://torontojs.com/code_of_conduct" target="_blank">Code Of Conduct.</a>
-			</p>
-		</div>
+	<div id="contents">
+		<p class="center-text">
+			Here is our <a href="https://torontojs.com/code_of_conduct" target="_blank">Code Of Conduct.</a>
+		</p>
+	</div>
 </BaseLayout>

@@ -10,48 +10,58 @@ import BaseLayout from '../Base/index.astro';
 import './styles.css';
 
 interface Props {
-	title: string,
-	summary: string,
-	authors: string[],
-	image?: ImageMetadata,
-	imageAlt?: string,
-	createdAt: Date,
-	updatedAt?: Date,
-	updates?: { date: Date, changes: string }[],
-	tags?: string[],
-	url: string,
-	relatedPosts?: RelatedPost[],
-	readingTime?: number,
-	wordCount?: number,
-	letterCount?: number
+	title: string;
+	summary: string;
+	authors: string[];
+	image?: ImageMetadata;
+	imageAlt?: string;
+	createdAt: Date;
+	updatedAt?: Date;
+	updates?: { date: Date, changes: string }[];
+	tags?: string[];
+	url: string;
+	relatedPosts?: RelatedPost[];
+	readingTime?: number;
+	wordCount?: number;
+	letterCount?: number;
 }
 
 const BLOG_URL = Astro.site?.href;
 
 const {
 	url,
-	title, summary,
+	title,
+	summary,
 	authors,
-	image, imageAlt,
-	createdAt, updatedAt, updates,
+	image,
+	imageAlt,
+	createdAt,
+	updatedAt,
+	updates,
 	tags,
-	readingTime, wordCount, letterCount,
+	readingTime,
+	wordCount,
+	letterCount,
 	relatedPosts
 } = Astro.props;
 
 const postUrl = `${BLOG_URL}${url}`;
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+	dateStyle: 'long',
+	timeStyle: 'short'
+});
 ---
 <BaseLayout
 	htmlTitle={[title, 'TorontoJS Blog']}
-	title={title}
+	{title}
 	description={summary}
-	authors={authors}
-	tags={tags}
+	{authors}
+	{tags}
 	url={postUrl}
 	image={image?.src}
-	imageAlt={imageAlt}
-	createdAt={createdAt}
-	updatedAt={updatedAt}
+	{imageAlt}
+	{createdAt}
+	{updatedAt}
 	pageSchema="BlogPosting"
 	hasFeed={true}
 >
@@ -63,44 +73,45 @@ const postUrl = `${BLOG_URL}${url}`;
 	<PostHeader
 		slot="header"
 		url={postUrl}
-		title={title}
-		summary={summary}
-		image={image}
-		imageAlt={imageAlt}
-		createdAt={createdAt}
-		updatedAt={updatedAt}
+		{title}
+		{summary}
+		{image}
+		{imageAlt}
+		{createdAt}
+		{updatedAt}
 		hasUpdates={updates && updates.length > 0}
-		readingTime={readingTime}
-		wordCount={wordCount}
-		letterCount={letterCount}
-		authors={authors}
+		{readingTime}
+		{wordCount}
+		{letterCount}
+		{authors}
 	/>
 
 	<article id="post-contents" itemprop="articleBody" class="e-content">
-		{updates && (
-			<aside id="update-history">
-				<details open>
-					<summary>Update History</summary>
-					<ul>
-						{updates.map((update) => (
-							<li>
-								<time
-									datetime={update.date.toISOString()}
-									title={update.date.toISOString()}
-								>
-									{new Intl.DateTimeFormat('en-US', {
-										dateStyle: 'long',
-										timeStyle: 'short'
-									}).format(update.date)}
-								</time>
-								<span>&mdash;</span>
-								<span>{update.changes}</span>
-							</li>
-						))}
-					</ul>
-				</details>
-			</aside>
-		)}
+		{
+			updates && (
+				<aside id="update-history">
+					<details open>
+						<summary>Update History</summary>
+						<ul>
+							{
+								updates.map((update) => (
+									<li>
+										<time
+											datetime={update.date.toISOString()}
+											title={update.date.toISOString()}
+										>
+											{dateFormatter.format(update.date)}
+										</time>
+										<span>&mdash;</span>
+										<span>{update.changes}</span>
+									</li>
+								))
+							}
+						</ul>
+					</details>
+				</aside>
+			)
+		}
 
 		<slot></slot>
 	</article>
@@ -109,47 +120,51 @@ const postUrl = `${BLOG_URL}${url}`;
 
 	<Fragment slot="footer" id="post-footer">
 		<div id="author-cards-wrapper">
-			{authors.map((author) => (
-				<AuthorCard author={author} />
-			))}
+			{authors.map((author) => <AuthorCard {author} />)}
 		</div>
 
-		{tags && tags.length > 0 && (
-			<TagList
-				tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
-				isOpen={true}
-			/>
-		)}
+		{
+			tags && tags.length > 0 && (
+				<TagList
+					tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
+					isOpen={true}
+				/>
+			)
+		}
 
-		{relatedPosts && relatedPosts.length > 0 && (
-			<details id="related-posts" open>
-				<summary id="related-posts-title">Related Posts</summary>
-				<div id="related-posts-wrapper">
-					<nav aria-labelledby="related-posts-title">
-						<ul>
-							{relatedPosts.map((post) => (
-								<li>
-									<PostCard
-										variant="small"
-										url={`${BLOG_URL}${post.url}`}
-										title={post.title}
-										image={post.image}
-										imageAlt={post.imageAlt}
-										createdAt={post.createdAt}
-									>
-										<span slot="title">{post.title}</span>
-										{post.summary}
-									</PostCard>
-								</li>
-							))}
-						</ul>
-					</nav>
-				</div>
-			</details>
-		)}
+		{
+			relatedPosts && relatedPosts.length > 0 && (
+				<details id="related-posts" open>
+					<summary id="related-posts-title">Related Posts</summary>
+					<div id="related-posts-wrapper">
+						<nav aria-labelledby="related-posts-title">
+							<ul>
+								{
+									relatedPosts.map((post) => (
+										<li>
+											<PostCard
+												variant="small"
+												url={`${BLOG_URL}${post.url}`}
+												title={post.title}
+												image={post.image}
+												imageAlt={post.imageAlt}
+												createdAt={post.createdAt}
+											>
+												<span slot="title">{post.title}</span> {post.summary}
+											</PostCard>
+										</li>
+									))
+								}
+							</ul>
+						</nav>
+					</div>
+				</details>
+			)
+		}
 
 		<aside id="post-license">
-			<small><em>Unless otherwise noted, all content on this site is licensed under a <a href={`${BLOG_URL}license`} class="u-license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</em></small>
+			<small><em>Unless otherwise noted, all content on this site is licensed under a <a href={`${BLOG_URL}license`} class="u-license"
+					>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</em></small>
 		</aside>
 	</Fragment>
 </BaseLayout>

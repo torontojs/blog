@@ -11,35 +11,41 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 export const getStaticPaths = (async ({ paginate }: { paginate: PaginateFunction }) => {
 	const postsList = await listPostPagesByTag();
 
-	return Object.entries(postsList).flatMap(([tagKey, taggedPostsList]) => paginate(taggedPostsList, {
-		params: { tag: tagKey },
-		pageSize: MAX_POSTS_PER_PAGE
-	}));
+	return Object.entries(postsList).flatMap(([tagKey, taggedPostsList]) =>
+		paginate(taggedPostsList, {
+			params: { tag: tagKey },
+			pageSize: MAX_POSTS_PER_PAGE
+		})
+	);
 }) satisfies GetStaticPaths;
 
 const {
 	data: posts,
 	url,
-	currentPage, lastPage,
-	start, end, total, size
+	currentPage,
+	lastPage,
+	start,
+	end,
+	total,
+	size
 } = Astro.props.page;
 const { tag } = Astro.params;
 
 const BLOG_URL = Astro.site?.href;
 ---
 <BlogPostsLayout
-	posts={posts}
+	{posts}
 	title={`Posts tagged with: "${tag ?? ''}"`}
 	currentUrl={url.current}
-	currentPage={currentPage}
-	lastPage={lastPage}
+	{currentPage}
+	{lastPage}
 	prevUrl={url.prev}
 	nextUrl={url.next}
 	baseUrl={`${BLOG_URL}tags/${tag ?? ''}`}
-	start={start}
-	end={end}
-	total={total}
-	size={size}
+	{start}
+	{end}
+	{total}
+	{size}
 >
 	<Fragment slot="header">
 		{`Posts tagged with: "${tag ?? ''}"`}

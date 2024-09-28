@@ -11,6 +11,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 We are starting this issue off by honouring [Jen Chan](https://www.jenchan.biz/)! As the year comes to an end, Jen will be stepping down as Executive Director for TorontoJS. Jen has been a trailblazer with helping lead the organization through the pandemic years and overseeing a large part of growth in the community.
 
 ![A picture of Jen Chan with a slight smile, she has dark brown hair with green accents and is wearing a coral winter coat. Behind her is a brick wall.](./assets/7f819de0-057b-4626-8421-5193bfb9fd8b_800x800.jpg)
@@ -21,8 +22,8 @@ Through figuring how to bring events online, returning to in-person events, ment
 
 - [TorontoJS Social (In-Person)](https://guild.host/events/toronto-js-social-in-27ewzx) - TONIGHT!!!!
 - **November 19th at 2:00pm** - [TorontoJS Code Club (Online)](https://guild.host/events/code-club-online-november-czcet9)
-- **November 26nd** **at 1:00pm** - [JS Social: OpenTTD (Online)](https://guild.host/events/js-social-openttd-online-a76bbz) - Love public transit? Play a 30 year old game together, online!
-- **December 6th at 6pm -** [JS Tech Talk (In-Person): Simplify Complex Apps, React and React native Code Share, Apollo Caching](https://guild.host/events/js-tech-talk-inperson-wku7de)
+- **November 26nd** **at 1:00pm** - [JS Social: OpenTTD (Online)](https://guild.host/events/js-social-openttd-online-a76bbz) - Love public transit? Play a 30 year old game together, online!
+- **December 6th at 6pm -** [JS Tech Talk (In-Person): Simplify Complex Apps, React and React native Code Share, Apollo Caching](https://guild.host/events/js-tech-talk-inperson-wku7de)
 
 ### Other events happening in Toronto
 

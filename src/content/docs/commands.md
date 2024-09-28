@@ -31,11 +31,12 @@ Wrapper for the `astro` CLI commands. You can run `astro add`, `astro check`, an
 Checks the project for errors and fix most of them. This includes linting the TypeScript code with ESLint, the HTML/Astro code with Markuplint, and the CSS with Stylelint.
 
 This is a sequence of the following commands:
-  - `npm run typecheck` - Checks the TypeScript code
-  - `npm run lint:js` - Lints the TypeScript code
-  - `npm run lint:css` - Lints the CSS code
-  - `npm run lint:md` - Checks markdown files using astro
-  - `npm run lint:html` - Lints the HTML/Astro code
+
+- `npm run typecheck` - Checks the TypeScript code
+- `npm run lint:js` - Lints the TypeScript code
+- `npm run lint:css` - Lints the CSS code
+- `npm run lint:md` - Checks markdown files using astro
+- `npm run lint:html` - Lints the HTML/Astro code
 
 ## `npm version`
 

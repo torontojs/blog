@@ -1,26 +1,21 @@
 #pwa-toast {
-	visibility: hidden;
-	position: fixed;
+	align-items: center;
+	background-color: var(--gray-12);
+	border-radius: var(--radius-3);
 	display: flex;
 	gap: var(--size-2);
-	align-items: center;
-	justify-content: space-between;
-
-	width: clamp(320px, (100% - var(--size-2) * 2), var(--max-width));
-	inset-inline: 0;
 	inset-block-end: 0;
+	inset-inline: 0;
+	justify-content: space-between;
 	margin: var(--size-2);
 	padding: var(--size-2) var(--size-3);
-	border-radius: var(--radius-3);
-
-	background-color: var(--gray-12);
-
+	position: fixed;
+	visibility: hidden;
+	width: clamp(320px, 100% - var(--size-2) * 2, var(--max-width));
 	z-index: calc(1 * infinity);
 }
 
-#pwa-toast:is([data-offline], [data-refresh]) {
-	visibility: visible;
-}
+#pwa-toast:is([data-offline], [data-refresh]) { visibility: visible; }
 
 #pwa-toast div {
 	flex-basis: min-content;
@@ -29,21 +24,17 @@
 
 #pwa-toast button {
 	display: none;
-	place-items: center;
 	padding: var(--size-1);
+	place-items: center;
 }
 
 #pwa-toast button svg {
-	width: 100%;
-	height: 100%;
 	aspect-ratio: var(--ratio-square);
+	height: 100%;
 	pointer-events: none;
+	width: 100%;
 }
 
-#pwa-toast[data-offline] #pwa-close {
-	display: grid;
-}
+#pwa-toast[data-offline] #pwa-close { display: grid; }
 
-#pwa-toast[data-refresh] #pwa-refresh {
-	display: grid;
-}
+#pwa-toast[data-refresh] #pwa-refresh { display: grid; }

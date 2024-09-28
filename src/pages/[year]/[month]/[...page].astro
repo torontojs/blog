@@ -11,20 +11,28 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 export const getStaticPaths = (async ({ paginate }: { paginate: PaginateFunction }) => {
 	const postsList = await listPostsPagesByMonth();
 
-	return Object.entries(postsList).flatMap(([yearKey, months]) => Object.entries(months).flatMap(([monthKey, monthPosts]) => paginate(monthPosts, {
-		params: {
-			year: yearKey,
-			month: monthKey
-		},
-		pageSize: MAX_POSTS_PER_PAGE
-	})));
+	return Object.entries(postsList).flatMap(([yearKey, months]) =>
+		Object.entries(months).flatMap(([monthKey, monthPosts]) =>
+			paginate(monthPosts, {
+				params: {
+					year: yearKey,
+					month: monthKey
+				},
+				pageSize: MAX_POSTS_PER_PAGE
+			})
+		)
+	);
 }) satisfies GetStaticPaths;
 
 const {
 	data: posts,
 	url,
-	currentPage, lastPage,
-	start, end, total, size
+	currentPage,
+	lastPage,
+	start,
+	end,
+	total,
+	size
 } = Astro.props.page;
 const { year, month } = Astro.params;
 const formatter = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric' });
@@ -32,18 +40,18 @@ const formatter = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric'
 const BLOG_URL = Astro.site?.href ?? '';
 ---
 <BlogPostsLayout
-	posts={posts}
+	{posts}
 	title={`Posts from ${formatter.format(new Date(`${year}-${month}-01T00:00:00`))}`}
 	currentUrl={url.current}
-	currentPage={currentPage}
-	lastPage={lastPage}
+	{currentPage}
+	{lastPage}
 	prevUrl={url.prev}
 	nextUrl={url.next}
 	baseUrl={`${BLOG_URL}${year}${month}`}
-	start={start}
-	end={end}
-	total={total}
-	size={size}
+	{start}
+	{end}
+	{total}
+	{size}
 >
 	<Fragment slot="header">
 		{`Posts from ${formatter.format(new Date(`${year}-${month}-01T00:00:00`))}`}

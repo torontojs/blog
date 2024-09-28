@@ -45,3 +45,8 @@
 	display: flex;
 	flex-direction: column;
 }
+
+#related-posts-wrapper li {
+	margin: 0;
+	padding: 0;
+}

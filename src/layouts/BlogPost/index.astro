@@ -1,6 +1,6 @@
 ---
 import AuthorCard from '../../components/AuthorCard/index.astro';
-import PostCardSmall from '../../components/PostCardSmall/index.astro';
+import PostCard from '../../components/PostCard/index.astro';
 import PostHeader from '../../components/PostHeader/index.astro';
 import SkipToContent from '../../components/SkipToContent/index.astro';
 import TagList from '../../components/TagList/index.astro';
@@ -129,14 +129,17 @@ const postUrl = `${BLOG_URL}${url}`;
 						<ul>
 							{relatedPosts.map((post) => (
 								<li>
-									<PostCardSmall
+									<PostCard
+										variant="small"
 										url={`${BLOG_URL}${post.url}`}
+										title={post.title}
 										image={post.image}
 										imageAlt={post.imageAlt}
+										createdAt={post.createdAt}
 									>
 										<span slot="title">{post.title}</span>
 										{post.summary}
-									</PostCardSmall>
+									</PostCard>
 								</li>
 							))}
 						</ul>

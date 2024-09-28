@@ -52,6 +52,7 @@ nav ul {
 	justify-content: center;
 	list-style-type: none;
 	width: 100%;
+	padding: 0;
 }
 
 nav ul > li { padding: 0; }

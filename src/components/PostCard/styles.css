@@ -1,14 +1,18 @@
 .post-card {
+	display: grid;
+	gap: var(--size-3);
 	border-radius: var(--size-7);
 	border: var(--size-1) solid var(--yellow-6);
 	box-shadow:
 		0 0 0 0.3rem var(--tjs-red-6),
 		inset 0 0 1.2rem 0.2rem var(--gray-10);
+}
+
+.post-card.large {
 	padding: var(--size-3);
 	width: 75%;
 	margin: 2rem auto;
 	text-align: center;
-	display: grid;
 	grid-template-columns: 15rem 1fr;
 	grid-template-rows: auto 1fr auto auto;
 	grid-template-areas:
@@ -17,10 +21,23 @@
 		'image read-more'
 		'footer footer'
 	;
-	gap: var(--size-3);
 }
 
-.post-card:not(:has( picture)) {
+.post-card.small {
+	--image-size: var(--avatar-small-size);
+
+	grid-template-areas:
+		'image header'
+		'image content';
+	grid-template-columns: var(--image-size) 1fr;
+	grid-template-rows: auto 1fr;
+
+	margin: 1rem;
+	padding: var(--size-2);
+	width: clamp(10rem, 35cqw, 25rem);
+}
+
+.post-card.large:not(:has( picture)) {
 	grid-template-columns: 1fr;
 	grid-template-areas:
 		'header'
@@ -30,15 +47,38 @@
 	;
 }
 
+.post-card.small:not(:has( picture)) {
+	grid-template-areas:
+		'header'
+		'content';
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+}
+
 .post-card header { grid-area: header; }
+
+.post-card.small header span {
+	font-size: smaller;
+}
 
 .post-card .post-card-image {
 	grid-area: image;
 	overflow: hidden;
 	border-radius: var(--size-7);
+	object-fit: cover;
+	object-position: center;
+}
+
+.post-card.small .post-card-image {
+	width: var(--image-size);
+	height: var(--image-size);
 }
 
 .post-card .post-card-content { grid-area: content; }
+
+.post-card.small .post-card-content {
+	font-size: smaller;
+}
 
 .post-card .post-card-read-more {
 	grid-area: read-more;
@@ -72,14 +112,21 @@
 	text-underline-offset: var(--size-2);
 }
 
-img {
+.post-card.small h3 {
+	margin: 0;
+	font-size: 1em;
+}
+
+.post-card img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	object-fit: cover;
+	object-position: center;
 }
 
 @media (max-width: 800px) {
-	.post-card {
+	.post-card.large {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto 1fr auto auto auto;
 		grid-template-areas:
@@ -90,4 +137,8 @@ img {
 			'footer'
 		;
 	}
+}
+
+@media (max-width: 600px) {
+	.post-card.small { --image-size: var(--avatar-mini-size); }
 }

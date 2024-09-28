@@ -1,12 +1,10 @@
-.tag-list, .tag-list summary {
-	background: none;
-}
+.tag-list, .tag-list summary { background: none; }
 
 .tag-list ul {
 	display: flex;
 	flex-wrap: wrap;
+	gap: var(--size-2);
+	list-style: none;
 	margin: 0;
 	padding-inline-start: 0;
-	list-style: none;
-	gap: var(--size-2);
 }

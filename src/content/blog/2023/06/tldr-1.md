@@ -11,6 +11,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 Summer is here, and welcome to the first issue of TorontoJS TL;DR. This is the Toronto Javascript newsletter, by you for you.
 
 Our goal with this newsletter to is keep you apprised of what's going on with TorontoJS and provide a spotlight of your projects. If you have anything to share for the next edition, find us on the [TorontoJS slack](https://torontojs.slack.com/).

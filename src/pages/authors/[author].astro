@@ -10,20 +10,21 @@ import '../../styles/authors.css';
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-export const getStaticPaths = (async () => (await listAllAuthors()).map(((author) => ({
-	params: { author: author.slug },
-	props: { ...author.data, render: author.render, slug: author.slug }
-})))) satisfies GetStaticPaths;
+export const getStaticPaths = (async () =>
+	(await listAllAuthors()).map((author) => ({
+		params: { author: author.slug },
+		props: { ...author.data, render: author.render, slug: author.slug }
+	}))) satisfies GetStaticPaths;
 
 const {
 	name,
 	render,
-	avatar, avatarAlt,
+	avatar,
+	avatarAlt,
 	pronouns,
 	socialMedia
 } = Astro.props;
 const { Content } = await render();
-
 ---
 <InternalPageLayout
 	htmlTitle={[name, 'Author', 'TorontoJS Blog']}
@@ -34,30 +35,29 @@ const { Content } = await render();
 	hasFeed={true}
 	pageSchema="ProfilePage"
 >
+	<a
+		slot="header-picture"
+		id="author-picture"
+		class="p-author h-card author-name"
+		rel="author"
+		itemprop="url"
+		href={Astro.url}
+	>
+		<Avatar image={avatar} imageAlt={avatarAlt} />
+	</a>
+	<a slot="header" href={Astro.url}>{name}</a>
+	<Fragment slot="header-extra">
+		{pronouns && <p>{pronouns}</p>}
+		<ul>
+			{Object.entries(socialMedia ?? {}).map(([name, url]) => <li><a href={url} rel="nofollow noopener noreferrer">{name}</a></li>)}
+		</ul>
+	</Fragment>
 
-<a
-	slot="header-picture"
-	id="author-picture"
-	class="p-author h-card author-name"
-	rel="author"
-	itemprop="url"
-	href={Astro.url}
->
-	<Avatar image={avatar} imageAlt={avatarAlt} />
-</a>
-<a slot="header" href={Astro.url}>{name}</a>
-<Fragment slot="header-extra">
-	{pronouns && (<p>{pronouns}</p>)}
-	<ul>
-		{Object.entries(socialMedia ?? {}).map(([name, url]) => (<li><a href={url} rel="nofollow noopener noreferrer">{name}</a></li>))}
-	</ul>
-</Fragment>
+	<div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">
+		<meta itemprop="name" content={name} />
 
-<div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">
-	<meta itemprop="name" content={name} />
-
-	<article id="author-bio">
-		<Content />
-	</article>
-</div>
+		<article id="author-bio">
+			<Content />
+		</article>
+	</div>
 </InternalPageLayout>

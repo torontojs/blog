@@ -4,7 +4,6 @@ import SkipToContent from '../components/SkipToContent/index.astro';
 import BaseLayout from '../layouts/Base/index.astro';
 import '../styles/report.css';
 const BLOG_URL = Astro.site?.href;
-
 ---
 <BaseLayout
 	htmlTitle={['Report', 'TorontoJS Blog']}
@@ -21,30 +20,32 @@ const BLOG_URL = Astro.site?.href;
 		</div>
 	</header>
 
-		<div>
-			<div class="space-main">
-				<p class="center-text">Did you experience something questionable at a TorontoJS event, or on our discussion channels? Feel free to direct others to our <a href="https://torontojs.com/code_of_conduct" target="_blank">Code Of Conduct.</a>
-				</p>
-				<p class="center-text">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
-			</div>
+	<div>
+		<div class="space-main">
+			<p class="center-text">
+				Did you experience something questionable at a TorontoJS event, or on our discussion channels? Feel free to direct others to our <a
+					href="https://torontojs.com/code_of_conduct"
+					target="_blank"
+				>Code Of Conduct.</a>
+			</p>
+			<p class="center-text">Our organizers, moderators and volunteers want to maintain a welcoming environment free of abuse, harassment, or discrimination.</p>
+		</div>
 
-			<div class="space-main">
-				<p class="center-text">Submit a <a href="https://torontojs.com/report" target="_blank"> report </a>here.
-				</p>
+		<div class="space-main">
+			<p class="center-text">
+				Submit a <a href="https://torontojs.com/report" target="_blank"> report </a>here.
+			</p>
+		</div>
 
-			</div>
+		<!-- save for after going live? -->
 
-
-				<!-- save for after going live? -->
-
-			<!-- <div class="space-main">
+		<!-- <div class="space-main">
 				<h3 class="center-text">Please provide the following information:</h3>
 					 <p class="center-text">
 					the time and place the harassment took place, the member(s) involved in the violation, any surrounding details you think are relevant to the report.
 					</p> -->
-			<!-- </div> -->
+		<!-- </div> -->
 		<!-- </div>  -->
-
 
 		<!-- <div id="report-form">
 			<form>
@@ -62,5 +63,5 @@ const BLOG_URL = Astro.site?.href;
 					<textarea name="comment" id="comment" required></textarea>
 					<button type="submit" value="submit">Submit</button>
 			</form> -->
-		</div>
+	</div>
 </BaseLayout>

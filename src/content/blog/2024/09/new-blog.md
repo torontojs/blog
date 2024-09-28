@@ -10,6 +10,7 @@ authors:
   - marco
   - drey
 ---
+
 We have a new home! Expect more frequent content and more of the nice and quirky newsletters!
 
 ## Intermission
@@ -25,6 +26,7 @@ As hate speech goes against our [Code of Conduct](https://torontojs.com/code_of_
 ## Combining ideas
 
 At the same time two other things happened in parallel:
+
 - Discussions about a blog for general posts from and to the community
 - A Request For Comment (RFC) style proposals system for improvements
 
@@ -43,6 +45,7 @@ To test out the proposals system, we thought it would be a good idea use the blo
 ## Building a blog
 
 We decided to go with [Astro](https://astro.build/) for two reasons:
+
 1. It builds statically, so no JS on the client (ironic that we are Toronto... _**JS**_ and try to get rid of JS) hehe.
 2. It has nice built in components, so we are not having to maintain the same lines of code.
 

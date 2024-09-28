@@ -1,13 +1,13 @@
 #contents {
+	margin-inline: auto;
+	max-width: var(--max-width);
 	padding-inline: var(--size-5);
 	width: 100%;
-	max-width: var(--max-width);
-	margin-inline: auto;
 }
 
 #contents :is(p, ul, ol) {
-	margin-block: var(--size-3);
 	font-weight: 450;
+	margin-block: var(--size-3);
 }
 
 #contents :is(h2, h3, h4, h5, h6) {

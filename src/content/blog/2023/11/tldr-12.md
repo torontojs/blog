@@ -9,6 +9,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 It is that time of the year again where our [favorite songs get stuck in our heads](https://www.youtube.com/watch?v=dQw4w9WgXcQ)…
 
 It is also a time of fun challenges and quick projects, so brush up your IDE and terminal and jump in on the advent calendars below!
@@ -19,7 +20,6 @@ It is also a time of fun challenges and quick projects, so brush up your IDE and
 
 - Advent of CSS - [https://www.adventofcss.com/](https://www.adventofcss.com/)
 
-
 Happy holidays and happy coding!
 
 ## Upcoming TorontoJS Events
@@ -29,7 +29,6 @@ Happy holidays and happy coding!
 - **December Code Club**: watch out for the date ;)
 
 - **January 24th, Thursday**: [JS Tech Talk [ Online ]: What would the browser do? Simpler mental models with Remix](https://guild.host/events/js-tech-talk-online-7nqoea)
-
 
 ## Community Showcase
 

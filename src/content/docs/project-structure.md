@@ -150,6 +150,7 @@ The components folder contains building blocks for parts that are "more complex 
 The layouts folder contain base layouts to use. This means, all the basic structure when you think something like "a page for a blog post", "a page listing blog posts", or "an internal page with content".
 
 All layouts derive from the `Base` layout and have a similar structure:
+
 - An html header with all the metadata for the page.
 - A `<slot>` to put the header content before the `<main>` tag.
 - The main content _inside_ the `<main>` tag.
@@ -180,6 +181,7 @@ For example, if we have the following list of markdown files, each representing 
 - `trivial-triple-triumvirate.md`, created in March 2024
 
 Those files, when built, will translate to:
+
 - `/2024/01/hello-world/index.html`
 - `/2024/02/selusa-secundus/index.html`
 - `/2024/03/trivial-triple-triumvirate/index.html`

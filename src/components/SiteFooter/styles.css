@@ -1,20 +1,20 @@
 #bottom-nav ul {
+	align-items: center;
+	background-color: var(--tjs-dark-bg);
 	display: flex;
+	font-weight: bold;
 	gap: 0.5rem;
 	justify-content: center;
-	align-items: center;
-	padding: var(--size-2);
-	background-color: var(--tjs-dark-bg);
-	font-weight: bold;
 	margin-block-start: var(--size-4);
+	padding: var(--size-2);
 }
 
-#bottom-nav .footer-items{
-	display: inline-flex;
+#bottom-nav .footer-items {
 	align-items: center;
+	display: inline-flex;
+	flex-wrap: wrap;
 	gap: 1rem;
 	margin-left: 0.75rem;
-	flex-wrap: wrap;
 	overflow-wrap: break-word;
 }
 

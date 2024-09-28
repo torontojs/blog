@@ -1,51 +1,48 @@
 .author-card {
 	display: grid;
-	padding-inline: var(--size-3);
+	gap: var(--size-3);
+	grid-template-areas:
+		'avatar name'
+		'avatar bio';
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto 1fr;
-	gap: var(--size-3);
-	place-items: center;
-	grid-template-areas:
-		"avatar name"
-		"avatar bio";
 	margin: var(--size-3) 0;
+	padding-inline: var(--size-3);
+	place-items: center;
 }
 
 .author-card .author-name {
-	margin: 0;
 	color: var(--title-color);
-	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
-	text-decoration-color: var(--tjs-red-7);
-	text-underline-offset: var(--size-1);
-
 	grid-area: name;
 	justify-self: start;
+	margin: 0;
+	text-decoration-color: var(--tjs-red-7);
+	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--gray-12);
+	text-underline-offset: var(--size-1);
 }
 
 .author-card .author-picture {
-	grid-area: avatar;
 	align-self: start;
+	grid-area: avatar;
 }
 
 .author-card .author-bio {
 	grid-area: bio;
-	width: 100%;
 	place-self: start start;
+	width: 100%;
 }
 
 @media (max-width: 768px) {
 	.author-card {
+		grid-template-areas:
+			'avatar'
+			'name'
+			'bio';
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr auto auto;
-		grid-template-areas:
-			"avatar"
-			"name"
-			"bio";
 	}
 
-	.author-card .author-picture {
-		place-self: center center;
-	}
+	.author-card .author-picture { place-self: center center; }
 
 	.author-card .author-name {
 		justify-self: center;

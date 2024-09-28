@@ -1,9 +1,9 @@
-.full-width  {
+.full-width {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	margin-top: var(--size-3);
 	width: 100%;
-	margin-top: var(--size-3)
 	/* max-inline-size is the problem here, nested style for h2 */
 }
 
@@ -14,44 +14,36 @@ h1 {
 
 .space-main {
 	display: block;
-	width: 100%;
-	text-align: center;
 	padding: 2rem;
+	text-align: center;
+	width: 100%;
 }
 
-.center-text {
-	margin: auto;
-}
+.center-text { margin: auto; }
 
 #report-form {
-  border-radius: var(--size-1);
-  border: var(--size-1) solid #ED342F;
-  padding: 20px;
-  width: 75%;
-  margin: 0 auto;
+	border: var(--size-1) solid #ed342f;
+	border-radius: var(--size-1);
+	margin: 0 auto;
+	padding: 20px;
+	width: 75%;
 }
 
 #report-form :is(input, textarea) {
-  width: 100%;
-  padding: var(--size-2);
-  border: var(--size-00) solid #cccccc;
-  border-radius: 4px;
-  resize: vertical;
+	border: var(--size-00) solid #cccccc;
+	border-radius: 4px;
+	padding: var(--size-2);
+	resize: vertical;
+	width: 100%;
 }
 
 #report-form label {
-  padding: var(--size-4) var(--size-4) var(--size-4) 0;
-  display: inline-block;
+	display: inline-block;
+	padding: var(--size-4) var(--size-4) var(--size-4) 0;
 }
 
-#report-form input {
-	margin-block-start: 20px;
-}
+#report-form input { margin-block-start: 20px; }
 
-#report-form button[type="submit"]{
-	background-color: #ED342F;
-}
+#report-form button[type='submit'] { background-color: #ed342f; }
 
-#report-form button[type="submit"]:hover{
-	background-color: --var(--tjs-red-7);
-}
+#report-form button[type='submit']:hover { background-color: --var(--tjs-red-7); }

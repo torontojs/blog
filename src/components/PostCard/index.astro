@@ -6,70 +6,76 @@ import TagList from '../TagList/index.astro';
 import './styles.css';
 
 interface Props {
-	url: string,
-	title: string,
-	createdAt: Date | string,
-	image?: ImageMetadata,
-	imageAlt?: string,
-	tags?: string[],
-	variant: "small" | "large"
+	url: string;
+	title: string;
+	createdAt: Date | string;
+	image?: ImageMetadata;
+	imageAlt?: string;
+	tags?: string[];
+	variant: 'small' | 'large';
 }
 
 const { url, title, createdAt, image, imageAlt, tags, variant } = Astro.props;
 
 const BLOG_URL = Astro.site?.href;
 // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-const IMAGE_WIDTHS = variant === "large"
+const IMAGE_WIDTHS = variant === 'large'
 	? [256, 512, 768, image?.width ?? 1024]
 	: [64, 128, 256, 512];
-const IMAGE_SIZES = variant === "large"
+const IMAGE_SIZES = variant === 'large'
 	? `(max-width: 360px) 256px, (max-width: 720px) 512px, (max-width: 1280px) 768px, ${image?.width ?? 0}px`
-	: "(max-width: 360px) 64px, (max-width: 720px) 128px, (max-width: 1280px) 256px, 512px";
+	: '(max-width: 360px) 64px, (max-width: 720px) 128px, (max-width: 1280px) 256px, 512px';
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 ---
-<article class:list={["post-card", variant]}>
+<article class:list={['post-card', variant]}>
 	<header>
-		{variant === "large" && (
-			<h2>
-				<a href={url}>
-					<slot name="title"></slot>
-				</a>
-			</h2>
-		)}
-		{variant === "small" && (
-			<h3><a href={url}><slot name="title"></slot></a></h3>
-		)}
+		{
+			variant === 'large' && (
+				<h2>
+					<a href={url}>
+						<slot name="title"></slot>
+					</a>
+				</h2>
+			)
+		}
+		{variant === 'small' && <h3><a href={url}><slot name="title"></slot></a></h3>}
 
 		<span><time datetime={new Date(createdAt).toISOString()}>{formatter.format(new Date(createdAt))}</time></span>
 	</header>
 
-	{image && (
-		<Picture
-			pictureAttributes={{ 'class': 'post-card-image' }}
-			src={image}
-			alt={imageAlt ?? ''}
-			widths={IMAGE_WIDTHS}
-			sizes={IMAGE_SIZES}
-			quality="high"
-		/>
-	)}
+	{
+		image && (
+			<Picture
+				pictureAttributes={{ class: 'post-card-image' }}
+				src={image}
+				alt={imageAlt ?? ''}
+				widths={IMAGE_WIDTHS}
+				sizes={IMAGE_SIZES}
+				quality="high"
+			/>
+		)
+	}
 
 	<div class="post-card-content">
 		<slot></slot>
 	</div>
 
-	{variant === "large" && (
-		<>
-			<a href={url} class="post-card-read-more">Read more<span class="visually-hidden">: {title}</span></a>
+	{
+		variant === 'large' && (
+			<>
+				<a href={url} class="post-card-read-more">Read more<span class="visually-hidden">: {title}</span></a>
 
-			<footer>
-				{tags && tags.length > 0 && (
-					<TagList
-						tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
-						isOpen={false}
-					/>
-				)}
-			</footer>
-		</>
-	)}
+				<footer>
+					{
+						tags && tags.length > 0 && (
+							<TagList
+								tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
+								isOpen={false}
+							/>
+						)
+					}
+				</footer>
+			</>
+		)
+	}
 </article>

@@ -9,6 +9,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 Wow!! Over the half way point of the year, isn't that something? One day its January 1st, maybe we were thinking about goals, resolutions, routines and new habits to implement and then all of a sudden, we are over the 6 month mark.
 
 Summer!! Sunshine!! In-person events??? Time outside?? The heat though.

@@ -10,7 +10,6 @@ import '../../styles/authors.css';
 const authors = await getCollection('authors');
 
 const BLOG_URL = Astro.site?.href;
-
 ---
 <InternalPageLayout
 	htmlTitle={['Authors', 'TorontoJS Blog']}
@@ -29,16 +28,15 @@ const BLOG_URL = Astro.site?.href;
 		TorontoJS Blog Authors
 	</PageHeader>
 
-
 	<div id="contents">
 		<ul id="author-list">
-			{authors.map(({ slug }) => (
-				<li itemprop="itemListElement">
-					<AuthorCard
-						author={slug}
-					/>
-				</li>
-			))}
+			{
+				authors.map(({ slug }) => (
+					<li itemprop="itemListElement">
+						<AuthorCard author={slug} />
+					</li>
+				))
+			}
 		</ul>
 	</div>
 </InternalPageLayout>

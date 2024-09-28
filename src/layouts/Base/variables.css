@@ -1,10 +1,8 @@
 :root {
 	/* Base size */
 	--body-text: 20px;
-
 	/* Max width for part of the page to grow */
 	--max-width: 1024px;
-
 	/* Theme colors */
 	--tjs-red-0: #fec2b8;
 	--tjs-red-1: #ffad9e;
@@ -19,16 +17,12 @@
 	--tjs-red-10: #aa2119;
 	--tjs-red-11: #9a1e17;
 	--tjs-red-12: #8a1b14;
-
 	--tjs-dark-bg: #13110b;
-
 	--theme-color: var(--tjs-red-7);
 	--surface-1: var(--gray-4);
-
 	--link: maroon;
 	--link-visited: var(--yellow-10);
 	--title-color: rgb(255 193 36);
-
 	accent-color: var(--theme-color);
 }
 

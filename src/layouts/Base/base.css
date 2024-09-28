@@ -1,21 +1,18 @@
-@import "open-props/style";
-@import "open-props/normalize";
+@import 'open-props/style';
+@import 'open-props/normalize';
 @import url('./variables.css');
 
-:root {
-	font-family: var(--font-system-ui);
-}
+:root { font-family: var(--font-system-ui); }
 
 :not(:defined) { display: none; }
 
 html, body {
+	box-sizing: border-box;
+	font-size: var(--body-text);
+	height: 100%;
 	margin: 0;
 	padding: 0;
-	height: 100%;
 	width: 100%;
-	box-sizing: border-box;
-
-	font-size: var(--body-text);
 }
 
 body {
@@ -23,48 +20,45 @@ body {
 	flex-direction: column;
 }
 
-
 *, *::after, *::before {
 	box-sizing: inherit;
 	font-family: inherit;
 }
 
 *:has(> svg) {
-	display: inline-flex;
 	align-items: center;
+	display: inline-flex;
 	gap: 0.3em;
 	overflow-wrap: break-word;
 	word-break: break-word;
 }
 
 *:has(> svg) svg {
-	min-width: 1em;
 	min-height: 1em;
+	min-width: 1em;
 }
 
-main {
-	flex-grow: 1;
-}
+main { flex-grow: 1; }
 
 nav ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style-type: none;
-	width: 100%;
 	padding: 0;
+	width: 100%;
 }
 
 nav ul > li { padding: 0; }
 
 iframe {
+	aspect-ratio: var(--ratio-landscape);
 	border: none;
 	display: block;
-	margin-inline: auto;
-	width: 100%;
 	height: auto;
+	margin-inline: auto;
 	max-height: 100%;
-	aspect-ratio: var(--ratio-landscape);
+	width: 100%;
 }
 
 a {
@@ -72,11 +66,10 @@ a {
 	text-decoration-color: currentcolor;
 }
 
-h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td {
-	max-inline-size: 100%;
-}
+h1, h2, h3, h4, h5, h6, p, dt, li, dd, blockquote, td { max-inline-size: 100%; }
 
 h1 {
+	color: white;
 	hyphenate-character: '-';
 	hyphenate-limit-chars: 8 3 2;
 	/* stylelint-disable-next-line property-no-vendor-prefix */
@@ -84,22 +77,20 @@ h1 {
 	hyphens: auto;
 	line-break: loose;
 	overflow-wrap: break-word;
+	text-shadow: 0.2rem 0.2rem 0.4rem black;
 	text-wrap: balance;
 	word-break: break-word;
-
-	color: white;
-	text-shadow: 0.2rem 0.2rem 0.4rem black;
 }
 
 .visually-hidden {
-	color: transparent;
-	overflow: hidden;
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
+	color: transparent;
 	height: 1px;
+	overflow: hidden;
+	pointer-events: none;
 	position: absolute;
+	user-select: none;
 	white-space: nowrap;
 	width: 1px;
-	pointer-events: none;
-	user-select: none;
 }

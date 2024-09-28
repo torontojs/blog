@@ -11,6 +11,7 @@ tags:
   - Newsletter
   - Community
 ---
+
 We made it all the way to issue 7, and dang is it hard to come up with an introduction for these that keeps it fresh. In fact, it's so difficult that every issue before this one had a mention of the weather! So, without further ado:
 
 So the next 14 days we can expect temperatures up to 20 degrees during the day, with minimal precipitation. It's starting to be time for sweaters and light jackets again. I know that the idea of summer being over and winter is scary, but we're about to enter the prettiest time of the year with the best fashion so it's not all bad!

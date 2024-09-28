@@ -7,44 +7,46 @@ import BaseLayout from '../Base/index.astro';
 import './styles.css';
 
 interface Props {
-	htmlTitle?: string[],
-	title: string,
-	url: string,
-	description: string,
-	tags?: string[],
-	image?: string,
-	imageAlt?: string,
-	createdAt?: Date,
-	updatedAt?: Date,
-	hasFeed?: boolean,
-	pageSchema?: string
+	htmlTitle?: string[];
+	title: string;
+	url: string;
+	description: string;
+	tags?: string[];
+	image?: string;
+	imageAlt?: string;
+	createdAt?: Date;
+	updatedAt?: Date;
+	hasFeed?: boolean;
+	pageSchema?: string;
 }
 
 const {
-	htmlTitle, title,
+	htmlTitle,
+	title,
 	description,
 	url,
 	tags,
-	image, imageAlt,
-	createdAt, updatedAt,
+	image,
+	imageAlt,
+	createdAt,
+	updatedAt,
 	hasFeed,
 	pageSchema
 } = Astro.props;
 ---
 <BaseLayout
-	htmlTitle={htmlTitle}
-	title={title}
-	description={description}
-	url={url}
-	tags={tags}
-	image={image}
-	imageAlt={imageAlt}
-	createdAt={createdAt}
-	updatedAt={updatedAt}
-	hasFeed={hasFeed}
-	pageSchema={pageSchema}
+	{htmlTitle}
+	{title}
+	{description}
+	{url}
+	{tags}
+	{image}
+	{imageAlt}
+	{createdAt}
+	{updatedAt}
+	{hasFeed}
+	{pageSchema}
 >
-
 	<SkipToContent slot="header" />
 	<SiteNav slot="header" />
 	<PageHeader slot="header">

@@ -1,21 +1,20 @@
 #post-contents {
+	line-height: var(--size-7);
+	margin-inline: auto;
+	max-width: var(--max-width);
 	padding-inline: var(--size-5);
 	width: 100%;
-	max-width: var(--max-width);
-	margin-inline: auto;
-	line-height: var(--size-7);
 }
 
 #post-contents :is(p, ul, ol) {
-	margin-block: var(--size-3);
 	font-weight: 450;
+	margin-block: var(--size-3);
 }
 
-#post-contents p > :is(img, picture, figure):only-child,
-#post-contents iframe {
+#post-contents p > :is(img, picture, figure):only-child, #post-contents iframe {
 	margin-inline: auto;
-	width: 100%;
 	max-width: var(--size-15);
+	width: 100%;
 }
 
 #post-contents :is(h2, h3, h4, h5, h6) {
@@ -29,11 +28,11 @@
 #post-contents h5 { font-size: var(--font-size-2); }
 #post-contents h6 { font-size: var(--font-size-1); }
 
-#post-contents :where(:not(pre)>code) {
+#post-contents :where(:not(pre) > code) {
+	padding-block: calc(var(--size-1) * 0.5);
+	padding-inline: var(--size-1);
 	white-space: break-spaces;
 	word-break: break-word;
-	padding-inline: var(--size-1);
-	padding-block: calc(var(--size-1) * 0.5);
 }
 
 #post-license {

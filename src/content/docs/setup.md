@@ -29,7 +29,6 @@ After installing, you will need to restart your terminal or open a new terminal 
 
 Now, when you run the project, `volta` will automatically install the correct version of Node.js for the project.
 
-
 ### Install mkcert
 
 You will need to generate a certificate to run the local server. To do so, you can use [mkcert](https://github.com/FiloSottile/mkcert).

@@ -11,23 +11,34 @@ interface Props {
 	createdAt: Date | string,
 	image?: ImageMetadata,
 	imageAlt?: string,
-	tags?: string[]
+	tags?: string[],
+	variant: "small" | "large"
 }
 
-const { url, title, createdAt, image, imageAlt, tags } = Astro.props;
+const { url, title, createdAt, image, imageAlt, tags, variant } = Astro.props;
 
 const BLOG_URL = Astro.site?.href;
 // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-const IMAGE_WIDTHS = [256, 512, 768, image?.width ?? 1024];
+const IMAGE_WIDTHS = variant === "large"
+	? [256, 512, 768, image?.width ?? 1024]
+	: [64, 128, 256, 512];
+const IMAGE_SIZES = variant === "large"
+	? `(max-width: 360px) 256px, (max-width: 720px) 512px, (max-width: 1280px) 768px, ${image?.width ?? 0}px`
+	: "(max-width: 360px) 64px, (max-width: 720px) 128px, (max-width: 1280px) 256px, 512px";
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'short' });
 ---
-<article class="post-card">
+<article class:list={["post-card", variant]}>
 	<header>
-		<h2>
-			<a href={url}>
-				<slot name="title"></slot>
-			</a>
-		</h2>
+		{variant === "large" && (
+			<h2>
+				<a href={url}>
+					<slot name="title"></slot>
+				</a>
+			</h2>
+		)}
+		{variant === "small" && (
+			<h3><a href={url}><slot name="title"></slot></a></h3>
+		)}
 
 		<span><time datetime={new Date(createdAt).toISOString()}>{formatter.format(new Date(createdAt))}</time></span>
 	</header>
@@ -38,7 +49,7 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 			src={image}
 			alt={imageAlt ?? ''}
 			widths={IMAGE_WIDTHS}
-			sizes={`(max-width: 360px) 256px, (max-width: 720px) 512px, (max-width: 1280px) 768px, ${image.width}px`}
+			sizes={IMAGE_SIZES}
 			quality="high"
 		/>
 	)}
@@ -47,14 +58,18 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 		<slot></slot>
 	</div>
 
-	<a href={url} class="post-card-read-more">Read more<span class="visually-hidden">: {title}</span></a>
+	{variant === "large" && (
+		<>
+			<a href={url} class="post-card-read-more">Read more<span class="visually-hidden">: {title}</span></a>
 
-	<footer>
-		{tags && tags.length > 0 && (
-			<TagList
-				tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
-				isOpen={false}
-			/>
-		)}
-	</footer>
+			<footer>
+				{tags && tags.length > 0 && (
+					<TagList
+						tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
+						isOpen={false}
+					/>
+				)}
+			</footer>
+		</>
+	)}
 </article>

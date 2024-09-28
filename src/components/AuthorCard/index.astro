@@ -1,6 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
-
+import { getAuthor } from '../../utils/authors.js';
 import Avatar from '../Avatar/index.astro';
 
 import './styles.css';
@@ -13,9 +12,8 @@ const { author } = Astro.props;
 
 const BLOG_URL = Astro.site?.href;
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const { data: { avatar, avatarAlt, name, pronouns }, render } = (await getEntry('authors', author))!;
-const description = await render();
+const { data: { avatar, avatarAlt, name, pronouns }, render } = await getAuthor(author);
+const { Content } = await render();
 ---
 <div class="author-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
 	<a class="author-picture" href={`${BLOG_URL}authors/${author}`}>
@@ -30,7 +28,6 @@ const description = await render();
 	</div>
 
 	<div class="author-bio">
-		{/* eslint-disable-next-line astro/no-set-html-directive */}
-		<Fragment set:html={description} />
+		<Content />
 	</div>
 </div>

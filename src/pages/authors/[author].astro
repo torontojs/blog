@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
-import { getCollection } from 'astro:content';
+import { listAllAuthors } from '../../utils/authors.js';
 
 import Avatar from '../../components/Avatar/index.astro';
 import InternalPageLayout from '../../layouts/InternalPage/index.astro';
@@ -10,7 +10,7 @@ import '../../styles/authors.css';
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-export const getStaticPaths = (async () => (await getCollection('authors')).map(((author) => ({
+export const getStaticPaths = (async () => (await listAllAuthors()).map(((author) => ({
 	params: { author: author.slug },
 	props: { ...author.data, render: author.render, slug: author.slug }
 })))) satisfies GetStaticPaths;
@@ -22,7 +22,7 @@ const {
 	pronouns,
 	socialMedia
 } = Astro.props;
-const description = await render();
+const { Content } = await render();
 
 ---
 <InternalPageLayout
@@ -57,8 +57,7 @@ const description = await render();
 	<meta itemprop="name" content={name} />
 
 	<article id="author-bio">
-		{/* eslint-disable-next-line astro/no-set-html-directive */}
-		<Fragment set:html={description} />
+		<Content />
 	</article>
 </div>
 </InternalPageLayout>

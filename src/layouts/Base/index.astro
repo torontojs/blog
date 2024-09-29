@@ -9,6 +9,7 @@ interface Props {
 	title: string;
 	htmlTitle?: string[];
 	url: string;
+	canonicalUrl?: string;
 	description: string;
 	authors?: string[];
 	tags?: string[];
@@ -26,6 +27,7 @@ const {
 	description,
 	authors,
 	url,
+	canonicalUrl,
 	tags,
 	image,
 	imageAlt,
@@ -41,6 +43,7 @@ const {
 		{htmlTitle}
 		{title}
 		{url}
+		{canonicalUrl}
 		{description}
 		{authors}
 		{tags}

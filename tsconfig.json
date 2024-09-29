@@ -1,5 +1,5 @@
 {
-	"include": ["globals.d.ts", "astro.config.ts", "src/**/*.ts", "src/**/*.d.ts", ".astro/**/*.d.ts"],
+	"include": ["globals.d.ts", "astro.config.ts", "src/**/*.ts", "src/**/*.d.ts", ".astro/**/*.d.ts", "src/env.d.ts"],
 	"exclude": ["node_modules/**/*", "dist/**/*", "src/content/**/*.js"],
 	"compilerOptions": {
 		"allowImportingTsExtensions": true,

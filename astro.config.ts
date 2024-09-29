@@ -3,7 +3,7 @@ import astroPWA, { type PwaOptions } from '@vite-pwa/astro';
 import astroIcon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
-import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.ts';
+import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.js';
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
 	encoding: 'utf8'

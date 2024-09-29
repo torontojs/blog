@@ -27,5 +27,6 @@ export const blogSchema = ({ image }: SchemaContext) =>
 				'The date of the update. As a parseable date string, without quotes. Examples: "2024-01-01", "2024-01-01 00:00:00", "2024-01-01T00:00:00-04:00", "2024-01-01T00:00:00Z".'
 			),
 			changes: zod.string().describe('A summary of the changes in this update.')
-		})).optional().describe('The list of updates this post had. It is a list of objects with the keys "date" and "changes".')
+		})).optional().describe('The list of updates this post had. It is a list of objects with the keys "date" and "changes".'),
+		canonicalUrl: zod.string().optional().describe('The original URL for the post, used when cross posting on Toronto JS blog.')
 	});

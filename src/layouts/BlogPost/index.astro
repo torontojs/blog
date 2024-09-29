@@ -12,6 +12,7 @@ import './styles.css';
 interface Props {
 	title: string;
 	summary: string;
+	canonicalUrl?: string;
 	authors: string[];
 	image?: ImageMetadata;
 	imageAlt?: string;
@@ -32,6 +33,7 @@ const {
 	url,
 	title,
 	summary,
+	canonicalUrl,
 	authors,
 	image,
 	imageAlt,
@@ -58,6 +60,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 	{authors}
 	{tags}
 	url={postUrl}
+	canonicalUrl={canonicalUrl}
 	image={image?.src}
 	{imageAlt}
 	{createdAt}

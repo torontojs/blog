@@ -24,6 +24,7 @@ const {
 	data: {
 		title,
 		summary,
+		canonicalUrl,
 		image,
 		imageAlt,
 		createdAt,
@@ -40,20 +41,21 @@ const {
 const { Content } = await render();
 ---
 <BlogPostLayout
-	{url}
-	{title}
-	{summary}
-	{authors}
-	{image}
-	{imageAlt}
-	{createdAt}
-	{updatedAt}
-	{updates}
-	{tags}
-	{readingTime}
-	{wordCount}
-	{letterCount}
-	{relatedPosts}
+	url={url}
+	title={title}
+	summary={summary}
+	canonicalUrl={canonicalUrl}
+	authors={authors}
+	image={image}
+	imageAlt={imageAlt}
+	createdAt={createdAt}
+	updatedAt={updatedAt}
+	updates={updates}
+	tags={tags}
+	readingTime={readingTime}
+	wordCount={wordCount}
+	letterCount={letterCount}
+	relatedPosts={relatedPosts}
 >
 	<Content />
 </BlogPostLayout>

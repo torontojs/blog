@@ -3,6 +3,8 @@ import astroPWA, { type PwaOptions } from '@vite-pwa/astro';
 import astroIcon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
+import remarkBehead from 'remark-behead';
+
 import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.js';
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
@@ -46,7 +48,8 @@ export default defineConfig({
 				dark: 'dark-plus'
 			},
 			wrap: true
-		}
+		},
+		remarkPlugins: [[remarkBehead, { minDepth: 2 }]]
 	},
 	integrations: [
 		astroPWA({

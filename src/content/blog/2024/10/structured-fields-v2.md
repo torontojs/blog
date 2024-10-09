@@ -1,7 +1,7 @@
 ---
 title: New Structured Fields RFC released
 summary: Structured Fields is a newish standard for encoding HTTP header values. It just got a new version. 
-createdAt: 2024-10-04T15:00:00.000Z
+createdAt: 2024-10-09T20:00:00.000Z
 tags:
   - open-source
   - blog

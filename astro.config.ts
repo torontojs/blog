@@ -1,9 +1,22 @@
 import sitemap from '@astrojs/sitemap';
+import {
+	transformerMetaHighlight,
+	transformerMetaWordHighlight,
+	transformerNotationDiff,
+	transformerNotationErrorLevel,
+	transformerNotationFocus,
+	transformerNotationHighlight,
+	transformerNotationWordHighlight,
+	transformerRenderWhitespace
+} from '@shikijs/transformers';
+import { transformerTwoslash } from '@shikijs/twoslash';
 import astroPWA, { type PwaOptions } from '@vite-pwa/astro';
 import astroIcon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
 import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.js';
+
+import hcShikiTheme from './src/styles/hc-shiki-theme.json';
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
 	encoding: 'utf8'
@@ -42,11 +55,28 @@ export default defineConfig({
 		shikiConfig: {
 			theme: 'css-variables',
 			themes: {
-				light: 'light-plus',
-				dark: 'dark-plus'
+				light: 'one-light',
+				dark: 'ayu-dark',
+				// @ts-expect-error - Astro is fussy about custom theme
+				contrast: hcShikiTheme
 			},
-			wrap: true
-		}
+			defaultColor: false,
+			wrap: true,
+			transformers: [
+				transformerTwoslash({
+					explicitTrigger: true,
+					rendererRich: { errorRendering: 'hover' }
+				}),
+				transformerNotationDiff(),
+				transformerNotationHighlight(),
+				transformerNotationWordHighlight(),
+				transformerNotationFocus(),
+				transformerNotationErrorLevel(),
+				transformerRenderWhitespace({ position: 'boundary' }),
+				transformerMetaHighlight(),
+				transformerMetaWordHighlight()
+			]
+		},
 	},
 	integrations: [
 		astroPWA({

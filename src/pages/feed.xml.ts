@@ -28,7 +28,8 @@ export const GET: APIRoute = async (context) => {
 		xmlns: {
 			atom: 'http://www.w3.org/2005/Atom',
 			media: 'http://search.yahoo.com/mrss/',
-			dc: 'http://purl.org/dc/elements/1.1/'
+			dc: 'http://purl.org/dc/elements/1.1/',
+			content: 'http://purl.org/rss/1.0/modules/content/'
 		},
 		customData: `
 			<language>en-us</language>

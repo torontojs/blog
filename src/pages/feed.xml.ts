@@ -19,7 +19,7 @@ export const GET: APIRoute = async (context) => {
 	const allPosts = await listAllPosts();
 
 	// INFO: hack to parse markdown
-	const postFiles = import.meta.glob<MarkdownInstance<{}>>('../../content/blog/**/*.md', { eager: true });
+	const postFiles = import.meta.glob<MarkdownInstance<{}>>('../content/blog/**/*.md', { eager: true });
 
 	return rss({
 		title: 'TorontoJS Blog',

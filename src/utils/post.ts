@@ -57,7 +57,7 @@ function getPostUrl(post: CollectionEntry<'blog'>) {
 	const slug = formatPostSlug(post);
 	const { year, month } = getPostDate(post);
 
-	return `${year}/${month}/${slug}`;
+	return `/${year}/${month}/${slug}`;
 }
 
 async function getRelatedPosts(post: CollectionEntry<'blog'>) {

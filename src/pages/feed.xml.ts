@@ -57,7 +57,8 @@ export const GET: APIRoute = async (context) => {
 
 			// INFO: hack to parse markdown
 			const [, postMarkdown] = Object.entries(postFiles).find(([filePath]) => filePath.includes(post.url)) ?? [];
-			const content = postMarkdown?.compiledContent() ?? '';
+
+			const content = (postMarkdown?.compiledContent() ?? '') || '&nbsp;';
 
 			const item: RSSFeedItem = {
 				title: post.data.title,

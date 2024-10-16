@@ -36,6 +36,8 @@
 		"@iconify-json/fa6-brands": "^1.2.0",
 		"@iconify-json/mdi": "^1.2.0",
 		"@iconify-json/uil": "^1.2.0",
+		"@shikijs/transformers": "^1.22.0",
+		"@shikijs/twoslash": "^1.22.0",
 		"@typescript-eslint/eslint-plugin": "^8.7.0",
 		"@typescript-eslint/parser": "8.7.0",
 		"@vite-pwa/astro": "^0.4.3",

@@ -1,7 +1,7 @@
 ---
 title: How to contribute to a large codebase?
 summary: A step-by-step guide on contributing to open-source projects with thousands of lines of code
-createdAt: 2024-10-03T23:15:00.000Z
+createdAt: 2024-10-16T00:15:00.000Z
 tags:
   - open-source
   - Community

@@ -26,3 +26,5 @@ Check detailed documentation on the commands available in [`src/content/docs/com
 ## Contributing
 
 If you want to contribute to the project, please read the [contributing guide](./src/content/docs/contributing.md).
+
+built by [drey moreau](https://github.com/dreymoreau) && [Marco Campos](https://github.com/madcampos)

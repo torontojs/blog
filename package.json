@@ -29,9 +29,9 @@
 		"open-props": "^1.7.6"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.3",
-		"@astrojs/rss": "^4.0.7",
-		"@astrojs/sitemap": "^3.1.6",
+		"@astrojs/check": "^0.9.4",
+		"@astrojs/rss": "^4.0.9",
+		"@astrojs/sitemap": "^3.2.1",
 		"@iconify-json/brandico": "^1.2.0",
 		"@iconify-json/fa6-brands": "^1.2.0",
 		"@iconify-json/mdi": "^1.2.0",
@@ -41,7 +41,7 @@
 		"@typescript-eslint/eslint-plugin": "^8.7.0",
 		"@typescript-eslint/parser": "8.7.0",
 		"@vite-pwa/astro": "^0.4.3",
-		"astro": "^4.15.9",
+		"astro": "^4.16.6",
 		"astro-icon": "^1.1.1",
 		"eslint": "^9.11.1",
 		"eslint-plugin-astro": "^1.2.4",

@@ -48,4 +48,4 @@ Code Club Online: [Nightmare Before React](https://guild.host/events/code-club-o
 
 # Contribute
 
-want to contribute to the blog?? we are now live!!! want to write for us?? submit a proposal through [our Github repo](https://github.com/torontojs/blog/blob/main/src/content/docs/contributing.md) and following our contributing guide!
+want to write for us?? submit a proposal through [our Github repo](https://github.com/torontojs/blog/blob/main/src/content/docs/contributing.md) and follow our contributing guide!

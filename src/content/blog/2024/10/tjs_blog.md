@@ -35,19 +35,17 @@ Code Club Online: [Nightmare Before React](https://guild.host/events/code-club-o
 [UIUX Design: Online Talk and Workshop](https://guild.host/events/uiux-design-online-talk-thghd9) - November 6th 6:30pm - 8:00pm
   - This is our second UIUX Design event and the first online one! Would you like to advance your career and improve your UIUX Design and Frontend skills? ....
 
-[Accessibility for Devs Series: In-Person Talks and panel Q&A](https://guild.host/events/accessibility-for-devs-l5nacu) - November 18th 6:00pm - 8:00pm
-  - This is our fourth Accessibility for Devs event and the second in-person one! Would you like to advance your career and improve your software development skills with accessibility in mind?...
+[Accessibility for Devs Series: Online Talks and panel Q&A](https://guild.host/events/accessibility-for-devs-l5nacu) - November 18th 6:00pm - 8:00pm
+  - This is our fourth Accessibility for Devs event! Would you like to advance your career and improve your software development skills with accessibility in mind?...
 
 
 # Cool Things Happening in the Community
 
 Tom has created a cool ttc app that will help get you, to and from your destination! It is called [tobus](https://tobus.ca/)!!
 
-![mobile version of tobus app](./assets/tom/mobile.png)
+![A screenshot of the "tobus app". On the top half of the screen it has a large action button written "next vehicle" and an input field that reads "bus/streetcar stop no.". On the bottom half it has an an input box to search for a line number, a list of favourites, showing the line number, name, and ETA for the next vehicle; followed by a button to edit bookmarks. Lastly a menu bar on the bottom of the screen with three options: home, lines, and settings.](./assets/tom/mobile.png)
 
-Jovan [wrote some tips on getting the most out of reading technical books!](https://medium.com/@jovanmedford/how-to-get-the-most-out-of-reading-technical-books-1573ef6cd43a) From starting at the back of the chapter,, making multiple passes of reading,, staying active when reading,, space repetition and lots more!!
-
-![Jovan's article](./assets/jovan/desktop.png)
+Jovan [A screenshot of Jovan's article, showing the title text and an half of the hero image. Title reads: How to get the most out of reading technical books](https://medium.com/@jovanmedford/how-to-get-the-most-out-of-reading-technical-books-1573ef6cd43a) From starting at the back of the chapter,, making multiple passes of reading,, staying active when reading,, space repetition and lots more!!
 
 <!-- insert subscribe button here -->
 

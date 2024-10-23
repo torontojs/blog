@@ -31,8 +31,8 @@ Code Club Online: [Nightmare Before React](https://guild.host/events/code-club-o
 [TechTalk Online - CTO Roles and Responsibilities](https://guild.host/events/torontojs-online-techtalk-5sxkm3): Ahmad Nassri - October 31st 6:30pm - 8:00pm
   - We're thrilled to announce the return of TorontoJS Tech Talks to the virtual stage! In this session, we're diving into the topic CTO's and their responsibilities!
 
-[UIUX Design: Online Talk and Workshop](https://guild.host/events/uiux-design-online-talk-thghd9) - November 6th 6:30pm - 8:00pm
-  - This is our second UIUX Design event and the first online one! Would you like to advance your career and improve your UIUX Design and Frontend skills? ....
+[UIUX Design: In Person Talk](https://guild.host/events/uiux-design-online-talk-thghd9) - November 6th 6:30pm - 8:00pm
+  - This is our second UIUX Design event and the first in-person one! Would you like to advance your career and improve your UIUX Design and Frontend skills? ....
 
 [Accessibility for Devs Series: Online Talks and panel Q&A](https://guild.host/events/accessibility-for-devs-l5nacu) - November 18th 6:00pm - 8:00pm
   - This is our fourth Accessibility for Devs event! Would you like to advance your career and improve your software development skills with accessibility in mind?...

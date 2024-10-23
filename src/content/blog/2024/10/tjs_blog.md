@@ -1,8 +1,7 @@
 ---
-title: Whats Happening This Month!!!
-summary: A quick fall update,, events from torontojs and community showcase!!!
+title: "Whats Happening This Month!!! TL;DR Issue #14"
+summary: A quick fall update,, events from Torontojs and community showcase!!!
 createdAt: 2024-10-23T12:00:00.000Z
-draft: true
 tags:
   - open-source
   - blog
@@ -14,7 +13,7 @@ authors:
 ---
 
 # HELLO HI!!!!
-hello!!!! wowzas!!! are we back to talk about the weather,, share some really cool upcoming events and highlight people doing cool things in the community?? YUP!!! YOU GUESSED IT!!!!
+hello!!!! wowzas!!! are we back to talk about the weather,, share some awesome upcoming events and highlight people doing cool things in the community?? YUP!!! YOU GUESSED IT!!!!
 
 fall is definitely here with the chilly weathers and we are so excited!!!! we are hoping that you have been doing your best to work hard and as well as take time for breaks!!!
 
@@ -41,7 +40,7 @@ Code Club Online: [Nightmare Before React](https://guild.host/events/code-club-o
 
 # Cool Things Happening in the Community
 
-Tom has created a cool ttc app that will help get you, to and from your destination! It is called [tobus](https://tobus.ca/)!!
+[Tom](https://github.com/thomassth) has created a cool ttc app that will help get you, to and from your destination! It is called [tobus](https://tobus.ca/)!!
 
 ![A screenshot of the "tobus app". On the top half of the screen it has a large action button written "next vehicle" and an input field that reads "bus/streetcar stop no.". On the bottom half it has an an input box to search for a line number, a list of favourites, showing the line number, name, and ETA for the next vehicle; followed by a button to edit bookmarks. Lastly a menu bar on the bottom of the screen with three options: home, lines, and settings.](./assets/tom/mobile.png)
 

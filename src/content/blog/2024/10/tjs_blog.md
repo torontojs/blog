@@ -44,9 +44,7 @@ Code Club Online: [Nightmare Before React](https://guild.host/events/code-club-o
 
 ![A screenshot of the "tobus app". On the top half of the screen it has a large action button written "next vehicle" and an input field that reads "bus/streetcar stop no.". On the bottom half it has an an input box to search for a line number, a list of favourites, showing the line number, name, and ETA for the next vehicle; followed by a button to edit bookmarks. Lastly a menu bar on the bottom of the screen with three options: home, lines, and settings.](./assets/tom/mobile.png)
 
-Jovan [A screenshot of Jovan's article, showing the title text and an half of the hero image. Title reads: How to get the most out of reading technical books](https://medium.com/@jovanmedford/how-to-get-the-most-out-of-reading-technical-books-1573ef6cd43a) From starting at the back of the chapter,, making multiple passes of reading,, staying active when reading,, space repetition and lots more!!
-
-<!-- insert subscribe button here -->
+[Jovan](https://medium.com/@jovanmedford/how-to-get-the-most-out-of-reading-technical-books-1573ef6cd43a) shares many amazing ways to read technical books and be able to retain that knowledge after reading!! From starting at the back of the chapter,, making multiple passes of reading,, staying active when reading,, space repetition and lots more!!
 
 # Contribute
 

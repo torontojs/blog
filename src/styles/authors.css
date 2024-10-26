@@ -27,3 +27,10 @@
 	list-style: none;
 	padding: 0;
 }
+
+#page-header li a {
+	color: var(--tjs-red-7);
+	text-shadow: none;
+	text-decoration: underline;
+	text-underline-offset: var(--size-1);
+}

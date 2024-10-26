@@ -20,6 +20,7 @@ interface Props {
 	wordCount?: number;
 	letterCount?: number;
 	authors: string[];
+	canonicalUrl?: string;
 }
 
 const {
@@ -33,7 +34,8 @@ const {
 	imageAlt,
 	readingTime,
 	wordCount,
-	authors
+	authors,
+	canonicalUrl,
 } = Astro.props;
 
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyle: 'long' });
@@ -67,6 +69,16 @@ const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeStyl
 					Published on <time itemprop="datePublished" class="dt-published" datetime={createdAt.toISOString()}>{formatter.format(createdAt)}</time>.
 				</small>
 			</p>
+
+			{
+				canonicalUrl && (
+					<p>
+						<small>
+							Originally published at <a href={canonicalUrl} rel="canonical">{canonicalUrl}</a>
+						</small>
+					</p>
+				)
+			}
 
 			{
 				updatedAt && (

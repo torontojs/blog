@@ -5,6 +5,7 @@ import { listAllAuthors } from '../../utils/authors.js';
 import Avatar from '../../components/Avatar/index.astro';
 import InternalPageLayout from '../../layouts/InternalPage/index.astro';
 
+import { Icon } from 'astro-icon/components';
 import '../../styles/authors.css';
 
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -25,6 +26,18 @@ const {
 	socialMedia
 } = Astro.props;
 const { Content } = await render();
+
+const socialIcons = {
+	github: "github",
+	codepen: "codepen",
+	linkedin: "linkedin",
+	mastodon: "mastodon",
+	twitter: "twitter",
+	facebook: "facebook",
+	instagram: "instagram",
+	default: "circle"
+}
+
 ---
 <InternalPageLayout
 	htmlTitle={[name, 'Author', 'TorontoJS Blog']}
@@ -49,9 +62,18 @@ const { Content } = await render();
 	<Fragment slot="header-extra">
 		{pronouns && <p>{pronouns}</p>}
 		<ul>
-			{Object.entries(socialMedia ?? {}).map(([name, url]) => <li><a href={url} rel="nofollow noopener noreferrer">{name}</a></li>)}
+			{Object.entries(socialMedia ?? {}).map(([name, url]) => <li><a href={url} rel="nofollow noopener noreferrer">
+						<Icon
+			id={`${name}-icon`}
+			name={`mdi:${socialIcons[name.toLowerCase()] ?? socialIcons.default}`}
+			title={name}
+		/>
+				{name}
+			</a></li>)}
 		</ul>
 	</Fragment>
+
+
 
 	<div id="contents" itemprop="about mainEntity" itemscope itemtype="https://schema.org/Person">
 		<meta itemprop="name" content={name} />

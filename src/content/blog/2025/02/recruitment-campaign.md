@@ -1,7 +1,7 @@
 ---
 title: 2025 Recruitment Campaign
 summary: 2025 Kick Off!
-createdAt: 2025-02-12T22:37:33.760-05:00
+createdAt: 2025-02-01T22:37:33.760-05:00
 tags:
   - blog
   - Community
@@ -9,7 +9,7 @@ tags:
   - sponsors
 authors:
   - kenbeaudin
-draft: true
+draft: false
 ---
 Hey Folks!
 

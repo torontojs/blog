@@ -3,7 +3,7 @@ name: Ken Beaudin
 avatar: ./assets/kenbeaudin.png
 pronouns: he/him
 avatarAlt: A picture of my face with a smile looking at the camera. I'm wearing a red t-shirt.
-email: me@madcampos.dev
+email: beaudin.ken.mathieu@gmail.com
 website: https://kenbeaudin.netlify.app/
 socialMedia:
   Github: https://github.com/kbventures

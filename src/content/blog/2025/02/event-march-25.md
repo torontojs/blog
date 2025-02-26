@@ -18,9 +18,10 @@ By the end of this workshop, you’ll be able to:
 - Load and control dotLottie animations dynamically in JavaScript
 - Trigger animations based on user inputs (scroll, hover, clicks, and more)
 - Optimize animations for smooth performance and responsiveness
-- Use dotLottie in real-world applications (websites, apps, UI elements) 
+- Use dotLottie in real-world applications (websites, apps, UI elements)
 
 Whether you're a developer, designer, or UI/UX enthusiast, this session will equip you with practical skills to elevate your animations and create engaging web experiences with ease.
+
 ## Meet Our Speaker ✨
 
 <dl>
@@ -36,6 +37,10 @@ Whether you're a developer, designer, or UI/UX enthusiast, this session will equ
 4. **6:40 pm** - Workshop begins 💻
 5. **7:40 pm** - Interactive Q&A Session ❓
 6. **8:00 pm** - Networking 🤝
+
+## Our Sponsors ✨
+
+Thanks to our sponsors [DragonflyDB](https://www.dragonflydb.io/) and [Sentry](https://sentry.io/) for making this event possible, and our partner [Super.com](https://super.com) for hosting us.
 
 ## RSVP ✨
 

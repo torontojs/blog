@@ -40,7 +40,11 @@ Whether you're a developer, designer, or UI/UX enthusiast, this session will equ
 
 ## Our Sponsors ✨
 
-Thanks to our sponsors [DragonflyDB](https://www.dragonflydb.io/) and [Sentry](https://sentry.io/) for making this event possible, and our partner [Super.com](https://super.com) for hosting us.
+Thanks to our sponsors [DragonflyDB](https://www.dragonflydb.io/) and [Sanity](https://www.sanity.io/) for making this event possible, and our partner [Super.com](https://super.com/) for hosting us.
+
+[![Dragonfly DB Logo](./assets/dragonflydb.svg)](https://www.dragonflydb.io/)
+[![Sanity Logo](./assets/sanity.svg)](https://www.sanity.io/)
+[![Super.com Logo](./assets/super.svg)](https://super.com/)
 
 ## RSVP ✨
 

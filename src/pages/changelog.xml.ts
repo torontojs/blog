@@ -22,13 +22,13 @@ export const GET: APIRoute = async (context) => {
 		title: 'TorontoJS Blog Changelog',
 		description: 'Changelog (Version History) for TorontoJS Blog, containing all recent changes.',
 		site: BLOG_URL,
-		items: (await getCollection('changelog')).map((changelog) => {
+		items: await Promise.all((await getCollection('changelog')).map(async (changelog) => {
 			const versionNumber = changelog.id.replace('.md', '');
 			const { versionName } = changelog.data;
 
 			// INFO: hack to parse markdown
 			const [, changelogMarkdown] = Object.entries(changelogFiles).find(([filePath]) => filePath.includes(changelog.id)) ?? [];
-			const content = changelogMarkdown?.compiledContent() ?? '';
+			const content = await (changelogMarkdown?.compiledContent() ?? Promise.resolve(''));
 
 			const item: RSSFeedItem = {
 				title: `${versionNumber}${versionName ? ` (${versionName})` : ''}`,
@@ -39,7 +39,7 @@ export const GET: APIRoute = async (context) => {
 			};
 
 			return item;
-		}),
+		})),
 		customData: `
 		<language>en-us</language>
 		<image>

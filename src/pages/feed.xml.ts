@@ -3,7 +3,7 @@ import type { APIRoute, MarkdownInstance } from 'astro';
 import rss, { type RSSFeedItem } from '@astrojs/rss';
 import { getImage } from 'astro:assets';
 
-import { listAllPosts } from '../utils/post';
+import { listAllPosts } from '../utils/post.js';
 
 import defaultImage from '../assets/icons/logo.png';
 
@@ -56,7 +56,7 @@ export const GET: APIRoute = async (context) => {
 
 			// INFO: hack to parse markdown
 			const [, postMarkdown] = Object.entries(postFiles).find(([filePath]) => filePath.includes(post.url)) ?? [];
-			const content = postMarkdown?.compiledContent() ?? '';
+			const content = await (postMarkdown?.compiledContent() ?? Promise.resolve(''));
 
 			const item: RSSFeedItem = {
 				title: post.data.title,

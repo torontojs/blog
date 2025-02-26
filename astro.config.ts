@@ -16,7 +16,7 @@ import { defineConfig } from 'astro/config';
 import { readFileSync } from 'node:fs';
 import { assetsCache, externalResourcesCache, pagesCache, scriptsCache } from './src/sw-caching.js';
 
-import hcShikiTheme from './src/styles/hc-shiki-theme.json';
+import hcShikiTheme from './src/styles/hc-shiki-theme.json' with { type: 'json' };
 
 const manifest: PwaOptions['manifest'] = JSON.parse(readFileSync('./src/manifest.json', {
 	encoding: 'utf8'
@@ -63,17 +63,26 @@ export default defineConfig({
 			defaultColor: false,
 			wrap: true,
 			transformers: [
+				// @ts-expect-error
 				transformerTwoslash({
 					explicitTrigger: true,
 					rendererRich: { errorRendering: 'hover' }
 				}),
-				transformerNotationDiff(),
-				transformerNotationHighlight(),
-				transformerNotationWordHighlight(),
-				transformerNotationFocus(),
-				transformerNotationErrorLevel(),
+				// @ts-expect-error
+				transformerNotationDiff({ matchAlgorithm: 'v3' }),
+				// @ts-expect-error
+				transformerNotationHighlight({ matchAlgorithm: 'v3' }),
+				// @ts-expect-error
+				transformerNotationWordHighlight({ matchAlgorithm: 'v3' }),
+				// @ts-expect-error
+				transformerNotationFocus({ matchAlgorithm: 'v3' }),
+				// @ts-expect-error
+				transformerNotationErrorLevel({ matchAlgorithm: 'v3' }),
+				// @ts-expect-error
 				transformerRenderWhitespace({ position: 'boundary' }),
+				// @ts-expect-error
 				transformerMetaHighlight(),
+				// @ts-expect-error
 				transformerMetaWordHighlight()
 			]
 		},

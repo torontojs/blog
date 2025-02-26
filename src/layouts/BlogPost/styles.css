@@ -17,6 +17,12 @@
 	width: 100%;
 }
 
+#post-contents a:has( > :is(img, picture, figure):only-child) {
+	display: block;
+	margin-inline: auto;
+	width: fit-content;
+}
+
 #post-contents :is(h2, h3, h4, h5, h6) {
 	color: var(--title-color);
 	text-shadow: var(--size-1) var(--size-1) var(--size-1) var(--tjs-dark-bg);

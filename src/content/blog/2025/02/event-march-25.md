@@ -31,12 +31,12 @@ Whether you're a developer, designer, or UI/UX enthusiast, this session will equ
 
 ## Our Schedule ✨
 
-1. **6:00 pm** - Check-in, welcome, Food & Beverages 🕕
-2. **6:10 pm** - Pizza and beverages 🍕
-3. **6:30 pm** - Welcome by TorontoJS and Sponsors 💻
-4. **6:40 pm** - Workshop begins 💻
-5. **7:40 pm** - Interactive Q&A Session ❓
-6. **8:00 pm** - Networking 🤝
+1. **6:00 pm** - Doors Open: Check-in, welcome, Food & Beverages 🕕🍕
+2. **6:25 pm** - Welcome by TorontoJS and Sponsors 💻
+3. **6:30 pm** - Workshop begins 💻
+4. **7:45 pm** - Interactive Q&A Session ❓
+5. **8:00 pm** - Networking 🤝
+6. **8:30 pm** - Doors Close 🚪
 
 ## Our Sponsors ✨
 

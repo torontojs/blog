@@ -1,9 +1,9 @@
 ---
-title: From Paper to Pixels: Building My AI-Powered Journal App for Mood Tracking
-summary: Converting handwritten journals into digital insights with AI
+title: "From Paper to Pixels: Building My AI-Powered Journal App for Mood Tracking"
+summary: "Converting handwritten journals into digital insights with AI"
 image: ./assets/journal-app-project-hero.png
-imageAlt: Journal app design layout
-createdAt: 2025-03-13T10:15:33.760-05:00
+imageAlt: "Journal app design layout"
+createdAt: 2025-03-16T00:00:00.000Z
 tags:
   - blog
   - Project
@@ -73,26 +73,32 @@ The upload feature, being core to the app's functionality, is always accessible,
 I started creating an MVP using [v0]("https://v0.dev/"). It's great to have something that works so quickly, but I decided to take time to review the architecture because I wanted to transform it from "something that just works" to a design that's easier to scale and has better performance. Here are the main challenges I faced and how I solved them:
 
 ### Challenge: Mixed Data Fetching and Presentation Logic
+
 **Problem:** My client components were handling both data fetching and UI rendering simultaneously. This created tightly coupled code where database queries were mixed with presentation logic.
 
 **Solution:** Separated concerns by moving data fetching to server components using Next.js 15 app router.
+
 - Created server components that handle data retrieval and pass only necessary data to client components
 - Client components now focus solely on presentation
 - This creates a clear separation between data access and UI rendering
 
 ### Challenge: Security Risks with Client-Side Database Queries
+
 **Problem:** Database credentials and queries were potentially exposed to client browsers, creating significant security vulnerabilities.
 
 **Solution:** Implemented server-only package to enforce server-side data operations.
+
 - Added [server-only]("https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment") import to files containing database queries
 - This creates a boundary that prevents client components from importing `server-only` code
 - If you try to import `server-only` code in a client component, Next.js gives an immediate error
 - Ensures all database operations and credentials stay strictly on the server
 
 ### Challenge: Code Duplication Violating DRY Principle
+
 **Problem:** I had identical database query code repeated across multiple components. When I searched my codebase for `fetchJournal`, I found the exact same code in three different places.
 
 **Solution:** Centralized all database queries in one file for easier maintenance.
+
 - Created a dedicated queries file with all database operations
 - Organized queries as methods of a single object (e.g., `queries.getJournalById()`)
 - When changes are needed (like removing a field), I only need to update one place
@@ -134,7 +140,6 @@ These architectural improvements delivered three major benefits:
 3. **Maintainability:** Improved code organization with clear separation of concerns makes the codebase easier to understand and extend. Centralized database queries eliminate duplication and simplify future changes.
 
 This approach follows best practices for Next.js applications and creates a more robust foundation as the app continues to grow.
-
 
 ## What's Next for MoodScribe?
 

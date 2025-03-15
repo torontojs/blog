@@ -17,7 +17,7 @@ draft: false
 
 Hey all!
 
-I've been working on my personal project: MoodScribe for a while to solve my personal problem but hopefully solve for someone else who has a similar problem as me. In this post, I'll share how I came up with the idea, tech stack that I used, core implementations and so on.
+I've been working on my personal project, MoodScribe, for a while to solve my own problem but hopefully help others with similar challenges. In this post, I'll share how I came up with the idea, tech stack that I used, core implementations and so on.
 
 ## What is MoodScribe?
 
@@ -68,23 +68,77 @@ I built the Figma design from scratch to ensure cohesive design throughout the e
 
 The upload feature, being core to the app's functionality, is always accessible, sticking to the bottom of the feed for intuitive user interaction.
 
-## Key Challenges Overcome
+## Key Challenges and Solutions
 
-### Architectural Challenges
+I started creating an MVP using [v0]("https://v0.dev/"). It's great to have something that works so quickly, but I decided to take time to review the architecture because I wanted to transform it from "something that just works" to a design that's easier to scale and has better performance. Here are the main challenges I faced and how I solved them:
 
-- Mixed data fetching and presentation logic in client components
-- Security risks with client-side database queries
-- Code duplication violating DRY principle
+### Challenge: Mixed Data Fetching and Presentation Logic
+**Problem:** My client components were handling both data fetching and UI rendering simultaneously. This created tightly coupled code where database queries were mixed with presentation logic.
 
-### Solutions Implemented
+**Solution:** Separated concerns by moving data fetching to server components using Next.js 15 app router.
+- Created server components that handle data retrieval and pass only necessary data to client components
+- Client components now focus solely on presentation
+- This creates a clear separation between data access and UI rendering
 
-- Separated concerns by moving data fetching to server components
-- Server-only package to enforce server-side data operations
-- Centralized database queries in one file for easier maintenance
+### Challenge: Security Risks with Client-Side Database Queries
+**Problem:** Database credentials and queries were potentially exposed to client browsers, creating significant security vulnerabilities.
+
+**Solution:** Implemented server-only package to enforce server-side data operations.
+- Added [server-only]("https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment") import to files containing database queries
+- This creates a boundary that prevents client components from importing `server-only` code
+- If you try to import `server-only` code in a client component, Next.js gives an immediate error
+- Ensures all database operations and credentials stay strictly on the server
+
+### Challenge: Code Duplication Violating DRY Principle
+**Problem:** I had identical database query code repeated across multiple components. When I searched my codebase for `fetchJournal`, I found the exact same code in three different places.
+
+**Solution:** Centralized all database queries in one file for easier maintenance.
+- Created a dedicated queries file with all database operations
+- Organized queries as methods of a single object (e.g., `queries.getJournalById()`)
+- When changes are needed (like removing a field), I only need to update one place
+- Provides TypeScript suggestions/autocompletion for available query methods
+
+```javascript
+// This is a JavaScript code block
+export const QUERIES = {
+  getJournalEntries: async function () {
+    const supabase = await createClient();
+    const { data: journalEntries, error: fetchError } = await supabase
+      .from("xxx")
+      .select("id, text_data, title, mood, created_at")
+      .order("created_at", { ascending: false });
+
+    if (fetchError) throw Error("Error fetching diary entries");
+
+    return journalEntries as JournalEntry[];
+  },
+
+  getJournalById: async function () {
+    // code to select journal by ID
+  },
+
+  updateJournalById: async function () {
+    // code to update journal by ID
+  },
+};
+```
+
+### Key Benefits
+
+These architectural improvements delivered three major benefits:
+
+1. **Performance:** Eliminated network roundtrips between client and server when fetching data. Database queries now happen only on the server side, which speeds up communication and reduces JavaScript bundle size.
+
+2. **Security:** Credentials and connection details remain server-side only and are never exposed to the client browser. The server-only package creates a hard boundary that prevents accidental exposure.
+
+3. **Maintainability:** Improved code organization with clear separation of concerns makes the codebase easier to understand and extend. Centralized database queries eliminate duplication and simplify future changes.
+
+This approach follows best practices for Next.js applications and creates a more robust foundation as the app continues to grow.
+
 
 ## What's Next for MoodScribe?
 
-As we continue developing MoodScribe, here are some exciting features on the horizon:
+As I continue developing MoodScribe, here are some exciting features on the horizon:
 
 - Better onboarding process
 - Improved performance with infinite scroll
@@ -93,6 +147,6 @@ As we continue developing MoodScribe, here are some exciting features on the hor
 
 ## Interested in trying it out?
 
-MoodScribe is currently in beta version. If you're interested in trying it out feel free to access to [the link](https://moodscribe.vercel.app/).
+MoodScribe is currently in beta version. If you're interested,feel free to check out [the link](https://moodscribe.vercel.app/).
 
 I look forward to hearing your feedback!

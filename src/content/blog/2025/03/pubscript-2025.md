@@ -87,4 +87,4 @@ _Please contact the organizers if you have any accessibility questions or concer
 
 If you are interested in organizing other events, even if it is for a small group, we are more than happy to help with that!
 
-Please reach out to @madcampos or @dann on slack and we can help you sort the event out.
+Please reach out on slack in the channel #team-eventsmaking and we can help you sort the event out.

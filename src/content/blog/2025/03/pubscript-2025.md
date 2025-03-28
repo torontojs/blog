@@ -2,7 +2,6 @@
 title: "PubScript: Summer 2025 Season"
 summary: Schedule for PubScript social events for the Summer 2025 Season
 createdAt: 2025-03-22T01:06:00
-draft: true
 tags:
   - events
   - Community
@@ -87,4 +86,4 @@ _Please contact the organizers if you have any accessibility questions or concer
 
 If you are interested in organizing other events, even if it is for a small group, we are more than happy to help with that!
 
-Please reach out on slack in the channel #team-eventsmaking and we can help you sort the event out.
+Please reach out on slack in the channel `#team-eventsmaking` and we can help you sort the event out.

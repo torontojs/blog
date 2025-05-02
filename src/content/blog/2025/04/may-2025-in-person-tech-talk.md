@@ -2,7 +2,6 @@
 title: TorontoJS May 2025 In-Person TechTalks
 summary: Announcement for the May 2025 TechTalk
 createdAt: 2025-05-01T20:56:27.299-04:00
-draft: true
 tags:
   - events
   - Community

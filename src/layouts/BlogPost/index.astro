@@ -131,7 +131,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 		{
 			tags && tags.length > 0 && (
 				<TagList
-					tags={Object.fromEntries(tags.map((tag) => [tag, `${BLOG_URL}tags/${tag}`]))}
+				tags={Object.fromEntries(tags.map((tag) => [tag, `/tags/${tag}`]))}
 					isOpen={true}
 				/>
 			)
@@ -149,7 +149,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 										<li>
 											<PostCard
 												variant="small"
-												url={`${BLOG_URL}${post.url}`}
+												url={`/${post.url}`}
 												title={post.title}
 												image={post.image}
 												imageAlt={post.imageAlt}

@@ -10,6 +10,8 @@ tags:
   - sponsors
   - social
   - TechTalk
+authors:
+  - marco
 ---
 
 Here’s the July 2025 edition of our Tech Talk event at Super.com on July 17, 2025.

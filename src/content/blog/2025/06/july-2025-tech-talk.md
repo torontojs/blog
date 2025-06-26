@@ -1,8 +1,8 @@
 ---
 title: TorontoJS July 2025 In-Person TechTalks
 summary: July's In-Person event is around the corner!
-image:
-imageAlt:
+image: ./assets/TJS_JULY17_TechTalk_Poster.png
+imageAlt: "A poster with a white background and the CN Tower sillouete on the right. On the left side it reads, from top to bottom: Toronto JS July 2025 In-Person Tech Talks; Cross-Runtime Harmony: How Standard APIs Are Shaping Modern Frameworks. (A Picture of Joe Zhou) Joe Zhou - Developer Advocate @ DragonflyDB; Rethinking AI Ethics and Safety: Rights, Risks, and Real-World Solutions for Advanced AI. (A picture of Amir Kiani) Amir Kiani - Sr. Analyst, AI Ethics and Safety; Thursday, July 17, 2025, 6:30 PM to 8:30 PM EST. Super.com, 260 Queen St w, Toronto; Thank you to our Sponsors: (Logos for DragonflyDB and Sanity); Community Partner: (Logo for super.com)"
 createdAt: 2025-06-25T23:01:48.604-04:00
 tags:
   - Community
